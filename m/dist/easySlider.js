@@ -193,7 +193,9 @@
 					});
 			}
 		});
-
+		setInterval(function(){
+	$("img[alt='next']").parent('li').click()
+}, 4000)
 		// A really lightweight plugin wrapper around the constructor,
 		// preventing against multiple instantiations
 		$.fn[ pluginName ] = function( options ) {

@@ -2,8 +2,8 @@
 /*--------------SLIDER----------------*/
 
 #slider {
-	width: 85%;
-	margin: 15% auto;
+	width: 80%;
+	margin: 17.8% auto;
 }
 
 
@@ -11,16 +11,16 @@
 
 /*position controls*/
 .controls li {
-	top: 50%;
+	top: 60%;
 	margin-top: -30px
 }
 
 .controls li:nth-child(1) {
-	left: 0;
+	left: 0px;
 }
 
 .controls li:nth-child(2) {
-	right: 0;
+	right: 0px;
 }
 
 
