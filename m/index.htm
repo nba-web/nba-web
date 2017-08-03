@@ -35,24 +35,8 @@ var setSite={ //设置网站属性
 	}
 </script>
 
-<script src="js1/jquery.min.js"></script>
-<script src="js1/YuxiSlider.jQuery.min.js"></script>
-<script>
-$(".slider").YuxiSlider({
-	width:800, //容器宽度
-	height:450, //容器高度
-	control:$('.control'), //绑定控制按钮
-	during:4000, //间隔4秒自动滑动
-	speed:800, //移动速度0.8秒
-	mousewheel:true, //是否开启鼠标滚轮控制
-	direkey:true //是否开启左右箭头方向控制
-});
-</script>
+<script src="js/index.js"></script>
 
-<script type="text/javascript">
-
-//(function(){var a=navigator.userAgent;if(-1!=a.indexOf("iPhone")||-1!=a.indexOf("iPad")||-1!=a.indexOf("iPod")||-1!=a.indexOf("Android")){var a=document.referrer,b={"http://slg.qq.com/m/baidu.com":"seo_baidu","http://slg.qq.com/m/sogou.com":"seo_sogou","http://slg.qq.com/m/sm.cn":"seo_sm","http://slg.qq.com/m/so.com":"seo_360","http://slg.qq.com/m/bing.com":"seo_bing","http://slg.qq.com/m/google.com":"seo_google"},c;for(c in b)if(-1!=a.indexOf(c)){a=b[c];if(window.sessionStorage)sessionStorage.setItem("channel",a);else{var d=d||0,b="";0!=d&&(b=new Date,b.setTime(b.getTime()+1E3*d),b="; expires="+b.toGMTString());document.cookie="channel="+escape(a)+b+"; path=/"}break}self.location="index.htm"/*tpa=http://slg.qq.com/m/*/}})(); 
-</script>
 </head>
 
 <body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
@@ -63,16 +47,17 @@ $(".slider").YuxiSlider({
 	</header>
 	
 	<section class="s1">
-		<a href="javascript:;" class="spr subscribe_btn subscribe_btn1" onclick="PTTSendClick('header','subscribe','立即预约');">立即预约</a>
+		<a href="javascript:;" id="btn1" class="spr subscribe_btn subscribe_btn1" onclick="btn1()">立即预约</a>
 	</section>
 	<section class="s2">
-		
+		<a href="javascript:;"  class="spr btn ljyuzhang" onclick="btn1()">立即预约</a>
 	</section>
 	
 	<section class="s5">
-	<h1>邀请澈哥哥</h1>	
+		<a href="javascript:;" onclick="btn1()" class="spr invite_btn">邀请好友,获得更多抽奖机会</a>
 	</section>
 	<section class="s6">
+	
 	<div id="slider">
 	<ul class="slides clearfix">
 		<li><img class="responsive" src="img/1.jpg"></li>
@@ -113,8 +98,8 @@ $(".slider").YuxiSlider({
 	</section>
 	
 	<div class="mask"></div>
-	<div id="login_slt" class="login_slt sprbg">
-		<a href="javascript:;" class="close_btn">关闭</a>
+	<div id="login_slt" class="login_slt sprbg" style="display: none;">
+		<a href="javascript:;" class="close_btn" onclick="btn1()">关闭</a>
 		<h3>请选择你登录的游戏平台</h3>
 		<a href="javascript:;" class="qq">QQ登录</a>
 		<a href="javascript:;" class="wx">微信登录</a>

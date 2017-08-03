@@ -30,7 +30,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	0%{transform: rotate(0deg);}
 	100%{transform: rotate(360deg);}
 	}
-	.subscribe_btn {display: block; width: 3.01rem; height: 2.03rem; background-position: -0.02rem -5.03rem; overflow: hidden; text-indent: -9999rem; margin: 0 auto;}
+	.subscribe_btn {display: block; width: 3.01rem; height: 2.03rem; background-position: -0.02rem -4.98rem; overflow: hidden; text-indent: -9999rem; margin-top:120%;margin-left:26%;}
 	.subscribe_result {font-family: SimSun;font-size:0.28rem; color: #000000; padding-top:0.2rem;text-shadow: 0 0.02rem 0.02rem #333; font-weight: bold; padding:0.3rem 0 0 0.4rem; line-height: 0.36rem;}
 	.subscribe_result strong{padding:0 0.05rem; color:#c54c4b;}
 	.subscribe_result span{display: block; font-size:0.24rem;}
@@ -73,7 +73,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.act1_gift li.gift strong {color: #000;}
 	.act1_gift li.gift span {color: #000;}
 
-	.btn {display:block; width: 3.14rem; height: 1.35rem; background-position: -0.02rem -7.08rem; margin: 0 auto; overflow: hidden; text-indent: -9999rem;}
+	.btn {display:block; width: 3.01rem; height: 2.03rem; background-position: -0.01rem -7.37rem; margin-left:26%;margin-top:63%; overflow: hidden; text-indent: -9999rem;}
 	.gift_prev,.gift_next {display: block;position: absolute; width:0.32rem; height: 0.75rem; background:rgba(0,0,0,0.6); top:3.4rem; left:0;}
 	.gift_prev:before {display: block; position: absolute; width: 0.25rem; height: 0.25rem; border-top:0.04rem solid #fff; border-left:0.04rem solid #fff; transform:rotate(-45deg); content: ''; top:0.21rem; left: 0.09rem;}
 	.gift_next {left:auto;right: 0;}
@@ -82,7 +82,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 
 	.act2_note {line-height: 0.4rem; color: #766151; font-size:0.2rem; width: 5.1rem; margin: 0 auto; text-indent: -0.47rem; padding-left:0.47rem;}
 	.act2_note em {display: inline-block; width: 0.21rem; height: 0.22rem; padding-right:0.1rem; margin-right:0.15rem; background-position: -6.59rem -0.95rem; text-align: center; text-indent: 0; line-height: 0.22rem; color: #ffffff; font-style: normal;font-family: SimSun; font-weight: bold;}
-	.invite_btn {display: block;margin: 0.8rem auto 0.1rem; width: 4.84rem; height: 0.44rem; background-position: -2.38rem -0.06rem; overflow: hidden; text-indent: -9999rem;}
+	.invite_btn {display: block; width: 3.01rem; height: 0.86rem; margin-top:76%; margin-left:26%;  background-position: -0.02rem -6.499rem; overflow: hidden; text-indent: -9999rem;}
 	.lottery_info {text-align: center; color: #000; font-size: 0.24rem; line-height: 0.36rem;}
 	.lottery_info strong {color: #bb3337;}
 	.lottery {width: 6.17rem; height: 6.72rem; background:url("../img/lottery.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/lottery.jpg*/; background-size: cover; margin:0.3rem auto 0.25rem;}
@@ -178,7 +178,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.totop {display: block; width: 0.67rem; height: 0.64rem; overflow:hidden; text-indent: -9999rem; background-position: -0.92rem -0.06rem; margin:0.5rem auto 0;}
 
 	.mask {width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.6); z-index: 999; display: none;}
-	.sprbg {background: url("../img/sprbg.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/sprbg.png*/ no-repeat; background-size:9.87rem 5.61rem;}
+	.sprbg {background: url("../img/sprbg.png") no-repeat; background-size:9.87rem 5.61rem;}
 	.share_tips {width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.6); z-index: 1001; display: none;}
 	.share_tips p {width: 3.8rem; float:right; text-align: center;color: #fff;font: 0.24rem; padding:0.3rem;}
 	.share_tips p:before {display: block; content: ''; width: 2.21rem; height: 3.01rem; background: url("../img/arrows.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/arrows.png*/ no-repeat; background-size: cover;margin:0 0 0 1.6rem;}
