@@ -1,0 +1,2 @@
+[0731/141210.621:ERROR:process_reader_win.cc(233)] ReadMemory at 0x5a942f0 of 32768 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0731/141210.621:WARNING:pe_image_annotations_reader.cc(65)] could not read simple annotations from C:\Program Files (x86)\Google\Chrome\Application\57.0.2987.133\chrome_elf.dll

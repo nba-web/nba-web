@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="《乱世王者》是一款由天美工作室自主研发的真实战争策略手游。多样兵种、器械任意搭配，极具策略；《乱世王者》背景处于英雄辈出的三国乱世，吕布、赵云等名将悉数登场；游戏更引入兵法战术，真实还原上兵伐谋的诡谲乱世，圆策略王者的战争英雄梦！">
+<meta name="Keywords" content="乱世王者、乱世王者手游,乱世王者官网,乱世王者官方手游、乱世王者官方手游下载,乱世王者移动版,乱世王者手机版,乱世王者手游正版,乱世王者官方手游测试">
+<title>乱世王者-官方网站-腾讯游戏-腾讯首款战争策略手游</title>
+<script type="text/javascript">
+(function (win,doc){
+if (!win.addEventListener) return;
+var html=document.documentElement;
+function setFont()
+{
+	var cliWidth=html.clientWidth;
+	html.style.fontSize=100*(cliWidth/640)+'px';
+}
+win.addEventListener('resize',setFont,false);
+setFont();
+})(window,document);
+var setSite={ //设置网站属性
+		siteType:"a20170613subscribe", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+		pageType:"m", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+		pageName:"移动端首页", //必填项:页面中文名
+		osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+		ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+		stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+	}
+</script>
+
+<script src="js1/jquery.min.js"></script>
+<script src="js1/YuxiSlider.jQuery.min.js"></script>
+<script>
+$(".slider").YuxiSlider({
+	width:800, //容器宽度
+	height:450, //容器高度
+	control:$('.control'), //绑定控制按钮
+	during:4000, //间隔4秒自动滑动
+	speed:800, //移动速度0.8秒
+	mousewheel:true, //是否开启鼠标滚轮控制
+	direkey:true //是否开启左右箭头方向控制
+});
+</script>
+
+
+<style>
+
+body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
+	li {list-style:none;}
+	h1,h2,h3,h4,h5 {font-size:100%;}
+	img {border:0;}
+	table{ border-collapse:collapse;}
+	a {color:#666666; text-decoration:none; outline:none;}
+	a:hover{color:#00787E; text-decoration:none;}
+
+	* html .q {height:1%;}
+	*+html .q {height:1%;}
+	.q:after {content:""; display:block; height:0; clear:both; overflow:hidden;}
+	.clear {clear:both; height:0px; overflow:hidden;}
+	.hidden {display:none;}
+	body {color:#626262; font-family:Microsoft YaHei; font-size:0.24rem; background:#181818;}
+	.spr {background: url("img/spr.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/spr.png*/ no-repeat; background-size: 7.22rem 8.45rem;}
+	header {width: 100%; height: 1rem; background:#181818; position: relative;}
+	header h1{width:3.1rem; height:0.81rem; float:left; padding:0.1rem 0 0;}
+	header h1 a{width:3.1rem; height:0.81rem; padding:0.08rem 0 0 1rem; display: inline-block; font-size:0.28rem; color:#fff; font-weight: normal;}
+	header h1 a:before{width:0.78rem; height:0.78rem; display:block; position: absolute; top:0.12rem; left:0.16rem; content:'';background: url("img/spr.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/spr.png*/ no-repeat; background-size: 7.22rem 8.45rem;}
+	header h1 a em {display: block; font-style:normal; font-size:0.18rem; color: #535859;}
+	.home_btn,.mygift_btn {display: block; width: 1.56rem; height: 0.5rem; background-position: -5.55rem -7.89rem; position: absolute; top:0.27rem; right:0.17rem;  overflow: hidden; text-indent: -9999rem;}
+	.mygift_btn {right: 1.8rem;background-position: -5.55rem -7.37rem;}
+	.s1 {width:100%; height:9.2rem; background:url("img/b1.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/header.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden; position: relative;}
+	.s1 h2 {width:2.47rem; height:3.84rem; background-position: 0 -0.95rem; margin:0.37rem 0 0 0.6rem; text-indent: -9999rem;}
+	.video_btn {display:block; height: 1.23rem; width: 1.23rem; position: relative; margin: 0.6rem auto 0;}
+	.video_btn i {display: block;width: 1.23rem; height: 1.23rem; background-position:-8.45rem -0.02rem; position: absolute; top: 0;left: 0; -webkit-animation:video_rotate 4s linear infinite;}
+	.video_btn:hover i {-webkit-animation-play-state:paused; }
+	.video_btn span {display: block;width: 0.27rem; height: 0.43rem; margin:-0.23rem -0.13rem; background-position:-9.28rem -4.02rem; position: absolute; top: 50%;left: 50%; overflow: hidden;text-indent: -9999px;}
+	@-webkit-keyframes video_rotate{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+	}
+	.subscribe_btn {display: block; width: 3.01rem; height: 2.03rem; background-position: -0.02rem -5.03rem; overflow: hidden; text-indent: -9999rem; margin: 0 auto;}
+	.subscribe_result {font-family: SimSun;font-size:0.28rem; color: #000000; padding-top:0.2rem;text-shadow: 0 0.02rem 0.02rem #333; font-weight: bold; padding:0.3rem 0 0 0.4rem; line-height: 0.36rem;}
+	.subscribe_result strong{padding:0 0.05rem; color:#c54c4b;}
+	.subscribe_result span{display: block; font-size:0.24rem;}
+	.subscribe_gift {display: flex; height: 1.98rem;justify-content:center; background:url("img/gift.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/gift.png*/ no-repeat 50% 0; background-size: 6.04rem 1.98rem; margin-top:-0.15rem;}
+	.subscribe_gift li {width:1.55rem; height: 1.98rem; display: flex; align-items: flex-end; justify-content:center; color: #f1e1a0; font-size:0.2rem; color: #333333; line-height: 0.5rem; font-weight: bold;}
+
+	.next_tips {display:block; margin: 0.3rem auto 0; width: 0.47rem; height: 0.51rem; background-position: -1.76rem -0.15rem;-webkit-animation:next_tips 2s linear infinite;animation:next_tips 2s linear infinite;}
+	@-webkit-keyframes next_tips{
+		0%,50%,100%{-webkit-transform:translateY(0)}
+		20%{-webkit-transform:translateY(5px)}
+		75%{-webkit-transform:translateY(-5px)}
+	}
+	@keyframes next_tips{
+		0%,50%,100%{transform:translateY(0)}
+		25%{transform:translateY(5px)}
+		75%{transform:translateY(-5px)}
+	}
+	.s2 {width:100%; height:4.9rem; background:url("img/b2.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/bg1.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden; position: relative;}
+	.s5 {width:100%; height:6rem; background:url("img/b3.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/bg1.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden; position: relative;}
+	.s6 {width:100%; height:4rem; background:url("img/b4.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/bg1.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden; position: relative;}
+	.s7 {width:100%; height:5.8rem; background:url("img/b5.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/bg1.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden; position: relative;}
+	.tit {height:0.86rem; width:3.8rem;  margin: 0.34rem auto; text-indent: -9999rem;}
+	.t1 {height:0.86rem;margin: 0.54rem auto 0; background-position: -2.54rem -0.75rem;}
+	.t2 {margin:1rem auto 0.15rem;background-position: -2.54rem -2.82rem;}
+	.act1_note {text-indent: -9999rem; height: 0; overflow: hidden;}
+	.act1_gift {width: 100%; overflow-x: auto; margin-top: 0.3rem;}
+	.act1_gift ul {height:3.45rem; width:10.6rem;}
+	.act1_gift ul li {width: 1.9rem; height: 3.7rem; padding:0 0.1rem; float:left;}
+	.step {width:1.2rem; height: 0.7rem; margin: 0 auto; background-position: 1000rem 1000rem;}
+	.step span {display:block; color: #766151; font-size:0.18rem;}
+	.step strong {display:block; text-align: center; color: #000; font-size:0.24rem;}
+	.step strong em{font-style: normal;}
+	.act1_gift .gift {width:1.9rem; height: 2.66rem; background-position:-5rem -3.88rem;}
+	.act1_gift .gift strong {display: block; text-align: center; padding-top:0.12rem; height:0.38rem; line-height: 0.36rem; color: #4a4d54; font-size: 0.2rem;}
+	.act1_gift .gift span {display: block; text-align: center;line-height: 0.2rem; color: #6b6b6b; font-size: 0.18rem;}
+	.act1_gift .gift span.gift_icon {height: 1.4rem;}
+	.act1_gift .gift span.gift_icon img {display:block;height: 1.32rem; width: auto; margin:0 auto;}
+	.act1_gift li.open .step {background-position: -5.8rem -6.6rem;}
+	.act1_gift li.gift {background-position:-3.06rem -3.88rem;}
+	.act1_gift li.gift strong {color: #000;}
+	.act1_gift li.gift span {color: #000;}
+
+	.btn {display:block; width: 3.14rem; height: 1.35rem; background-position: -0.02rem -7.08rem; margin: 0 auto; overflow: hidden; text-indent: -9999rem;}
+	.gift_prev,.gift_next {display: block;position: absolute; width:0.32rem; height: 0.75rem; background:rgba(0,0,0,0.6); top:3.4rem; left:0;}
+	.gift_prev:before {display: block; position: absolute; width: 0.25rem; height: 0.25rem; border-top:0.04rem solid #fff; border-left:0.04rem solid #fff; transform:rotate(-45deg); content: ''; top:0.21rem; left: 0.09rem;}
+	.gift_next {left:auto;right: 0;}
+	.gift_next:before {display: block; position: absolute; width: 0.25rem; height: 0.25rem; border-top:0.04rem solid #fff; border-right:0.04rem solid #fff; transform:rotate(45deg); content: ''; top:0.21rem; right: 0.1rem;}
+
+
+	.act2_note {line-height: 0.4rem; color: #766151; font-size:0.2rem; width: 5.1rem; margin: 0 auto; text-indent: -0.47rem; padding-left:0.47rem;}
+	.act2_note em {display: inline-block; width: 0.21rem; height: 0.22rem; padding-right:0.1rem; margin-right:0.15rem; background-position: -6.59rem -0.95rem; text-align: center; text-indent: 0; line-height: 0.22rem; color: #ffffff; font-style: normal;font-family: SimSun; font-weight: bold;}
+	.invite_btn {display: block;margin: 0.8rem auto 0.1rem; width: 4.84rem; height: 0.44rem; background-position: -2.38rem -0.06rem; overflow: hidden; text-indent: -9999rem;}
+	.lottery_info {text-align: center; color: #000; font-size: 0.24rem; line-height: 0.36rem;}
+	.lottery_info strong {color: #bb3337;}
+	.lottery {width: 6.17rem; height: 6.72rem; background:url("img/lottery.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/lottery.jpg*/; background-size: cover; margin:0.3rem auto 0.25rem;}
+	.swfcontent_start,.swfcontent_disable {animation:none; background:none; opacity: 0;}
+	.swfcontent_disable {animation:none;filter:grayscale(100%);  }
+	.swfcontent_slight,.swfcontent_hover {display: none; background:none;}
+
+	.code {height: 0.4rem; margin: 0.15rem auto;display: flex; justify-content:center;}
+	.code input {display: block;padding: 0; border:1px solid #f20c0c; color: #f20c0c; width:3.4rem; height: 0.35rem; line-height: 0.35rem; font-size: 0.2rem; text-align: center; background: #000;font-family:Microsoft YaHei; border-radius: 0;}
+	.code span {display: block; line-height: 0.35rem; font-size: 0.2rem; text-indent:0.1rem;}
+
+	.act2_tips {text-align:center; font-size: 0.24rem; color: #000;font-family: SimSun; line-height: 0.3rem; font-weight: bold;}
+	.act2_tips strong {color: #dc0000; font-size: 0.3rem;}
+	.gift2prev,.gift2next {top:20.95rem;}
+	.act2_gift {width: 100%; overflow-x: auto;height: 2.15rem; margin-top:0.4rem;}
+	.act2_gift ul {width: 11rem;height: 1.9rem;}
+	.act2_gift li{width:2.05rem; height: 1.6rem;border:0.01rem solid #aea9a3; float: left;background-image:linear-gradient(40deg,#a4884e,#fff); margin:0.2rem 0.05rem 0;}
+	.act2_gift li .gift{width:1.93rem; height:1.48rem;margin:0.05rem;border:0.01rem solid #919192; background: #eff1f4; text-align: center;}
+	.act2_gift li .gift strong{display: block;width: 0.85rem; height: 0.2rem; line-height: 0.2rem; text-align: center; color: #f4e287; background: #665f51; border:0.01rem solid #f4e287; margin: -0.14rem auto 0; font-size: 0.18rem; font-weight: normal;box-shadow: 0px 0px 0.03rem 0.01rem #665f51;}
+	.act2_gift li .gift span{display: block; color: #766151; font-size:0.17rem; line-height: 0.2rem;}
+	.act2_gift li .gift span.gift_icon{height:0.8rem;}
+	.act2_gift li .gift span.gift_icon img{height:0.8rem;display:block; margin: 0 auto;}
+
+	.act2_gift li.open .gift{background-image:linear-gradient(0deg,#dcc371,#f8f4e4);}
+
+
+	.status {text-align: center; font-size: 0.18rem; color: #fff; line-height: 0.2rem; height: 0.4rem;}
+	.status strong {font-weight: normal; color: #c9301e;padding:0 0.03rem;}
+	.status span {display: none;}
+	.open .status span {display: block;}
+
+
+	.s3 {width:100%; height:5.01rem; background:url("img/bg2.jpg")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/bg2.jpg*/ no-repeat 50% 0; background-size: cover;overflow: hidden;}
+
+	.rule_tit,.feature_tit {width: 2.17rem; height:0.86rem; background-position: -4.87rem -1.82rem; text-indent: -9999rem; margin:0.3rem auto;}
+	.feature_tit {background-position: -2.54rem -1.8rem; }
+	.feature {position: relative; height: 4.1rem;}
+	.feature_prev,.feature_next {display:block; width:0.43rem; height:0.86rem; position:absolute; top:0.76rem; overflow:hidden; text-indent:-9999rem; background-position: -2.54rem -3.88rem;}
+
+	.feature_prev {left:0.17rem;}
+	.feature_next {right:0.17rem;transform:scaleX(-1);}
+	.featureroll_box {width:3.81rem; height:2.64rem; overflow:hidden; margin:0 auto; border:0.01rem solid #c9b07e; border-radius: 0.02rem;}
+	.feature_roll_ul{width:500%;height:2.64rem; overflow-x: hidden; display: flex;}
+	.feature_roll_ul li{float:left;display:block;overflow:hidden;position:relative; width:3.81rem; height:2.64rem;}
+	.feature_roll_ul img,.feature_roll_ul a{width:3.81rem; height:2.64rem;}
+	.feature_hd{width:3.86rem; height: 0.52rem;background-image:linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 15%,rgba(255,255,255,0.6) 85%,rgba(255,255,255,0) 100%);margin: 0.1rem auto 0; position: relative; overflow: hidden;}
+	.feature_hd li {width: 2rem; height: 0.3rem; position: absolute; top:0.7rem; left:50%; margin:0 -1rem; text-indent: -9999rem;}
+	.feature_hd li.current { top:0.18rem;}
+	.feature_hd li:nth-child(1) {background-position: -3.36rem -8.17rem;}
+	.feature_hd li:nth-child(2) {background-position: -3.35rem -6.86rem;}
+	.feature_hd li:nth-child(3) {background-position: -3.34rem -7.19rem;}
+	.feature_hd li:nth-child(4) {background-position: -3.35rem -7.53rem;}
+	.feature_hd li:nth-child(5) {background-position: -3.35rem -7.84rem;}
+	.rule_tit {margin-bottom: 0.05rem;}
+	.s3 ol {width: 2.8rem; height:20.7rem; padding:0 0 0 0.7rem;line-height: 0.4rem; color: #766151; font-size:0.2rem; text-indent: -0.47rem;}
+	.s3 ol li {color: #333333; line-height: 0.4rem; font-size: 0.2rem;}
+	.s3 ol li em {display: inline-block; width: 0.21rem; height: 0.22rem; padding-right:0.1rem; margin-right:0.15rem; background-position: -6.59rem -0.66rem; text-align: center; text-indent: 0; line-height: 0.22rem; color: #ffffff; font-style: normal;font-family: SimSun; font-weight: bold;}
+	.s3 ol li strong {color:#b72c2b;}
+
+	.bottom_nav {width:6rem; margin: 1rem auto 0; position: relative; height: 3.8rem; display: flex;}
+	.bottom_nav li {width:3rem; height: 2.33rem; text-align: center; font-size:0.18rem;color:#000;}
+	.bottom_nav li a{color:#000;}
+	.bottom_nav li i{display: block; height:1.69rem;}
+	.bottom_nav li img{display: block; width: 1.39rem; height:1.39rem; margin: 0 auto;}
+	.bottom_nav li:nth-child(2) img {width: 1.77rem; height:1.69rem;}
+	.qun h4 {text-indent: -9999rem; height: 0.6rem;}
+	.qun div {width: 3.5rem; margin:0 auto; height: 1.4rem; overflow-y: auto;}
+	.qun div a {text-align: center; line-height: 0.45rem;display: block; height: 0.45rem}
+	.qun div a em {display: inline-block; width: 0.32rem; height: 0.37rem; line-height: 0.37rem; font-style: normal; background-position: -6.82rem -1.32rem; color: #771212; font-size:0.17rem;}
+	.qun div a span {display: inline-block; font-size:0.2rem; color: #771212; width: 1.5rem; height: auto; text-align: left; text-indent: 0.05rem;}
+	.qun div a i {display: inline-block; width: 0.62rem; height: 0.45rem; color: #dcb46f; background-position: -6.56rem -3.32rem; font-style: normal; font-size: 0.16rem; text-align: center;}
+	.qun div a.full em {background-position: -6.47rem -1.32rem; color: #303030;}
+	.qun div a.full span {color: #303030;}
+	.qun div a.full i {color:#886f6d;background-position: -6.56rem -2.74rem;}
+	.qun div::-webkit-scrollbar-track {
+	 background-color:#1e1e1e;
+	 -webkit-border-radius: 2px;
+	 -moz-border-radius: 2px;
+	 border-radius:2px;
+	 border:1px solid #86520e;
+	}
+	 .qun div::-webkit-scrollbar-thumb {
+	 background-color: #b6a57e;
+	 -webkit-border-radius: 2px;
+	 -moz-border-radius: 2px;
+	 border-radius:2px;border:1px solid #86520e;
+	}
+	.qun div::-webkit-scrollbar {
+	 width: 4px;
+	}
+
+
+	.totop {display: block; width: 0.67rem; height: 0.64rem; overflow:hidden; text-indent: -9999rem; background-position: -0.92rem -0.06rem; margin:0.5rem auto 0;}
+
+	.mask {width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.6); z-index: 999; display: none;}
+	.sprbg {background: url("img/sprbg.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/sprbg.png*/ no-repeat; background-size:9.87rem 5.61rem;}
+	.share_tips {width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.6); z-index: 1001; display: none;}
+	.share_tips p {width: 3.8rem; float:right; text-align: center;color: #fff;font: 0.24rem; padding:0.3rem;}
+	.share_tips p:before {display: block; content: ''; width: 2.21rem; height: 3.01rem; background: url("img/arrows.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/arrows.png*/ no-repeat; background-size: cover;margin:0 0 0 1.6rem;}
+	.login_slt {display:none;width: 4.54rem; height: 3.1rem; margin: -1.55rem -2.27rem; background-position:-5.33rem 0;  position: fixed; top: 50%; left: 50%; z-index: 1000;}
+	.close_btn {display: block; position: absolute; top: 0.31rem; right: 0.01rem; overflow: hidden; text-indent: -9999px; width: 0.41rem; height: 0.41rem;}
+	.login_slt h3{height:1.23rem; text-indent: -9999px;}
+	.qq,.wx {display:block;float:left;width: 1.26rem; text-align: center; margin-left: 0.35rem; color:#000; padding-top:1.26rem;}
+	.qq {margin-left:0.84rem;}
+
+	.popup {display:none; width: 5.28rem; height: 5.61rem; margin: -2.795rem -2.64rem; position: fixed; top: 50%; left:50%; z-index: 1000;}
+	.popup h3 {font-family: SimSun; font-size: 0.28rem; color: #000; text-align: center; line-height: 0.35rem; padding-top:0.6rem;}
+	.input_list {margin: 0.15rem auto 0; width: 4.5rem; height: 2.3rem; border-bottom:1px solid #fff;}
+	.input_list li{padding-left:1.3rem; height: 0.55rem;}
+	.input_list li strong{margin-left:-1.5rem;float:left; display: inline; width: 1.45rem; line-height: 0.4rem; text-align: right;font-size:0.24rem; color: #000; font-weight: normal;}
+	.input_list li input{width: 2.8rem; height: 0.4rem; border:0.01rem solid #766151; color: #766151; background: #f8f6f1; font-size:0.24rem; text-indent: 0.05rem;font-family:Microsoft YaHei; margin: 0; padding:0; border-radius: 0;}
+	.input_list li input.verification {float:left; width:1.56rem;}
+	.input_list li a {display: inline; float:left; width: 1.23rem; height: 0.42rem; line-height: 0.42rem; background: #766151; color: #fff; text-align: center; font-size:0.18rem;}
+	::-webkit-input-placeholder {color: #766151;} 
+	:-moz-placeholder {color: #766151;} 
+	::-moz-placeholder {color: #766151; }
+	:-ms-input-placeholder {color: #766151;} 
+	.input_list li.radio input{position: absolute; opacity: 0; top:-10rem;}
+	.radio label{display: block; font-size:.24rem; color: #766151; float: left; margin-right:0.3rem; height: 0.35rem}
+	.radio label span {display: inline-block; width: .19rem; height: .19rem;border:1px solid #766151; border-radius: 50%; margin:0 0.08rem -0.05rem 0;}
+	.radio label span i {display: none;}
+	.radio label.slt span i {display: block; width: 0.13rem; height: 0.13rem; background: #766151; margin: 0.03rem; border-radius: 50%}
+	.input_tips {border-top:1px solid #e5ddc9;margin: 0 auto; width: 4.5rem; text-align: center; color: #766151; font-size: 0.18rem; line-height: 0.3rem; padding-top:0.05rem; position: relative;}
+	.popup .btn {margin-top:-0.3rem;}
+
+	.succeed_gift {height: 1.2rem; padding:0.3rem 0 0.1rem; width: 4.4rem; margin:0 auto;border-bottom: 0.01rem solid #fff;}
+	.succeed_gift li {width:1.1rem; float: left; text-align: center;}
+	.succeed_gift li img{display: block; width: 0.68rem; height: 0.68rem; border:0.01rem solid #82795d; margin: 0 auto;}
+	.succeed_gift li span {display: block; padding: 0.1rem 0 0; line-height: 0.18rem; font-size:0.16rem; color: #766151;}
+	.invite .input_list {width:4.4rem; height: 1.3rem; margin-top:0;}
+	.invite .input_list li {height: 0.6rem;}
+	.invite p{font-size:0.2rem; color: #666666;margin: 0 auto; width: 4.6rem; line-height: 0.26rem;padding:0.2rem 0;}
+	.topline{border-top:0.01rem solid #e5ddc9; padding:0.2rem 0 0;width: 4.4rem; margin:0 auto;}
+
+	.succeed ul {margin: 0.15rem auto 0; width: 4.80rem; height: 1.2rem; border-bottom:0.01rem solid #fff;}
+	.succeed ul li{float:left; width:50%;font-size:0.2rem; color: #766151; padding:0; line-height: 0.36rem; text-indent:0.2rem;}
+	.succeed p{font-size:0.2rem; color: #666666;margin: 0 auto; width: 4.6rem; line-height: 0.26rem; padding:0.05rem; position: relative;}
+	.succeed p.topline{border-top:0.01rem solid #e5ddc9; padding-top:0.2rem;}
+	.succeed p a {color:#ccbd8f;}
+	.succeed p a:hover {color:#fff;}
+	.succeed img {display: block; margin:0 auto; width: 1.13rem;}
+	.share_btn {display:block; width: 1.03rem; height: 0.44rem; overflow: hidden; text-indent: -99999rem; background-position: -5.36rem -5.09rem; margin:0 auto;}
+	
+	.video_player_mask {z-index:10011;background:#000;display:none;width:100%;height:100%;position:fixed;top:0;left:0;}
+	.video_player{margin:20% 0; width: 100%; height:80%;}
+	.video_close{font:700 24px/32px "Helvetica Neue",Helvetica,STHeiTi,sans-serif;width:32px;height:32px;background:#000;color:#869f22;position:fixed;right:2%;top:2%;z-index:10012;text-align:center;display:none;}
+	.gift_popup {position: fixed; width: 5.28rem; height: 7.75rem; margin:-3.88rem -2.64rem; top: 50%; left: 50%;}
+	.gift_popup h3 {padding:0.5rem 0 0; margin-bottom: 0; line-height: 0.4rem; font-size: 0.28rem; text-align: center; color: #000;}
+	.mygift {height:4.4rem; margin:0 0.1rem; overflow-y:auto;}
+	.mygift div {width:4.62rem; margin:0.15rem auto 0; background: #e1dac8; padding-top: 0.1rem;}
+	.mygift h4 {width:3.62rem; margin:0 auto 0.14rem; color: #766151; height: 0.34rem; line-height: 0.34rem; text-align: center;font-size:0.18rem;background-image:linear-gradient(-90deg,#e1dac8,#f5f2d6,#e1dac8);}
+	.mygift ul {display: flex;flex-wrap: wrap;}
+	.mygift li {width:1.54rem; height: 1.7rem; text-align: center; color: #766151; font-size: 0.18rem;}
+	.mygift li img{display:block;width:0.68rem; height: 0.68rem;border:1px solid #82795d; margin: 0 auto 0.1rem;}
+	@media all and (orientation : landscape) { 
+	.popup {position: absolute; margin-top:0;}
+	} 
+	.mygift::-webkit-scrollbar-track {
+	 background-color:#1e1e1e;
+	 -webkit-border-radius: 2px;
+	 -moz-border-radius: 2px;
+	 border-radius:2px;
+	 border:1px solid #86520e;
+	}
+	 .mygift::-webkit-scrollbar-thumb {
+	 background-color: #b6a57e;
+	 -webkit-border-radius: 2px;
+	 -moz-border-radius: 2px;
+	 border-radius:2px;border:1px solid #86520e;
+	}
+	.mygift::-webkit-scrollbar {
+	 width: 4px;
+	}
+
+	.user_info h3 {text-align: left; margin:0 0.4rem; font-size: 0.18rem; line-height: 0.28rem; padding-bottom: 0.1rem; border-bottom: 0.01rem solid #fff;}
+	.user_info h3 strong {color:#e50404;}
+	.user_info select {float:left;width: 1.29rem; height: 0.36rem; border:0.01rem solid #766151; color: #766151; background: #f8f6f1; font-size:0.18rem; text-indent: 0.05rem;font-family:Microsoft YaHei; margin: 0 0.23rem 0 0; padding:0;}
+	.user_info .input_list {height: 3.55rem; border:none; margin:0 auto; border-top:0.01rem solid #e5ddc9; padding:0.1rem 0.19rem 0;}
+	.user_info .input_list li {height: 0.51rem;}
+	.submit_btn {display:block; width: 1.58rem; height: .5rem; overflow: hidden; text-indent: -99999rem; background-position: -5.36rem -4.5rem; margin: 0 auto;}
+
+	.winning {height: 3.95rem;}
+	.winning h3 {padding:.80rem 0 .20rem 2.00rem; text-align: left;}
+	.winning h3 i{display: block; width:1.21rem; height: 1.21rem; background-position: -5.36rem -3.11rem; position: absolute; top: .68rem; left: .60rem;}
+	.winning ul{height: 1.40rem;border-bottom:. 1rem solid #fff; margin: 0 .30rem; padding:0 0 0 1.60rem;}
+	.winning li {height: 1.28rem; color: #766151; font-size: .18rem; float: left;}
+	.winning li img{display:block;width:1.28rem; height: 1.28rem;float: left;}
+	.winning li span{display: block; float: left; width: 1.50rem; line-height: 0.4rem; padding-left:0.20rem;}
+	.winning p{border-top.:1rem solid #e5ddc9;margin: 0 .30rem; font-size: .18rem; color: #766151; text-align: center; line-height: .40rem;}
+	.tips {height: 3.00rem; position: relative;}
+	.tips h3 {padding:.80rem 0 .50rem 1.60rem; text-align: left; margin: 0 .30rem; border-bottom.:1rem solid #fff;}
+	.tips h3 i{display: block; width:1.21rem; height: 1.22rem; background-position: -6.79rem -3.12rem; position: absolute; top: .67rem; left: .47rem;}
+	.tips p{border-top.:1rem solid #e5ddc9;margin: 0 .30rem .10rem; font-size: .18rem; color: #766151; text-align: center; line-height: .40rem;}
+	.popup_end {height: .20rem; width: 100%; background-position: 0 bottom; overflow: hidden; position: absolute; bottom: 0; left: 0;}
+    .sprbg1 {background: url("../../game.gtimg.cn/images/slg/act/a20170613subscribe/sprbg.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/sprbg.png*/ no-repeat;}
+    .share_btn1 {display:block; width: 103px; height: 44px; overflow: hidden; text-indent: -99999px; background-position: -649px -493px; position: absolute; top: 84%; right: 33%;}
+#listPage {text-align: center; font-size: 0.24rem;padding-bottom:0.2rem;}
+#listPage a{margin:0 0.05rem;}
+</style>
+
+<script type="text/javascript">
+
+//(function(){var a=navigator.userAgent;if(-1!=a.indexOf("iPhone")||-1!=a.indexOf("iPad")||-1!=a.indexOf("iPod")||-1!=a.indexOf("Android")){var a=document.referrer,b={"http://slg.qq.com/m/baidu.com":"seo_baidu","http://slg.qq.com/m/sogou.com":"seo_sogou","http://slg.qq.com/m/sm.cn":"seo_sm","http://slg.qq.com/m/so.com":"seo_360","http://slg.qq.com/m/bing.com":"seo_bing","http://slg.qq.com/m/google.com":"seo_google"},c;for(c in b)if(-1!=a.indexOf(c)){a=b[c];if(window.sessionStorage)sessionStorage.setItem("channel",a);else{var d=d||0,b="";0!=d&&(b=new Date,b.setTime(b.getTime()+1E3*d),b="; expires="+b.toGMTString());document.cookie="channel="+escape(a)+b+"; path=/"}break}self.location="index.htm"/*tpa=http://slg.qq.com/m/*/}})(); 
+</script>
+</head>
+
+<body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
+	<header>
+		<h1><a href="main.shtml.htm" tppabs="http://slg.qq.com/m/main.shtml" onclick="PTTSendClick('header','logo','logo');">篮球大师<em>篮球首款战争策略手游</em></a></h1>
+		<a href="javascript:;" class="spr mygift_btn" onclick="PTTSendClick('header','mygift','我的礼包');">我的礼包</a>
+		<a href="main.shtml.htm" tppabs="http://slg.qq.com/m/main.shtml" class="spr home_btn" onclick="PTTSendClick('header','home','进入官网');">进入官网</a>
+	</header>
+	
+	<section class="s1">
+		
+	</section>
+	<section class="s2">
+		
+	</section>
+	
+	<section class="s5">
+	<h1>邀请澈哥哥</h1>	
+	</section>
+	<section class="s6">
+	<div id="slider">
+	<ul class="slides clearfix">
+		<li><img class="responsive" src="img/1.jpg"></li>
+		<li><img class="responsive" src="img/2.jpg"></li>
+		<li><img class="responsive" src="img/3.jpg"></li>
+		<li><img class="responsive" src="img/4.jpg"></li>
+	</ul>
+	<ul class="controls">
+		<li><img src="img/prev.png" alt="previous"></li>
+		<li><img src="img/next.png" alt="next"></li>
+	</ul>
+	<ul class="pagination">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="dist/easySlider.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#slider").easySlider( {
+			slideSpeed: "5",
+			paginationSpacing: "15px",
+			paginationDiameter: "12px",
+			paginationPositionFromBottom: "20px",
+			slidesClass: ".slides",
+			controlsClass: ".controls",
+			paginationClass: ".pagination"					
+		});
+	});
+</script>
+	</section>
+	<section class="s7">
+		
+	</section>
+	
+	<div class="mask"></div>
+	<div id="login_slt" class="login_slt sprbg">
+		<a href="javascript:;" class="close_btn">关闭</a>
+		<h3>请选择你登录的游戏平台</h3>
+		<a href="javascript:;" class="qq">QQ登录</a>
+		<a href="javascript:;" class="wx">微信登录</a>
+	</div>
+	<div class="sprbg popup invite" id="subscribe_popup">
+		<a href="javascript:;" class="close_btn">关闭</a>
+		<h3>恭喜您预约成功！</h3>
+		<ul class="succeed_gift">
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" alt="">
+				<span>郭嘉将魂*10</span>
+			</li>
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" alt="">
+				<span>紫色将魂*20</span>
+			</li>
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" alt="">
+				<span>50000粮草*8</span>
+			</li>
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">
+				<span>极品兵书*18</span>
+			</li>
+		</ul>
+		<p class="topline">填写手机号码和好友邀请码共赢预约礼包</p>
+		<ul class="input_list">
+			<li>
+				<strong>手机号:</strong>
+				<input type="type" class="build_yourphone" value="" placeholder="输入您的手机号">
+			</li>
+			<li>
+				<strong>邀请码:</strong>
+				<input type="type" id="inviteCode" value="" placeholder="这里显示邀请码">
+			</li>
+		</ul>
+		<div class="topline"></div>
+		<a href="javascript:;" class="sprbg lijiyuyuez submit_btn">确定</a>
+	</div>
+	<div class="sprbg popup succeed" id="succeed">
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3>恭喜您预约成功！</h3>
+		<ul>
+            <li>平台：<span class="yypt"></span></li>
+            <li>昵称：<span class="yync"></span></li>
+            <li id="shoujihao">手机号：<span class="yysjh"></span></li>
+            <li>邀请码：<span class="yyyqm"></span></li>
+		</ul>
+		<p class="topline">将您的邀请码发送给好友，好友预约成功后领取更多奖励</p>
+		<p>方法1：将你的邀请码告诉好友，让好友在预约时填写即可</p>
+        <div class="code">
+            <input type="text" name="" value="" class="cdkid" readonly="readonly" style="background-color: #ffffff;border-color: #ffffff;">
+            <span>长按选择复制</span>
+        </div>
+        <p>方法2：点击分享，将邀请码分享给更多好友</p>
+        <a href="javascript:void(0);" class="sprbg share_btn" onclick="PTTSendClick('popup','share','分享按钮');">分享</a>
+	</div>
+
+
+	<div id="videoPlayer_box" class="video_player_mask">
+		<div id="videoPlayer" class="video_player"></div>
+	</div>
+	<i id="videoClose" class="video_close">&times;</i>
+	<div class="share_tips"><p>请点击右上角分享给好友，<br>共赴乱世，成就霸业！</p></div>
+	<div class="sprbg gift_popup popup" id="gift_popup">
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3>我的礼包</h3>
+		<div class="mygift">
+			<div class="mygift1">
+				<h4>预约礼包</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" alt="">郭嘉将魂*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" alt="">紫色将魂*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" alt="">50000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*18</li>
+				</ul>
+			</div>
+			<div class="mygift2">
+				<h4><span id="wanzhang">300</span>万玩家预约达成累计礼包</h4>
+				<ul class="q">
+					
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">500君主经验*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">10,000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">10,000木材*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*18</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">1,600铁矿*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">400宝石*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" alt="">蚩尤号角*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" alt="">后羿之箭*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">香烛*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" alt="">普通招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" alt="">高级招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">郭嘉*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img28.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img28.jpg" alt="">武将技能书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*20</li>
+				</ul>
+			</div>
+			<div class="mygift3">
+				<h4>邀请好友达成累计礼包</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">1000君主经验*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">50,000木材*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">50,000粮草*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img4.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img4.jpg" alt="">君主技能重置*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">8,000铁矿*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">2,000宝石*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" alt="">随机迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">1小时加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img9.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img9.jpg" alt="">高级迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img10.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img10.jpg" alt="">2小时士兵<br>训练加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img11.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img11.jpg" alt="">2小时伤兵<br>恢复加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img12.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img12.jpg" alt="">官网预约<br>专属铭牌*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img13.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img13.jpg" alt="">2小时科技<br>研究加速*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img14.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img14.jpg" alt="">2小时建筑<br>加速*10</li>
+				</ul>
+			</div>
+			<div class="mygift4">
+				<h4>预约抽奖礼品</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">500君主经验*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">10,000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">10,000木材*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*18</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">1,600铁矿*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">400宝石*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" alt="">蚩尤号角*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" alt="">后羿之箭*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">香烛*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" alt="">随机迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">1小时加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" alt="">普通招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" alt="">高级招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img21.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img21.jpg" alt="">Apple Watch<br>Series 2</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img22.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img22.jpg" alt="">京东100元购物卡</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img23.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img23.jpg" alt="">好莱坞会员卡</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img24.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img24.jpg" alt="">IPad Pro 9.7英寸</li>
+				</ul>
+				<div id="listPage"></div>
+			</div>
+
+			
+		</div>
+	</div>
+	<div class="sprbg popup user_info" id="user_info">
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><strong>特别提醒：</strong>为保证实物奖励能准确邮寄，下面所有项目务必详细填写！</h3>
+        <form id="form_personInfo_374583" name="form_personInfo_374583">
+		<ul class="input_list">
+
+            <li style="display:none;" id="tr_package_name_374583">
+
+                <span class="star">*</span> 所或实物：
+
+            </li>
+            <li style="display:none;" id="tr_package_value_374583">
+
+                <select name="sPackageInfo" id="package_374583"></select>
+
+            </li>
+			<li>
+				<strong>姓名:</strong>
+				<input type="type" name="sName">
+			</li>
+			<li class="radio" id="gender">
+				<strong>性别:</strong>
+				<input type="radio" id="man" value="male" name="sGender" onclick="_radio(0,'gender');"><label for="man" onclick="_radio(0,'gender');"><span><i></i></span>男</label>
+				<input type="radio" id="woman" value="female" name="sGender" onclick="_radio(1,'gender');"><label for="woman" onclick="_radio(1,'gender');"><span><i></i></span>女</label>
+			</li>
+			<li>
+				<strong>身份证号码:</strong>
+				<input type="type" name="sIdentity">
+			</li>
+			<li>
+				<strong>手机号码:</strong>
+				<input type="type" name="sMobile">
+			</li>
+			<li>
+				<strong>所在城市:</strong>
+				<select name="sProvince" id="province_374583">
+				</select>
+				<select name="sCity" id="city_374583">
+				</select>
+			</li>
+			<li>
+				<strong>邮政编码:</strong>
+				<input type="type" name="sPostCode">
+			</li>
+			<li>
+				<strong>详细地址:</strong>
+				<input type="type" name="sAddress">
+			</li>
+		</ul>
+		<a href="javascript:void(0);" id="personInfoContentBtn_374583" class="sprbg submit_btn">确定</a>
+        </form>
+	</div>	
+	<div class="sprbg popup winning" id="winning"><!--中奖-->
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><i class="sprbg"></i>恭喜您，抽奖获得:</h3>
+		<ul class="winning_gift">
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg" alt="">
+				<span>50000粮草*8</span>
+				<span>50000粮草*8</span>
+				<span>50000粮草*8</span>
+			</li>
+		</ul>
+		<p>游戏不删档开启后，来官网领取礼包。</p>
+		<a href="javascript:;" class="sprbg submit_btn">确定</a>
+		<div class="sprbg popup_end"></div>
+	</div>	
+	<div class="sprbg popup tips" id="tips"><!--alert-->
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><i class="sprbg"></i>这里显示对应要提示的语句，请开发同学输出</h3>
+		<p></p>
+		<a href="javascript:void(0);" class="sprbg submit_btn">确定</a>
+		<div class="sprbg popup_end"></div>
+	</div>
+
+	<!--<script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>-->
+    <script src="../../pub.idqqimg.com/qqmobile/qqapi.js-_bid=152" tppabs="http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/js/mobile_build/util/zepto.js" tppabs="http://ossweb-img.qq.com/images/js/mobile_build/util/zepto.js"  ></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/js/mobile_build/milo.js" tppabs="http://ossweb-img.qq.com/images/js/mobile_build/milo.js" ></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/ams/atm/reporting.js" tppabs="http://ossweb-img.qq.com/images/ams/atm/reporting.js"></script>
+    <script src="../../ossweb-img.qq.com/images/js/loadjs/loadjs.js" tppabs="http://ossweb-img.qq.com/images/js/loadjs/loadjs.js"></script>
+    <script src="../../ossweb-img.qq.com/images/data/mreport.js" tppabs="http://ossweb-img.qq.com/images/data/mreport.js"></script>
+	<script type="text/javascript" src="../../ossweb-img.qq.com/images/js/motion.js" tppabs="http://ossweb-img.qq.com/images/js/motion.js"></script>
+	<script src="../../imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js" tppabs="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js"></script>
+	<script src="../../ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js" tppabs="http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+	<script src="../act/a20170613subscribe/m/lottery.min.js" tppabs="http://slg.qq.com/act/a20170613subscribe/m/lottery.min.js"></script>
+	<script type="text/javascript">
+	if(typeof(pgvMain)=='function')pgvMain();
+	//点击开始抽奖 通知js  flash->js
+//开发获得抽奖结果 通知flash开始播放效果 js->flash
+
+    var waitTime = 60;
+    var dj = null;
+    var orderflag = 1;
+    var appid = sPlatId = sArea = "";
+
+    var waitTime = 60;
+    var dj = null;
+
+    var wx_appid = 'wxce0a39d8e25a6763';
+    var qq_appid = '1105371489';
+    var serverType = 'slg';
+    var giftid = 0;
+    var boot_people_count = 0; //游戏共已有多少人预约
+    var invite_people_count =0; //用户已拉多少人
+
+    var myinviteCode = ''; // 我的邀请码
+    var inviteCode = milo.request('inviteCode'); // 接受的邀请码
+    var sServiceType = 'slg';
+    var btnFlag = 1,yuyueFlag = 0;
+    var zhongDuan = 1;
+    var spid = 0;
+    var isLogin = 0;
+    var listgift = {
+        '611137':{
+            'name':'<span>IPad Pro 9.7英寸</span>',
+            'num' :'10',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg*/
+        },
+        '613824':{
+            'name':'<span>京东100元卡</span>',
+            'num' :'2',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg*/
+        },
+        '611163':{
+            'name':'<span>Apple Watch Series 2</span>',
+            'num' :'1',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg*/
+        },
+        '611167':{
+            'name':'<span>好莱坞会员卡</span>',
+            'num' :'3',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg*/
+        },
+        '611170':{
+            'name':'<span>500君主经验*8</span><span>10000木材*8</span><span>10000粮草*8</span>',//10000*8粮草
+            'num' :'5',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg*/
+        },
+        '611176':{
+            'name':'<span>5分钟加速*18</span><span>1600铁矿*8</span><span>400宝石*8</span>',//400*8宝石
+            'num' :'6',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg*/
+        },
+        '611180':{
+            'name':'<span>随机迁城*1</span><span>1小时加速*5</span><span>5分钟加速*20</span>',//5分钟加速*20 没有图片
+            'num' :'7',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg*/
+        },
+        '611182':{
+            'name':'<span>蚩尤号角*28</span><span>后羿之箭*28</span><span>香烛*8</span>',
+            'num' :'8',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg*/
+        },
+        '611183':{
+            'name':'<span>高级招募券*3</span><span>普通招募券*3</span><span>极品兵书*10</span>',
+            'num' :'9',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg*/
+        },
+        '611184':{
+            'name':'<span>10000木材*2</span><span>10000粮草*2</span>',//谢谢参与 没有图片
+            'num' :'4',
+            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg*/
+        }
+    };
+
+    var UA = navigator.userAgent;
+    var REGEXP_IOS_QQ = /(iPad|iPhone|iPod).*? QQ\/([\d\.]+)/;
+    var REGEXP_ANDROID_QQ = /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/;
+
+    var ua = window.navigator.userAgent.toLowerCase();
+
+    //开始抽奖flash->js
+    function callJsToStart() {
+        if (isLogin == '1') {
+            if (yuyueFlag == '1') {
+                amsCfg_374467.sData = {sPlatId: spid, 'appid': appid};
+
+               // alert(JSON.stringify(amsCfg_374467.sData));
+
+                amsSubmit(113923, 374467);
+            } else {
+                hideStyle();
+                alert('请先预约再来抽奖');
+            }
+        } else {
+            hideStyle();
+            showPopup('login_slt');
+
+        }
+//测试
+    }
+
+    function hideStyle(){
+        $('#swfcontent_start').addClass('swfcontent_start');
+        $('#swfcontent_start').removeClass('swfcontent_disable');
+
+    }
+
+function callFlashToRoll(id){
+	//通知转盘转到对应的中奖产品的id （序号从0,1,2.....，0是指针初始指示的位置，沿着顺时针的方向递增）
+	if(SWFOBJ)SWFOBJ.stopRoll(id);
+}
+    //3、flash动画完成通知js flash->js
+    function callJsToComplete(){
+        //alert('恭喜你获得大奖哟！！');
+        $('.winning_gift li').html('<img src="'+listgift[giftid]['img']+'" alt="">'+listgift[giftid]['name']);
+        //showDialog.show({id:'winning'});
+        showPopup('winning');
+        $('#winning .submit_btn').off();
+        $('#winning .submit_btn').on('click',function(){
+
+            if(giftid == '611137' || giftid == '613824' || giftid == '611163' || giftid == '611167'){
+                hiddenPopup();
+                amsCfg_374583.sData = {iShow: 1,'appid':appid};
+                amsSubmit(113923,374583);
+
+                // showPopup('user_info');
+
+            }else{
+                hiddenPopup();
+            }
+
+        });
+    }
+	//初始化抽奖对象的SWFOBJ 
+	//转盘的中心点坐标为（0,0））
+var SWFOBJ= new mo.Lottery({
+		// 'lighturl':'../../ossweb-img.qq.com/images/motion/lottery/light.png'/*tpa=http://ossweb-img.qq.com/images/motion/lottery/light.png*/,
+		'total':10,
+		'width':6.17,
+		'height':6.72,
+		'sbtnx':1.75,
+		'sbtny':2.69,
+		'sbtnw':2.75,
+		'sbtnh':1.27,
+		'boxw':1.22,
+		'boxh':1.77,
+		'position':"http://slg.qq.com/m/0.34_0.47,1.77_0.47,3.21_0.47,4.64_0.47,4.64_2.46,4.64_4.45,3.21_4.45,1.77_4.45,0.34_4.55,0.34_2.46",
+		'contentId' : 'swfcontent',
+		'onClickRollEvent' : callJsToStart,
+		'onCompleteRollEvent':callJsToComplete
+	});
+
+	var _scrool = function (obj) {
+        this.rollBox = $(obj.rollBox);
+        this.rollList = $(obj.rollBox+' ul');
+        this.prev = $(obj.prev);
+        this.next = $(obj.next);
+        this.init();
+    }
+    _scrool.prototype={
+    	startRoll:function(a){//alert(this.rollBox.scrollLeft());
+    		var t=this.rollBox.scrollLeft();
+    		//alert(this.rollBox.width())
+    		this.rollBox.scrollLeft(t+(a*100))
+    		
+    		//this.rollBox.animate({scrollLeft:t+(a*200)},100)
+    	},
+    	init:function(){
+    		var slef=this;
+    		slef.prev.on("click",function(){
+	        	slef.startRoll(-1);
+	        });
+    		slef.next.on("click",function(){
+	        	slef.startRoll(1);
+	        });
+    	}
+    }
+    var gift1=new _scrool({
+    	rollBox:'.act1_gift',
+    	prev:'.gift1prev',
+    	next:'.gift1next'
+
+	}),
+	gift1=new _scrool({
+    	rollBox:'.act2_gift',
+    	prev:'.gift2prev',
+    	next:'.gift2next'
+
+	});
+	var showPopup=function(id){
+		hiddenPopup();
+		$('#'+id).show();
+		$('.mask').show();
+	},
+	hiddenPopup=function(){
+		$('#login_slt').hide();
+		$('.popup').hide();
+		$('.mask').hide();
+	}
+	//视频
+	var showVideo=function(vid){
+		var video = new tvp.VideoInfo();
+		video.setVid(vid);
+		var player =new tvp.Player();
+		player.create({
+			width:"100%",
+			height:"100%",
+			video:video,
+			modId:"videoPlayer",
+			isHtml5UseAirPlay:true,
+			isHtml5UseFakeFullScreen:true,
+			autoplay:true
+		});
+		$('#videoPlayer_box').show();
+		$('#videoClose').show();
+	};
+	$('#videoClose').on("click",function(){
+		$('#videoPlayer_box').hide();
+		$('#videoClose').hide();
+		$('#videoPlayer').html(" ");
+	});
+	$('.video_btn').on('touchstart',function(){showVideo('n0522ooico0');PTTSendClick('kv','video','kv视频');})
+	$('.close_btn').on('touchstart',function(){hiddenPopup();});
+	$('.share_btn,.invite_btn,.share_btn1').on('touchstart',function(){$('.share_tips').show();});
+	$('.share_tips').on('touchstart',function(){$('.share_tips').hide();});
+	function _radio(n,id){
+		var radio=document.getElementById(id).getElementsByTagName("label");
+		if(n==0){
+			radio[0].className='slt';
+			radio[1].className='';
+		}
+		else{
+			radio[1].className='slt';
+			radio[0].className='';
+		}
+	}
+    $('#shoujihao').hide();
+
+	window.tab=new mo.Slide({//游戏特色
+		target: $('#featureRoll li'),
+		direction: 'x',
+		prevBtn:$('.feature_prev'),
+		nextBtn:$('.feature_next'),
+		//circle: true,
+		controller:$('.feature_hd li'),
+		autoPlay: false,
+		event:{
+			'change': function(){
+				PTTSendClick('feature','tab'+this.curPage,'游戏特色'+this.curPage)
+			}
+		}
+	});
+	window.onresize=function(){$('#featureRoll').css('width',window.tab.target.length*100+'%')}
+
+	//$('.bottom_nav').html((navigator.userAgent.indexOf("QQBrowser")>-1)?'<li class="qq"><a href="http://buluo.qq.com/p/barindex.html?bid=365240" target="_blnak"><i class="spr"></i><span>手Q兴趣部落搜索：乱世王者<br>看看同好玩家都在聊些啥</span></a></li>':'<li class="wx"><a href="javascript:void(0);" target="_blnak"><i class="spr"></i><span>微信搜索：lswz<br>关注微信有惊喜</span></a></li>');
+
+function orient() {//alert($(window).scrollTop())
+	if (window.orientation == 90 || window.orientation == -90) {
+		$('.popup').css('top',$(window).scrollTop()+'px');
+	}
+	else{
+		$('.popup').css('top','50%');
+	}
+}
+$(function(){orient();});
+$(window).bind( 'orientationchange', function(e){orient();});
+    //判断微信客户端
+    function isWeiXin(){
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //判断QQ客户端
+    function isQQ(){
+        var chkRes = false;
+        mqq.device.isMobileQQ(function(result){
+            chkRes = result;
+        });
+        return chkRes;
+    }
+
+    //判断IOS
+    function isIos(){
+        return /iphone|ipod|ipad/i.test(ua);
+    }
+    //判断安卓
+    function isAndroid(){
+        return /android/i.test(ua);
+    }
+    //判断是安卓还是ios
+    sPlatId = isIos() ? '0' : (isAndroid() ? '1' : '');
+
+    if (isWeiXin()) {
+        appid = wx_appid;
+        sArea = 1;
+    } else {
+        appid = qq_appid;
+        sArea = 2;
+    }
+
+    if(isWeiXin()){
+        $('.yincangq').hide();
+    }else if(isQQ()){
+        $('.yincangw').hide();
+    }
+
+    function shareFun(strLink,strTitle,strDesc,strImg,strAct){
+        //分享
+        if(isWeiXin()){
+            //微信分享
+            need("biz.wxclient", function(WXClient){
+                //微信客户初始化成功后，返回wx对象
+                WXClient.init({"sAppId":"wxfeb5a65212da517c"},function(wx){
+                    //分享用的信息对象
+                    var shareObj={
+                        title: strTitle,
+                        desc: strDesc,
+                        link: strLink,
+                        imgUrl: strImg,
+                        actName:strAct,//点击流命名
+                        success: function (sres) {
+                        },
+                        cancel: function (sres) {
+                        }
+                    }
+                    //为发送给好友、分享到朋友圈、分享到QQ、分享到微博同时绑定分享事件
+                    WXClient.shareAll(shareObj);
+                });
+            });
+
+        }else{
+            need("biz.mobileclient", function(mClient){
+                var obj = {
+                    wx_appid : 'wx8c3943652bd29eeb', //微信appid
+                    title: strTitle,// 分享标题，默认为活动页面标题（可手动调整）
+                    desc: strDesc, //分享活动简介
+                    link: strLink, //分享链接
+                    imgUrl: strImg, //分享后朋友看到的图标
+                    WXtrigger: function (res) { //微信点击事件回调
+
+                    },
+                    WXsuccess: function (res) { //微信分享成功回调
+
+                    },
+                    WXcancel: function (res) { //微信分享取消回调
+
+                    },
+                    WXfail: function (res) { //微信分享失败回调
+
+                    }
+                };
+                mClient.shareAll(obj);
+            });
+        }
+    }
+    var homePage = location.protocol+'//slg.qq.com/m/index.htm';
+    var strTitle = '预约就送1888元大礼包-王者策略版-乱世王者';
+    var strDesc = '进入群雄乱世，成就王者大业，踏上帝王之路！';
+    var strImg = location.protocol+'//game.gtimg.cn/images/slg/m/web201704/share_logo.jpg';
+    var strAct = 'a20170613subscribe';
+    shareFun(homePage,strTitle,strDesc,strImg,strAct);
+    //微信授权
+    if(inviteCode == '' || inviteCode == null || inviteCode == undefined ){
+        var urls = homePage+'?sServiceType=slg&appid=wxce0a39d8e25a6763&acctype=wx';
+    }else{
+        var urls = homePage+'?sServiceType=slg&appid=wxce0a39d8e25a6763&acctype=wx&inviteCode='+inviteCode;
+    }
+
+    var auth_url = window.location.protocol+'//open.weixin.qq.com/connect/oauth2/authorize?appid='+wx_appid+'&redirect_uri='+encodeURIComponent(urls)+'&response_type=code&scope=snsapi_userinfo&state=state#wechat_redirect';
+    var code = milo.request('code');
+    if(isWeiXin() && code == ''){
+        window.location.href = auth_url;
+    }else {
+
+        milo.ready(function () {
+            function showInvite(index, invite_people_count) {
+                $(".act2_gift ul").find("li").each(function () {
+                    if (parseInt($(this).index()) <= index) {
+                        $(this).addClass("open");
+                    }
+                });
+            }
+
+            function showYuyue(index, yuyue_people_count) {
+
+                $(".act1_gift ul").find("li").each(function () {
+                    if (($(this).index()) <= index) {
+                        $(this).addClass("open");
+                    }
+                });
+            }
+
+            function showMyGifts(invite_people_count, yuyue_people_count) {
+                $(".mygift1,.mygift2,.mygift3,.mygift4").hide();
+                if (yuyueFlag != 0) {
+                    $(".mygift1").show();
+
+                    var obj3 = $(".mygift3").find(".q");
+                    obj3.find("li").hide();
+                    if (invite_people_count >= 1) {
+                        $(".mygift3").show();
+                        obj3.find("li:eq(0)").show();
+                        obj3.find("li:eq(1)").show();
+                        obj3.find("li:eq(2)").show();
+                    }
+                    if (invite_people_count >= 3) {
+                        obj3.find("li:eq(3)").show();
+                        obj3.find("li:eq(4)").show();
+                        obj3.find("li:eq(5)").show();
+                    }
+                    if (invite_people_count >= 7) {
+                        obj3.find("li:eq(6)").show();
+                        obj3.find("li:eq(7)").show();
+                        obj3.find("li:eq(8)").show();
+                    }
+                    if (invite_people_count >= 12) {
+                        obj3.find("li:eq(9)").show();
+                        obj3.find("li:eq(10)").show();
+                        obj3.find("li:eq(11)").show();
+                    }
+                    if (invite_people_count >= 20) {
+                        obj3.find("li:eq(12)").show();
+                        obj3.find("li:eq(13)").show();
+                        obj3.find("li:eq(14)").show();
+                    }
+
+                    var obj2 = $(".mygift2").find(".q");
+                    obj2.find("li").hide();
+                    if (yuyue_people_count >= 1000000) {
+                        $('#wanzhang').text('100');
+                        $(".mygift2").show();
+                        obj2.find("li:eq(0)").show();
+                        obj2.find("li:eq(1)").show();
+                        obj2.find("li:eq(2)").show();
+                    }
+                    if (yuyue_people_count >= 1500000) {
+                        $('#wanzhang').text('150');
+                        obj2.find("li:eq(3)").show();
+                        obj2.find("li:eq(4)").show();
+                        obj2.find("li:eq(5)").show();
+                    }
+                    if (yuyue_people_count >= 1800000) {
+                        $('#wanzhang').text('180');
+                        obj2.find("li:eq(6)").show();
+                        obj2.find("li:eq(7)").show();
+                        obj2.find("li:eq(8)").show();
+                    }
+                    if (yuyue_people_count >= 2000000) {
+                        $('#wanzhang').text('200');
+                        obj2.find("li:eq(9)").show();
+                        obj2.find("li:eq(10)").show();
+                        obj2.find("li:eq(11)").show();
+                    }
+                    if (yuyue_people_count >= 3000000) {
+                        $('#wanzhang').text('300');
+                        obj2.find("li:eq(12)").show();
+                        obj2.find("li:eq(13)").show();
+                        obj2.find("li:eq(14)").show();
+                    }
+                }
+            }
+
+            //方法整合 ，根据游戏已经预约人数，及用户已经拉取多少人，调节节点相应显示
+            function countDeal(invite_people_count, yuyue_people_count) {
+                // alert(invite_people_count);
+                if (invite_people_count >= 1 && invite_people_count < 3) {
+                    showInvite(0, invite_people_count);
+                }
+                else if (invite_people_count >= 3 && invite_people_count < 7) {
+                    showInvite(1, invite_people_count);
+                }
+                else if (invite_people_count >= 7 && invite_people_count < 12) {
+                    showInvite(2, invite_people_count);
+                }
+                else if (invite_people_count >= 12 && invite_people_count < 20) {
+                    showInvite(3, invite_people_count);
+                }
+                else if (invite_people_count >= 20) {
+                    showInvite(4, invite_people_count);
+                }
+
+                if (yuyue_people_count >= 1000000 && yuyue_people_count < 1500000) {
+                    showYuyue(0, yuyue_people_count);
+                }
+                else if (yuyue_people_count >= 1500000 && yuyue_people_count < 1800000) {
+                    showYuyue(1, yuyue_people_count);
+                }
+                else if (yuyue_people_count >= 1800000 && yuyue_people_count < 2000000) {
+                    showYuyue(2, yuyue_people_count);
+                }
+                else if (yuyue_people_count >= 2000000 && yuyue_people_count < 3000000) {
+                    showYuyue(3, yuyue_people_count);
+                }
+                else if (yuyue_people_count >= 3000000) {
+                    showYuyue(4, yuyue_people_count);
+                }
+
+                var pre = yuyue_people_count / 30000;
+                var line_s1 = 8;
+                var line_s2 = 28;
+                var line_s3 = 47;
+                var line_s4 = 66;
+                var line_s5 = 90;
+
+                if (yuyue_people_count <= 1000000) {
+                    pre = yuyue_people_count * line_s1 / 1000000;
+                }
+                else if (yuyue_people_count <= 1500000) {
+                    pre = (yuyue_people_count - 1000000) * (line_s2 - line_s1) / 500000;
+                    pre = pre + line_s1;
+                }
+                else if (yuyue_people_count <= 1800000) {
+                    pre = (yuyue_people_count - 1500000) * (line_s3 - line_s2) / 300000;
+                    pre = pre + line_s2;
+                }
+                else if (yuyue_people_count <= 2000000) {
+                    pre = (yuyue_people_count - 1800000) * (line_s4 - line_s3) / 200000;
+                    pre = pre + line_s3;
+                }
+                else if (yuyue_people_count < 3000000) {
+                    pre = (yuyue_people_count - 2000000) * (line_s5 - line_s4) / 1000000;
+                    pre = pre + line_s4;
+                }
+
+                if (pre > 100)pre = 100;
+                $(".line2").css("width", pre + "%");
+
+                $(".yqnum").text(invite_people_count);
+                $(".yynum").text(yuyue_people_count);
+
+                showMyGifts(invite_people_count, yuyue_people_count);
+            }
+
+            $("#tologin").on("click", function () {
+                need("biz.login", function (LoginManager) {
+                    LoginManager.checkLogin(function (userinfo) {
+
+                    }, function () {
+                        showPopup("login_slt");
+                    });
+                });
+            });
+
+            // 点击微信登录
+            $(".wx").click(function(){
+                var ua = window.navigator.userAgent.toLowerCase();
+                var friendKey = milo.request("friendKey");
+                if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                    window.location.href=auth_url;
+                }else{
+                    //https://game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90091277&appid=wxce0a39d8e25a6763&url=https%3A%2F%2Fslg.qq.com%2Fm%2Findex.htm#wechat_redirect
+                    //拉取微信的url待定
+                    location.href = location.protocol+"//game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90091277&appid="+wx_appid+"&url="+encodeURIComponent(homePage)+"#wechat_redirect";
+                    //location.href = auth_url;
+                }
+            });
+
+// 点击QQ登录
+            $(".qq").click(function(){
+                var UA = navigator.userAgent;
+                var REGEXP_IOS_QQ = /(iPad|iPhone|iPod).*? QQ\/([\d\.]+)/;
+                var REGEXP_ANDROID_QQ = /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/;
+                
+                homePage = homePage+'?_wv=49957';
+                
+                if(!REGEXP_IOS_QQ.test(UA) && !REGEXP_ANDROID_QQ.test(UA)){
+                    setTimeout(function(){
+                        window.location.href = 'mqqapi://forward/url?url_prefix=' + btoa(homePage)+"&version=1&src_type=web";
+                    },200);
+                }else{
+                    window.location.href=homePage;
+                }
+            });
+
+
+            $("#shdz").on('click', function () {
+                //判断登录
+                need('biz.login', function (LoginManager) {
+                    LoginManager.checkLogin(function (userinfo) {
+                        amsCfg_374583.sData = {iShow: 1, 'appid': appid};
+                        amsSubmit(113923, 374583);
+                    }, function () {
+                        showPopup('login_slt');
+                    });
+                });
+            });
+
+
+            need("biz.login", function (LoginManager) {
+                LoginManager.checkLogin(function (userinfo) {
+                    isLogin = 1;
+                    reportInit(userinfo.uin, userinfo.logtype);
+                    $("#inviteCode").val(inviteCode);
+                    // 取得用户名
+                    if(isWeiXin()) {
+                        milo.cookie.clear("lg_source");
+                        milo.cookie.clear("ams_game_appid");
+                        milo.cookie.clear("lg_source", "http://slg.qq.com/m/.qq.com", "/");
+                        milo.cookie.clear("ams_game_appid","http://slg.qq.com/m/qq.com","/");
+
+                        LoginManager.getUserInfoByWxOpenId({
+                            "openid":milo.cookie.get("openid"),
+                            "access_token":milo.cookie.get("access_token")
+                        },function(wxuser){
+                            nickname = decodeURIComponent(wxuser.nickname)
+                            nickname = nickname.replace(/<span.*?><\/span>/g, '')
+                            $("#login_name").text(nickname);
+                            $(".yync").text(nickname);
+                        });
+
+                    }else{
+                        nickname = LoginManager.getUin();
+
+                        nickname = nickname.replace(/<span.*?><\/span>/g, '')
+                        $("#login_name").text(nickname);
+                        $(".yync").text(nickname);
+                    }
+
+                    amsCfg_371655.sData.appid = appid;
+                    amsSubmit(113923, 371655);
+                }, function () {
+
+                    if(isQQ()){
+                        LoginManager.login();
+                    }else if(isWeiXin()){
+                        window.location.href=auth_url;
+                    }else{
+                        // 未登录
+                        showPopup('login_slt');
+                        amsCfg_371655.sData.appid = qq_appid;
+                        amsSubmit(113923, 371655);
+                    }
+
+                });
+            });
+
+            $(".mygift_btn").on("click", function () {
+                if (yuyueFlag != 0) {
+                    //  alert(appid);
+                	amsCfg_384061.sData.appid = appid;
+                    amsSubmit(113923,384061);
+                } else {
+                    alert("预约后才能查看我的礼包~！");
+                }
+
+            });
+
+            //点击立即预约
+            $('.subscribe_btn1,.ljyuzhang').on('click', function (event) {
+                //判断登录
+                need('biz.login', function (LoginManager) {
+                    LoginManager.checkLogin(function (userinfo) {
+                        // 已登录
+                        if (parseInt(yuyueFlag) > 0) {
+                            showPopup('succeed');
+                        } else {
+                            amsCfg_371733.sData = {
+                                'appid':appid,
+                                'sArea':sArea,
+                                'zhongDuan':zhongDuan
+                            };
+                            amsSubmit(113923,371733);
+                        }
+
+                    }, function () {
+                        // 未登录
+                        showPopup('login_slt');
+                    });
+                });
+                //预约成功 showPopup('dialog_boot_succeed');
+            });
+            // 点击预约（提交）
+            $(".lijiyuyuez").on('click', function () {
+                //判断登录
+                need('biz.login', function (LoginManager) {
+                    LoginManager.checkLogin(function (userinfo) {
+                        // 已登录
+                        if (btnFlag == 1) {
+                            btnFlag = 0;
+
+                            var sMobile  = $('.build_yourphone');
+
+                            if(sMobile.val() == '') {
+
+                            }else{
+                                if(!milo.isMobile(sMobile.val())) {
+                                    btnFlag = 1;
+                                    alert('您输入的手机号码有误');
+                                    return;
+                                }
+                            }
+                            amsCfg_375625.sData = {
+                                'appid':appid,
+                                'sMobile':sMobile.val(),
+                                'inviteCode':$("#inviteCode").val()
+                            };
+                            amsSubmit(113923,375625);
+                        }
+                    }, function () {
+                        btnFlag = 1;
+                        // 未登录
+                        showPopup('login_slt');
+                    });
+                });
+            });
+
+            //页面加载
+            amsCfg_371655 = {
+                "iActivityId": 113923, //活动id
+                "iFlowId": 371655, //流程id
+                "sData": {}, // 传递额外参数
+                "fFlowSubmitEnd": function (res) {
+                    var data = res.jData;
+                    boot_people_count = data.yuYue_num;
+                    yuyueFlag = data.usData;
+                    if (yuyueFlag != 0) {
+                        invite_people_count = data.inviteCount; //用户已拉多少人
+                        myinviteCode = data.myinviteCode;//用户专属邀请码
+
+                       var strLink = homePage+'?inviteCode='+myinviteCode;
+                        shareFun(strLink,strTitle,strDesc,strImg,strAct);
+
+                        $(".yypt").text(data.area == '1' ? '微信' : 'QQ');
+
+                        if(data.mobile != '0'){
+                            $('#shoujihao').show();
+                            $(".yysjh").text(data.mobile);
+                        }else{
+                            $('#shoujihao').hide();
+                        }
+                        $(".yyyqm").text(myinviteCode);
+                        $(".cdkid").val(myinviteCode);
+                        $('#shyu').text(data.shyu);
+                        $('#total').text(data.total);
+                    } else {
+                    }
+
+
+                    //countDeal(2,2000000);
+                    countDeal(invite_people_count, boot_people_count);
+                }
+            };
+            //更新手机和邀请码375625
+            amsCfg_375625 = {
+                "iActivityId": 113923, //活动id
+                "iFlowId":    375625, //流程id
+                "sData" : {}, // 传递额外参数
+                "fFlowSubmitEnd": function(res){
+                    btnFlag = 1;
+                    if(res.jData.code < 0) {
+                        // yuyueFlag = 1;
+                        alert(res.jData.msg);
+                        console.log(res);
+                    }else{
+
+                        hiddenPopup();
+                       var sss = $('.build_yourphone').val();
+                        if(sss != ''){
+                            $('#shoujihao').show();
+                            $(".yysjh").text(sss);
+                        }else{
+                            $('#shoujihao').hide();
+                        }
+                        showPopup('succeed');
+                    }
+                }
+            };
+            //保存预约信息
+            amsCfg_371733 = {
+                "iActivityId": 113923, //活动id
+                "iFlowId": 371733, //流程id
+                "sData": {}, // 传递额外参数
+                "fFlowSubmitEnd": function (res) {
+
+                    btnFlag = 1;
+                    var data = res.jData;
+                    if (res.jData.code < 0) {
+                        alert(res.jData.msg);
+                    } else {
+                        myinviteCode = res.jData.myInviteCode;
+                        yuyueFlag = 1;
+                        //预约成功，预约总人数+1
+                        countDeal(invite_people_count, parseInt(boot_people_count) + 1);
+
+                        hiddenPopup();
+
+                        var strLink_code = homePage+'?inviteCode='+myinviteCode;
+                        shareFun(strLink_code,strTitle,strDesc,strImg,strAct);
+
+                        $(".yypt").text(data.area == '1' ? '微信' : 'QQ');
+                        $(".yyyqm").text(myinviteCode);
+                        $(".cdkid").val(myinviteCode);
+                        $('#shyu').text(data.shyu);
+                        $('#total').text(data.total);
+                        showPopup('subscribe_popup');
+                    }
+                    return;
+                }
+            };
+
+
+            // 抽奖领取主功能初始化
+            amsCfg_374467 = {
+                'iAMSActivityId': '113923', // AMS活动号
+                'activityId': '177034', // 模块实例号
+                "sData": {}, // 传递额外参数
+                'onBeginGetGiftEvent': function () {
+                    return 0; // 抽奖前事件，返回0表示成功
+                },
+                'onGetGiftFailureEvent': function (callbackObj) {// 抽奖失败事件
+                    hideStyle();
+                    alert(callbackObj.sMsg);
+                },
+                'onGetGiftSuccessEvent': function (callbackObj) {// 抽奖成功事件
+                    var packageLen = callbackObj.iPackageId ? callbackObj.iPackageId.split(',') : '';
+                    if (packageLen && packageLen.length > 1) {
+                        hideStyle();
+                        alert(callbackObj.sMsg);
+                        return;
+                    }
+
+                    if(parseInt($('#shyu').html()) - 1 > 0){
+                        $('#shyu').text(parseInt($('#shyu').html()) - 1);
+                    }else{
+                        $('#shyu').text(0);
+                    }
+
+
+
+                    giftid = callbackObj.iPackageId;
+
+                    callFlashToRoll(listgift[giftid]['num']);
+
+                }
+            };
+            //获奖记录
+            amsCfg_384061 = {
+                'activityId' : '113923', // AMS活动号
+                "flowId":"384061",  //流程号
+                "moduleId":"177034",// 模块实例号
+                "sData":{},
+                '_everyRead' : true, //每次都读取这个配置文件(有可能这个配置文件在用户操作后里面的参数需要改变)
+                "extParam":{"pageNo":1,"pageSize":18},
+                //提交成功的回调 （必选）
+                'success':function(alldata){
+                    $('.mygift4 ul').html('');
+                    var i;
+                    var data = alldata.myGiftList;
+                    
+                    for(i in data){
+
+                        var userdata = '';
+
+                        if (data[i]['iPackageId'] == '611170') {
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg*/ alt="">500君主经验*8<br>10,000粮草*8<br>10,000木材*8</li>';
+                        } else if (data[i]['iPackageId'] == '611176') {
+                            userdata = ' <li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg*/ alt="">5分钟加速*18<br>1,600铁矿*8<br>400宝石*8</li>';
+                        } else if (data[i]['iPackageId'] == '611180') {
+                            userdata = ' <li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg*/ alt="">随机迁城*1<br>1小时加速*5<br>5分钟加速*20</li>';
+                        } else if (data[i]['iPackageId'] == '611182') {
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg*/ alt="">蚩尤号角*28<br>后羿之箭*28<br>香烛*8</li>';
+
+                        } else if (data[i]['iPackageId'] == '611183') {
+
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg*/ alt="">普通招募券*3<br>高级招募券*3<br>极品兵书*10</li>';
+
+                        } else if (data[i]['iPackageId'] == '611184') {
+                            userdata = ' <li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg*/ alt="">10,000粮草*2<br>10,000木材*2</li>';
+                        } else if (data[i]['iPackageId'] == '611137') {
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg*/ alt="">IPad Pro 9.7英寸</li>';
+                        } else if (data[i]['iPackageId'] == '613824') {
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg*/ alt="">京东100元购物卡</li>';
+                        } else if (data[i]['iPackageId'] == '611163') {
+                            userdata = ' <li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg*/ alt="">Apple Watch<br>Series 2</li>';
+                        } else if (data[i]['iPackageId'] == '611167') {
+                            userdata = '<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg"/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg*/ alt="">好莱坞会员卡</li>';
+                        }
+
+                       // alert(userdata);
+                        $(".mygift4").show();
+                        $(".mygift4 ul").append(userdata);
+
+                    }
+                    showPopup('gift_popup');
+                need("util.ajaxpage",function(jo){
+					pageShow = new jo({
+						oPage : "pageShow",
+						pageId : "listPage",
+						pageNow : alldata.pageNow,
+						pageShowNum : 2,//前后最多显示的页数
+						pageTotal : alldata.pageTotal,
+						style : 134,
+						onChange : function(i){
+							amsCfg_384061.sData.appid = appid;
+							amsCfg_384061.extParam.pageNo = i;
+			                amsSubmit(113923,384061);
+							return false;
+						}
+					});
+				});
+                
+                
+            }
+        };
+
+
+            amsCfg_374583 = {
+                'iActivityId' : '113923', // AMS活动号
+                'iFlowId' : '374583', // 流程号
+                '_everyRead' : true,
+                'success': function(res){ //提交成功的回调
+                    if(typeof res.jData == "object") { //返回已经提交的数据，填充页面
+                        need(["biz.provincecityselector", "http://slg.qq.com/m/util.form"], function(pcs, FormManager) {
+
+                            showPopup('user_info');
+
+                            //提交按钮事件
+                            g('personInfoContentBtn_374583').onclick = function(){
+                                var fillData = FormManager.getAllInputValue('form_personInfo_374583');
+                                for(var i in fillData) {
+                                    var _val = fillData[i];
+                                    switch(i) {
+                                        case 'sName': {
+                                            if(!_val){alert("姓名不能为空"); return false;}
+                                            if(milo.getByteLength(_val) > 30){alert("姓名长度不能超过30个字节。"); return false;}
+                                            break;
+                                        }
+                                        case 'sGender':{
+                                            if(!_val){alert("性别必须选择"); return;}
+                                            break;
+                                        }
+                                        case 'sIdentity':{
+                                            if(!_val){alert("身份证号码不能为空"); return false;}
+                                            if(!milo.isIDCard(_val)){alert("身份证号码有误。"); return false;}
+                                            break;
+                                        }
+                                        case 'sMobile':{
+                                            if(!_val){alert("手机号码不能为空"); return false;}
+                                            if(isNaN(_val) || _val.indexOf('.') >= 0){alert("手机号码必须为数字。"); return false;}
+                                            if(!milo.isMobile(_val)){alert("手机号码格式不对。"); return;}
+                                            break;
+                                        }
+                                        case 'sAddress':{
+                                            if(!_val){alert("详细地址不能为空"); return false;}
+                                            if(milo.getByteLength(_val) > 100){alert("详细地址不能超过100个字节。"); return false;}
+                                            break;
+                                        }
+                                        case 'sPostCode':{
+                                            if(!_val){alert("邮政编码不能为空"); return;}
+                                            if(milo.getByteLength(_val) > 8){alert("邮政编码不能超过8个字节。"); return;}
+                                            if(isNaN(_val) || _val.indexOf('.') >= 0){alert("邮政编码必须为数字。"); return;}
+                                            break;
+                                        }
+                                        case 'sProvince':{
+                                            if(!_val){alert("请选择省份"); return;}
+                                            break;
+                                        }
+                                        case 'sCity':{
+                                            if(!_val){alert("请选择城市"); return;}
+                                            break;
+                                        }
+                                        default : {}
+                                    }
+                                }
+                                hiddenPopup();
+                                amsCfg_374583.sData = fillData;
+                                amsCfg_374583.sData.appid = appid;
+                                amsSubmit(113923,374583);
+                            }
+
+                            pcs.show({
+                                provinceId : "province_"+374583,
+                                cityId : "city_"+374583
+                            });
+
+                            //如果返回值不等于undefined ，赋值当前省
+                            if(res.jData.sProvince != undefined){
+                                g('province_374583').value = res.jData.sProvince;
+                            }
+
+                            //监听省 change事件
+                            g('province_374583').onchange();
+
+                            //如果返回值不等于undefined ，赋值当前市
+                            if(res.jData.sCity != undefined){
+                                g('city_374583').value = res.jData.sCity;
+                            }
+
+                            if(res.jData.sGender == 'female'){
+                                _radio(1,'gender');
+                            }else if(res.jData.sGender == 'male'){
+                                _radio(0,'gender');
+                            }
+
+                            delete res.jData.sProvince;
+                            delete res.jData.sCity;
+                            FormManager.setAllInputValue(res.jData, 'form_personInfo_374583');
+
+                            if(typeof res.jData.arrPackageInfo != 'undefined' && res.jData.arrPackageInfo.length > 0) { //如果存在实物信息，则显示
+                                for(var i=0; i<res.jData.arrPackageInfo.length; ++i) {
+                                    var iPackageId = res.jData.arrPackageInfo[i].iPackageId;
+                                    var sPackageName = res.jData.arrPackageInfo[i].sPackageName;
+                                    g('package_374583').options[i] = new Option(sPackageName, iPackageId + '|' + sPackageName);
+                                }
+                            }
+                        });
+
+                    } else {
+                        alert(res.sMsg);
+                    }
+                }
+            };
+
+        });
+
+    }
+   if(isWeiXin()){$('.s3').css('height','http://slg.qq.com/m/15.8rem');}
+	</script>
+</body>
+</html>

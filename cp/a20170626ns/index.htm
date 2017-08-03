@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="gbk">
+<meta name="Description" content="《乱世王者》联盟招募王者集结！" />
+<meta name="Keywords" content="SLG,战争,策略,三国,手游,乱世王者,公会,联盟" />
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>女神守护战-乱世王者</title>
+<script>function samResize(){var docEl=document.documentElement;var clientHeight=docEl.clientWidth;if(!clientHeight){return}docEl.style.fontSize=100*(clientHeight/1206)+"px"}samResize();
+</script>
+<!-- 设计：cp | 重构：cp | 创建：2017/6/26-->
+<style>
+body,div,p,ul,li,input,h1,h2,h3{margin:0;padding:0}
+ul{ list-style:none;}
+a{text-decoration:none;outline:none;-webkit-tap-highlight-color: rgba(255,255,255,0);}
+img{ display:block; border:0; width:100%;}
+em{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-size:100%;margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0}
+html,body{width: 100%;height: 100%;}
+/*public Styles*/
+.hide{width:0;height:0;}
+.tc{text-align:center;}
+.t{text-indent:-99999px;display:block;overflow:hidden;}
+
+.conts_wap{ width:100%; position:relative;}
+
+.bg1{ width:7.5rem; height:12rem; position:relative; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg1.jpg")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg1.jpg*/ no-repeat; background-size:100%; position:relative;}
+.bg2{ width:7.5rem; height:15rem; position:relative; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg2.jpg")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg2.jpg*/ no-repeat; background-size:100%; position:relative;}
+.bg3{ width:7.5rem; height:12rem; position:relative; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg3.jpg")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg3.jpg*/ no-repeat; background-size:100%; position:relative;}
+
+.bg4{ width:7.5rem; height:15rem; position:relative; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg4.jpg")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/p1_bg4.jpg*/ no-repeat; background-size:100%; position:relative;}
+.bg6{ width:7.5rem; height:1.51rem; position:relative; background:#171819; font-size:0.24rem; color:#d7b38c; line-height:1.51rem; text-align:center; font-weight:bold;}
+
+.bg1_text{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/xiaozi.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/xiaozi.png*/ no-repeat; background-size:100%; width:3.8rem; height:0.3rem; position:absolute; top:11.8rem; left:1.8rem; z-index:1; }
+a.ljlq{ display:block; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/asy.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/asy.png*/ no-repeat; background-size:100%; width:3.42rem; height:1.02rem; position:absolute; top:10.62rem; left:2rem; }
+.boxpt{ padding-top:0.42rem; }
+.boxpt.pa1{ margin:0 auto; width:2.1rem; position:relative; top:2.84rem; }
+.box{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/box.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/box.png*/ no-repeat; background-size:100%; width:2.1rem; height:2.75rem; position:relative;}
+.toux { width:1.7rem; height:2.07rem; position:absolute; top:-0.38rem; left:0.19rem;}
+.toux img{ width:1.7rem; height:2.07rem;}
+.box .icon1{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a1.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a1.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon2{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a2.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a2.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon3{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a3.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a3.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon4{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a4.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a4.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon5{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a5.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a5.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon6{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a6.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a6.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon7{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a7.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a7.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon8{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a8.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a8.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon9{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a9.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a9.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon10{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a10.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a10.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+
+.box .icon11{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a11.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a11.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon12{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a12.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a12.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon13{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a13.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a13.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon14{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a14.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a14.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon15{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a15.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a15.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+.box .icon16{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/a16.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/a16.png*/  no-repeat; background-size:100%; width:0.46rem; height:0.46rem;position:absolute; top:1.15rem; left:1.47rem; }
+
+.name{ width:2.1rem; text-align:center; font-size:0.3rem; color:#9e4f20; position:absolute; top:1.75rem; left:0;}
+.shz{width:2.1rem; text-align:center; font-size:0.2rem; color:#9e4f20; position:absolute; top:2.25rem; left:0;}
+.wtez{  display:block; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/abtn.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/abtn.png*/ no-repeat; background-size:100%; width:1.84rem; height:0.49rem; margin:0 auto; margin-top:0.16rem;}
+
+.clear_b{ width:100%; text-align:center; clear:both; display:block; overflow:hidden;}
+.clear_b.pa1{ position: absolute; top:7.04rem; left:-0.1rem; z-index:1; }
+.clear_b.pa2{ position: absolute; top:11.18rem; left:-0.1rem; z-index:1;}
+.clear_b.pa3{ position: absolute; top:0.4rem; left:-0.1rem; z-index:1;}
+.clear_b.pa4{ position: absolute; top:4.6rem; left:-0.1rem;z-index:1; }
+.clear_b.pa5{ position: absolute; top:8.9rem; left:-0.1rem; z-index:1;}
+
+
+.clear_b .boxpt{ display:inline-block; width:1.9rem; }
+
+.shuoming{ position:absolute; top:4.1rem; left:0.2rem;}
+.shuoming li{ width:7.2rem; clear: both; display:block; overflow:hidden; margin-bottom:0.2rem;}
+.tips{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/icon.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/icon.png*/  no-repeat; background-size:100%; width:0.36rem; height:0.36rem; font-size:0.24rem; color:#ffffff; text-align:center; line-height:0.36rem; float:left;}
+.tips_txt{width:6.77rem; float:left;font-size:0.24rem; color:#553412; padding-top:0.02rem; }
+
+	/* 本例子css -------------------------------------- */
+	.focus{ width:7.5rem; height:4.2rem;  margin:0 auto; position:relative; overflow:hidden; top:10rem; border-top:0.04rem solid #deb36e; border-bottom:0.04rem solid #deb36e;   }
+	.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:5px; text-align:center;  }
+	.focus .hd ul{ display:inline-block; height:5px; padding:3px 5px;   
+		-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;
+	}
+	.focus .hd ul li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; border:0.02rem solid #ffffff; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+	.focus .hd ul .on{ background:#bfa365; border:0.02rem solid #bfa365;  }
+
+	.focus .bd{ position:relative; z-index:0; }
+	.focus .bd li img{  width:7.5rem; height:4.2rem;   }
+	.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+	a.touchslider-prev{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/prev.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/prev.png*/ no-repeat; background-size:100%; width:0.72rem; height:1.34rem; position:absolute; top:1.4rem; left:0rem; display:block; z-index:2; text-indent:-9999rem; }
+	a.touchslider-next{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/next.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/next.png*/ no-repeat; background-size:100%; width:0.72rem; height:1.34rem; position:absolute; top:1.4rem; right:0rem; display:block; z-index:2; text-indent:-9999rem; }
+
+a.video1{ width:1.54rem; height:1.5rem; display:block; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/link.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/link.png*/ repeat; position:absolute; top:7.83rem; left:2.99rem; text-indent:-9999rem;}
+a.video2{ width:6.9rem; height:3.5rem; display:block; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/link.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/link.png*/ repeat; position:absolute; top:4.88rem; left:0.3rem; text-indent:-9999rem;}
+#video {height: 426px; display:none;width: 100%;}
+#video .close {right: -34px;top: 0;}
+.jqqd .close {display: block;height: 34px;position: absolute;right: -20px;top: -20px;width: 34px;}
+
+
+.bottombtn{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/bottom.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/bottom.png*/ no-repeat; background-size:100%; width:0.68rem; height:0.42rem; position: fixed; bottom:1rem; left:3.4rem; z-index:2;  -webkit-animation: bounce-down 1.5s linear infinite;animation: bounce-down 1.5s linear infinite;}
+.opacity_bg{ background-color: rgb(0, 0, 0); border-top: 1px solid transparent; position: absolute;  z-index: 9998; width: 100%; left: 0px; top: 0px; opacity: 0.5; display:none;}
+
+a.dengluqq{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/wtez.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/wtez.png*/ no-repeat; background-size:100%; width:2.88rem; height:0.84rem; position:absolute; top:4.8rem; left:2.4rem; }
+.qqdenglufuc{ display:none; background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/tc.jpg")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/tc.jpg*/ no-repeat; background-size:100%; width:5.4rem; height:3.2rem; position:fixed; top:50%; left:50%; margin-left:-2.7rem; margin-top:-1.6rem; z-index:10000;  }
+a.qqdenglu{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/qqdl.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/qqdl.png*/ no-repeat; background-size:100%; width:2.6rem; height:0.7rem; position:absolute; top:1.2rem; left:1.5rem; display:block;  }
+a.qqclose{ background:url("../../../game.gtimg.cn/images/slg/cp/a20170626ns/gb.png")/*tpa=https://game.gtimg.cn/images/slg/cp/a20170626ns/gb.png*/ no-repeat;  background-size:100%; width:0.39rem; height:0.39rem; position:absolute; top:0.2rem; right:0.2rem; display:block;}
+@-webkit-keyframes bounce-down {
+    25% {
+        -webkit-transform: translateY(-10px);
+    }
+    50%, 100% {
+        -webkit-transform: translateY(0);
+    }
+    75% {
+        -webkit-transform: translateY(10px);
+    }
+}
+
+@keyframes bounce-down {
+    25% {
+        transform: translateY(-10px);
+    }
+    50%, 100% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+</style>
+<script src="../../../ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min-1.js" tppabs="https://ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$(window).scroll(function(){
+			var s_t1= $(".bg4").offset().top;
+			
+			
+			if($(window).scrollTop() < s_t1){
+				
+				$(".bottombtn").show();
+				}else{
+				$(".bottombtn").hide();
+				
+					}
+			})
+			
+	
+	});
+</script>
+<script>
+(function(){
+	function resizeFont(){
+	var docEl=document.documentElement;
+	var cw=docEl.clientWidth;
+	if(!cw){return}
+	docEl.style.fontSize=100*(cw/750)+"px";
+	}
+	resizeFont();
+	$(window).on("resize orientation",function(){
+		resizeFont();
+		})
+	})()
+	
+</script>
+<script src="TouchSlide.1.1.js" tppabs="https://slg.qq.com/cp/a20170626ns/TouchSlide.1.1.js"></script>
+
+</head>
+<body>
+<div class="bottombtn"></div>
+<div class="wrapper">
+	<div class="bg1">
+    	<a href="../../index-1.htm" tppabs="https://slg.qq.com/" class="ljlq" ontouchend="PTTSendClick('btn','a1','首页');" target="_blank"></a>
+        <div class="bg1_text"></div>
+    </div>
+	<div class="bg2">
+    	<div class="boxpt pa1 anchor1">
+            <div class="box">
+                <div class="toux"><img src=""></div>
+                <div class="icon1"></div>
+                <div class="name"></div>
+                <div class="shz"></div>
+            </div>
+            <a href="" class="wtez"></a>
+        </div>
+        
+        <div  class="clear_b pa1">
+            <div class="boxpt anchor2">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon2"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor3">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon3"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor4">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon4"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+        </div>
+    
+        <div  class="clear_b pa2">
+            <div class="boxpt anchor5">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon5"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor6">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon6"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor7">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon7"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+        </div>
+    </div>
+	<div class="bg3">
+        <div  class="clear_b pa3">
+            <div class="boxpt anchor8">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon8"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor9">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon9"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor10">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon10"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+        </div>
+        <div  class="clear_b pa4">
+            <div class="boxpt anchor11">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon11"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor12">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon12"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor13">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon13"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+        </div>
+        <div  class="clear_b pa5">
+            <div class="boxpt anchor14">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon14"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor15">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon15"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+            <div class="boxpt anchor16">
+                <div class="box">
+                    <div class="toux"><img src=""></div>
+                    <div class="icon16"></div>
+                    <div class="name"></div>
+                    <div class="shz"></div>
+                </div>
+                <a href="" class="wtez"></a>
+            </div>
+        </div>
+    </div>
+    
+	<div class="bg4">
+    	<div class="shuoming">
+        	<ul>
+            	<li>
+                	<div class="tips">1.</div>
+                	<div class="tips_txt">点击“为她而战”可增加该主播热度1。每个账号只能选择一个主播，增加一次热度。</div>
+                </li>
+            	<li>
+                	<div class="tips">2.</div>
+                	<div class="tips_txt">活动中，主播人气值达到1000、3000、5000时，主播将在粉丝QQ群中发放万元红包雨！</div>
+                </li>
+            	<li>
+                	<div class="tips">3.</div>
+                	<div class="tips_txt">活动结束后，排名第一的主播将为《乱世王者》游戏演唱主题曲！</div>
+                </li>
+            	<li>
+                	<div class="tips">4.</div>
+                	<div class="tips_txt">腾讯公司保留在法律规定的范围内对上述规则进行解释的权利。</div>
+                </li>
+            </ul>
+        
+        </div>
+			<!-- 本例主要代码 Start ================================ -->
+			<div id="focus" class="focus">
+				<a class="touchslider-prev">111</a>
+				<a class="touchslider-next">222</a>
+
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<div class="bd">
+					<ul>
+							<li><a  onclick="showVideo('g0506ndyfgn','no')" ><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo1.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo1.jpg"  /></a></li>
+							<li><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo2.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo2.jpg"/></li>
+							<li><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo3.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo3.jpg"/></li>
+							<li><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo4.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo4.jpg"/></li>
+							<li><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo5.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo5.jpg"/></li>
+							<li><img _src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/lunbo6.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/lunbo6.jpg"/></li>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#focus",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"left", 
+					autoPlay:true,//自动播放
+					autoPage:true, //自动分页
+					prev: ".touchslider-prev", // prev 样式指定
+					next: ".touchslider-next", // next 样式指定
+					switchLoad:"_src", //切换加载，真实图片路径为"_src"
+					interTime:4000 
+				});
+			</script>
+			<!-- 本例主要代码 End ================================ -->
+    
+    </div>
+	<div class="bg6">腾讯公司保留在法律规定的范围内对上述规则进行解释的权利</div>
+</div>
+<div class="opacity_bg"></div>
+<div class="qqdenglufuc">
+	<a href="javascript:alert('请绑定QQ')" class="qqdenglu"></a>
+	<a href="javascript:closeqq();" class="qqclose"></a>
+</div>
+<script src="../../../ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min-1.js" tppabs="https://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script src="../../../ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min-1.js" tppabs="https://ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+
+<script type="text/javascript">
+function gotoClass(cls){
+	var stopd = $("."+cls).offset().top;
+	$("html,body").animate({"scrollTop":stopd+0});
+
+}
+var popbox = function(){
+	$('.sbtn1').click(function(){
+		  $('.dialog').fadeIn();
+		})
+	}
+var closepop = function(){
+	$('.dia-close').click(function(){
+		  $('.dialog').fadeOut();
+		})
+	}
+function qqqunshow(){
+	
+	$("#qqqun").css("display","block")
+	$(".denglu").css("display","none")
+	
+}
+function denglu(){
+	
+	$(".opacity_bg").css("display","block")
+	$(".qqdenglufuc").css("display","block")
+
+}
+function closeqq(){
+	$(".qqdenglufuc").css("display","none")
+	$(".opacity_bg").css("display","none")
+
+}
+
+$(document).ready(function(){
+	var bodyHeight1= $(document).height();
+
+	$(".opacity_bg").css({"height":bodyHeight1});
+
+	});
+</script>
+<!--视频相关脚本-->
+<script type="text/javascript" src="jquery.bpopup-0.7.0.min.js" tppabs="https://slg.qq.com/cp/a20170626ns/jquery.bpopup-0.7.0.min.js"></script> 
+<script type="text/javascript" src="../../../imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js" tppabs="https://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js"></script>
+<script src="../../../pub.idqqimg.com/qqmobile/qqapi-1.js-_bid=152" tppabs="https://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+<script type="text/javascript" src="../../../ossweb-img.qq.com/images/js/mobile_build/util/zepto-1.js" tppabs="https://ossweb-img.qq.com/images/js/mobile_build/util/zepto.js"  ></script>
+<script type="text/javascript" src="../../../ossweb-img.qq.com/images/js/mobile_build/milo-1.js" tppabs="https://ossweb-img.qq.com/images/js/mobile_build/milo.js" ></script>
+<script type="text/javascript" src="../../../ossweb-img.qq.com/images/ams/atm/reporting-1.js" tppabs="https://ossweb-img.qq.com/images/ams/atm/reporting.js"></script>
+<div id="video" class="jqqd"> <a class="close" href="javascript:void(0);" style="position:absolute; top:34px; right:0; z-index:10000;"><img src="../../../game.gtimg.cn/images/slg/cp/a20170626ns/hj_close.jpg" tppabs="https://game.gtimg.cn/images/slg/cp/a20170626ns/hj_close.jpg" /></a>
+      <div class="video_zone" style="width:100%;"></div>
+    </div>
+<script type="text/javascript"> 
+var showdialog = function(id){
+	var $id = $("#"+id);
+	
+	 $id.bPopup({
+/*        speed: 650,
+        transition: 'slideIn',
+	    transitionClose: 'slideBack'*/
+		fadeSpeed: 'slow', //can be a string ('slow'/'fast') or int
+            followSpeed: 1500, //can be a string ('slow'/'fast') or int
+            modalColor: 'black'
+        });
+	$id.find(".close").unbind("click").click(function(){
+		$id.bPopup().close();
+	});
+	
+	}
+var  showVideo = function(vid,mod){
+	$("#mod_player1").remove();
+	$("<div/>",{"id":"mod_player1"}).appendTo(".video_zone");
+	var video = new tvp.VideoInfo();
+	if(mod=="live"){
+		 video.setChannelId(vid);
+   		 var player = new tvp.Player();
+		 player.create({
+		  width: '100%',
+		  height: 426,
+		  video: video,
+		  type: 1,
+		  autoplay: 1,
+		  modId: "mod_player1"
+	  });
+		  
+		}else{
+			video.setVid(vid);
+			var player = new tvp.Player();
+			player.create({
+				width:'100%',
+				height:426,
+				video:video,
+				isVodFlashShowSearchBar:0,
+				isVodFlashShowEnd:0,
+				autoplay:1,
+				modId:"mod_player1"
+			});
+      }
+	
+	showdialog('video');
+	$("#video").find(".close").unbind("click").click(function(){
+		
+		$("#video").bPopup().close();
+		$("#mod_player1").remove();
+		})
+	}
+</script>
+<script>
+    var ua = window.navigator.userAgent.toLowerCase();
+    //判断是否qq
+    function isQQ(){
+        var chkRes = false;
+        mqq.device.isMobileQQ(function(result){
+            chkRes = result;
+        });
+        return chkRes;
+    }
+    //判断是否是微信浏览器
+    function isWeiXin(){
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //判断平台
+    function isIos(){
+        return /iphone|ipod|ipad/i.test(ua);
+    }
+    function isAndroid(){
+        return /android/i.test(ua);
+    }
+
+    var appid = "1105371489";
+    var sPlatId = isIos() ? '0' : (isAndroid() ? '1' : '1');
+
+    var REGEXP_IOS_QQ = /(iPad|iPhone|iPod).*? QQ\/([\d\.]+)/;
+    var REGEXP_ANDROID_QQ = /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/;
+
+    var homePage = location.protocol+'//slg.qq.com/cp/a20170626ns/cont.htm';
+
+    milo.ready(function(){
+        need("biz.login", function(LoginManager){
+            LoginManager.checkLogin(function(userInfo){
+                //登录成功的回调
+                if(isQQ()){
+                    var uin = LoginManager.getUserUin();
+                    $("#login_qq_span").html(milo.xss.filterWxNickName(uin));
+                }else{
+                    alert('请在手机QQ中打开');
+                }
+                amsCfg_376891.sData.appid = appid;
+                amsSubmit(115700,376891);
+            }, function(){
+                amsCfg_376891.sData.appid = appid;
+                amsSubmit(115700,376891);
+                if (isQQ()) {
+                    //QQ客户端跳转QQ登录界面
+                    LoginManager.login();
+                } else {
+                    alert("请在手机QQ中打开！");
+                }
+            });
+        });
+    });
+    //获取主播列表
+    amsCfg_376891 = {
+        "iActivityId": 115700, //活动id
+        "iFlowId":    376891, //流程id
+        "sData":{},
+        "fFlowSubmitEnd": function(res){
+            var anchors = res.jData.list;
+            $.each(anchors, function(i, value){
+                var str = '';
+                str += '<div class="box">';
+                str += '    <div class="toux"><img src="'+ value.headImg +'"></div>';
+                str += '    <div class="icon'+ i +'"></div>';
+                str += '    <div class="name">'+ value.name +'</div>';
+                str += '    <div class="shz">守护人气值:'+ value.score +'</div>';
+                str += '</div>';
+                str += '<a href="javascript:hrefItem('+ value.id +');" class="wtez"></a>';
+                $('.anchor'+i).html(str);
+            });
+            return;
+        }
+    };
+
+    function hrefItem(id){
+        need("biz.login",function(){
+            var UA = navigator.userAgent;
+            if(!REGEXP_IOS_QQ.test(UA) && !REGEXP_ANDROID_QQ.test(UA)){
+                setTimeout(function(){
+                    window.location.href = 'mqqapi://forward/url?url_prefix=' + btoa(homePage+"?_wv=1&id="+id)+"&version=1&src_type=web";
+                },200);
+            }else{
+                window.location.href=homePage+'?_wv=49957&id='+id;
+            }
+        });
+    }
+
+    var pageLinks = location.protocol + '//slg.qq.com/cp/a20170626ns/index.htm';
+    //分享
+    if (isWeiXin()) {
+        need("biz.wxclient", function (WXClient) {
+            //微信客户初始化成功后，返回wx对象
+            WXClient.init({"sAppId": "wxfeb5a65212da517c"}, function (wx) {
+                //分享用的信息对象
+                var shareObj = {
+                    title: '乱世王者女神守卫战',
+                    desc: '做乱世王者，为女神而战。领游戏1888元礼包！',
+                    link: pageLinks,
+                    imgUrl: location.protocol + '//game.gtimg.cn/images/slg/cp/a20170626ns/share.jpg',
+                    actName: 'a20170626ns',//点击流命名
+                    success: function (sres) {
+                        PTTSendClick('btn','success','微信分享');
+                    },
+                    cancel: function (sres) {
+                        PTTSendClick('btn','cancel','微信分享');
+                    }
+                }
+                //为发送给好友、分享到朋友圈、分享到QQ、分享到微博同时绑定分享事件
+                WXClient.shareAll(shareObj);
+            });
+        });
+    } else if (isQQ()) {
+
+        mqq.ui.setTitleButtons({
+            left: {title: '', callback: ''},
+            right: {title: '', hidden: false, iconID: 4, callback: ''}
+        });
+
+        mqq.ui.setOnShareHandler(function (type) {
+            mqq.ui.shareMessage({
+                share_url: pageLinks,
+                title: '乱世王者女神守卫战',
+                desc: '做乱世王者，为女神而战。领游戏1888元礼包！',
+                image_url: location.protocol + '//game.gtimg.cn/images/slg/cp/a20170626ns/share.jpg',
+                share_type: type
+            }), function (retCode) {
+                PTTSendClick('btn','cancel','QQ分享');
+            };
+        });
+    }
+
+</script>
+<script type="text/javascript">
+//此段代码不能放到外链JS中，
+var setSite = { //设置网站属性
+        siteType:"a20170626ns", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+        pageName:"首页", //必填项:页面中文名
+        osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+        ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+        stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+    }
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>
