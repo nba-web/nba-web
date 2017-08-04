@@ -30,7 +30,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	0%{transform: rotate(0deg);}
 	100%{transform: rotate(360deg);}
 	}
-	.subscribe_btn {display: block; width: 3.01rem; height: 2.03rem; background-position: -0.02rem -4.98rem; overflow: hidden; text-indent: -9999rem; margin-top:120%;margin-left:26%;}
+	.subscribe_btn {display: block; width: 3.01rem; height: 1.53rem; background-position: -0.02rem -4.98rem; overflow: hidden; text-indent: -9999rem; margin-top:120%;margin-left:26%;}
 	.subscribe_result {font-family: SimSun;font-size:0.28rem; color: #000000; padding-top:0.2rem;text-shadow: 0 0.02rem 0.02rem #333; font-weight: bold; padding:0.3rem 0 0 0.4rem; line-height: 0.36rem;}
 	.subscribe_result strong{padding:0 0.05rem; color:#c54c4b;}
 	.subscribe_result span{display: block; font-size:0.24rem;}
@@ -183,12 +183,14 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.share_tips p {width: 3.8rem; float:right; text-align: center;color: #fff;font: 0.24rem; padding:0.3rem;}
 	.share_tips p:before {display: block; content: ''; width: 2.21rem; height: 3.01rem; background: url("../img/arrows.png")/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/m/arrows.png*/ no-repeat; background-size: cover;margin:0 0 0 1.6rem;}
 	.login_slt {display:none;width: 4.54rem; height: 3.1rem; margin: -1.55rem -2.27rem; background-position:-5.33rem 0;  position: fixed; top: 50%; left: 50%; z-index: 1000;}
-	.close_btn {display: block; position: absolute; top: 0.31rem; right: 0.01rem; overflow: hidden; text-indent: -9999px; width: 0.41rem; height: 0.41rem;}
+	.close_btn {display: block; position: absolute; top: 0.31rem; right: 0.01rem; overflow: hidden; text-indent: -99999rem;  width: 0.41rem; height: 0.41rem;}
+	.close_btn_succeed {display: block; position: absolute; top: 0.68rem; right: 0.64rem; overflow: hidden; text-indent: -99999rem; width: 0.41rem; height: 0.41rem;}
 	.login_slt h3{height:1.23rem; text-indent: -9999px;}
 	.qq,.wx {display:block;float:left;width: 1.26rem; text-align: center; margin-left: 0.35rem; color:#000; padding-top:1.26rem;}
 	.qq {margin-left:0.84rem;}
 
-	.popup {display:none; width: 5.28rem; height: 5.61rem; margin: -2.795rem -2.64rem; position: fixed; top: 50%; left:50%; z-index: 1000;}
+	/*.popup {display:none; width: 5.28rem; height: 5.61rem; margin: -2.795rem -2.64rem; background-position:-5.33rem 0;position: fixed; top: 50%; left:50%; z-index: 1000;}*/
+	.popup {display:none;width: 5.28rem; height: 5.61rem; margin: -2.795rem -2.64rem; background-position:-0.02rem -0.1;  position: fixed; top: 50%; left: 50%; z-index: 1000;}
 	.popup h3 {font-family: SimSun; font-size: 0.28rem; color: #000; text-align: center; line-height: 0.35rem; padding-top:0.6rem;}
 	.input_list {margin: 0.15rem auto 0; width: 4.5rem; height: 2.3rem; border-bottom:1px solid #fff;}
 	.input_list li{padding-left:1.3rem; height: 0.55rem;}

@@ -9,9 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 <meta name="author" content="Tencent-TGideas">
 <meta name="Copyright" content="Tencent">
-<meta name="Description" content="《乱世王者》是一款由天美工作室自主研发的真实战争策略手游。多样兵种、器械任意搭配，极具策略；《乱世王者》背景处于英雄辈出的三国乱世，吕布、赵云等名将悉数登场；游戏更引入兵法战术，真实还原上兵伐谋的诡谲乱世，圆策略王者的战争英雄梦！">
-<meta name="Keywords" content="乱世王者、乱世王者手游,乱世王者官网,乱世王者官方手游、乱世王者官方手游下载,乱世王者移动版,乱世王者手机版,乱世王者手游正版,乱世王者官方手游测试">
-<title>乱世王者-官方网站-腾讯游戏-腾讯首款战争策略手游</title>
+<title>篮球大师-官方网站-全新手游-真实NBA经理人手游</title>
 <link rel="stylesheet" href="css/index.css" type="text/css" />
 <script type="text/javascript">
 (function (win,doc){
@@ -41,7 +39,7 @@ var setSite={ //设置网站属性
 
 <body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
 	<header>
-		<h1><a href="main.shtml.htm" tppabs="http://slg.qq.com/m/main.shtml" onclick="PTTSendClick('header','logo','logo');">篮球大师<em>篮球首款战争策略手游</em></a></h1>
+		<h1><a href="#" tppabs="http://slg.qq.com/m/main.shtml" onclick="void();">篮球大师<em style="color: #ffffff;font-size:50%;padding-top:15px">真实NBA经理人手游</em></a></h1>
 		<a href="javascript:;" class="spr mygift_btn" onclick="PTTSendClick('header','mygift','我的礼包');">我的礼包</a>
 		<a href="main.shtml.htm" tppabs="http://slg.qq.com/m/main.shtml" class="spr home_btn" onclick="PTTSendClick('header','home','进入官网');">进入官网</a>
 	</header>
@@ -142,9 +140,9 @@ var setSite={ //设置网站属性
 		<div class="topline"></div>
 		<a href="javascript:;" class="sprbg lijiyuyuez submit_btn">确定</a>
 	</div>
-	<div class="sprbg popup succeed" id="succeed">
-		<a href="javascript:void(0);" class="btn1('close_invite')">关闭</a>
-		<!--<h3>恭喜您预约成功！</h3>-->
+	<div class="sprbg popup" id="succeed">
+		<a href="javascript:void(0);" class="close_btn_succeed" onclick="btn1('close_invite')">关闭</a>
+		<!--<h3>恭喜您预约成功！</h3>
 		<br/>
 		<ul>
             <li>平台：<span class="yypt"></span></li>
@@ -152,6 +150,7 @@ var setSite={ //设置网站属性
             <li id="shoujihao">手机号：<span class="yysjh"></span></li>
             <li>邀请码：<span class="yyyqm"></span></li>
 		</ul>
+		
 		<p class="topline">将您的邀请码发送给好友，好友预约成功后领取更多奖励</p>
 		<p>方法1：将你的邀请码告诉好友，让好友在预约时填写即可</p>
         <div class="code">
@@ -160,6 +159,7 @@ var setSite={ //设置网站属性
         </div>
         <p>方法2：点击分享，将邀请码分享给更多好友</p>
         <a href="javascript:void(0);" class="sprbg share_btn" onclick="PTTSendClick('popup','share','分享按钮');">分享</a>
+		-->
 	</div>
 
 
@@ -338,249 +338,6 @@ var setSite={ //设置网站属性
 	<script src="../../ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js" tppabs="http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
 	<script src="../act/a20170613subscribe/m/lottery.min.js" tppabs="http://slg.qq.com/act/a20170613subscribe/m/lottery.min.js"></script>
 	<script type="text/javascript">
-	if(typeof(pgvMain)=='function')pgvMain();
-	//点击开始抽奖 通知js  flash->js
-//开发获得抽奖结果 通知flash开始播放效果 js->flash
-
-    var waitTime = 60;
-    var dj = null;
-    var orderflag = 1;
-    var appid = sPlatId = sArea = "";
-
-    var waitTime = 60;
-    var dj = null;
-
-    var wx_appid = 'wxce0a39d8e25a6763';
-    var qq_appid = '1105371489';
-    var serverType = 'slg';
-    var giftid = 0;
-    var boot_people_count = 0; //游戏共已有多少人预约
-    var invite_people_count =0; //用户已拉多少人
-
-    var myinviteCode = ''; // 我的邀请码
-    var inviteCode = milo.request('inviteCode'); // 接受的邀请码
-    var sServiceType = 'slg';
-    var btnFlag = 1,yuyueFlag = 0;
-    var zhongDuan = 1;
-    var spid = 0;
-    var isLogin = 0;
-    var listgift = {
-        '611137':{
-            'name':'<span>IPad Pro 9.7英寸</span>',
-            'num' :'10',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg*/
-        },
-        '613824':{
-            'name':'<span>京东100元卡</span>',
-            'num' :'2',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/2.jpg*/
-        },
-        '611163':{
-            'name':'<span>Apple Watch Series 2</span>',
-            'num' :'1',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/1.jpg*/
-        },
-        '611167':{
-            'name':'<span>好莱坞会员卡</span>',
-            'num' :'3',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/3.jpg*/
-        },
-        '611170':{
-            'name':'<span>500君主经验*8</span><span>10000木材*8</span><span>10000粮草*8</span>',//10000*8粮草
-            'num' :'5',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/5.jpg*/
-        },
-        '611176':{
-            'name':'<span>5分钟加速*18</span><span>1600铁矿*8</span><span>400宝石*8</span>',//400*8宝石
-            'num' :'6',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/6.jpg*/
-        },
-        '611180':{
-            'name':'<span>随机迁城*1</span><span>1小时加速*5</span><span>5分钟加速*20</span>',//5分钟加速*20 没有图片
-            'num' :'7',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/7.jpg*/
-        },
-        '611182':{
-            'name':'<span>蚩尤号角*28</span><span>后羿之箭*28</span><span>香烛*8</span>',
-            'num' :'8',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/8.jpg*/
-        },
-        '611183':{
-            'name':'<span>高级招募券*3</span><span>普通招募券*3</span><span>极品兵书*10</span>',
-            'num' :'9',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/9.jpg*/
-        },
-        '611184':{
-            'name':'<span>10000木材*2</span><span>10000粮草*2</span>',//谢谢参与 没有图片
-            'num' :'4',
-            'img' :'../../game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg'/*tpa=http://game.gtimg.cn/images/slg/act/a20170613subscribe/4.jpg*/
-        }
-    };
-
-    var UA = navigator.userAgent;
-    var REGEXP_IOS_QQ = /(iPad|iPhone|iPod).*? QQ\/([\d\.]+)/;
-    var REGEXP_ANDROID_QQ = /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/;
-
-    var ua = window.navigator.userAgent.toLowerCase();
-
-    //开始抽奖flash->js
-    function callJsToStart() {
-        if (isLogin == '1') {
-            if (yuyueFlag == '1') {
-                amsCfg_374467.sData = {sPlatId: spid, 'appid': appid};
-
-               // alert(JSON.stringify(amsCfg_374467.sData));
-
-                amsSubmit(113923, 374467);
-            } else {
-                hideStyle();
-                alert('请先预约再来抽奖');
-            }
-        } else {
-            hideStyle();
-            showPopup('login_slt');
-
-        }
-//测试
-    }
-
-    function hideStyle(){
-        $('#swfcontent_start').addClass('swfcontent_start');
-        $('#swfcontent_start').removeClass('swfcontent_disable');
-
-    }
-
-function callFlashToRoll(id){
-	//通知转盘转到对应的中奖产品的id （序号从0,1,2.....，0是指针初始指示的位置，沿着顺时针的方向递增）
-	if(SWFOBJ)SWFOBJ.stopRoll(id);
-}
-    //3、flash动画完成通知js flash->js
-    function callJsToComplete(){
-        //alert('恭喜你获得大奖哟！！');
-        $('.winning_gift li').html('<img src="'+listgift[giftid]['img']+'" alt="">'+listgift[giftid]['name']);
-        //showDialog.show({id:'winning'});
-        showPopup('winning');
-        $('#winning .submit_btn').off();
-        $('#winning .submit_btn').on('click',function(){
-
-            if(giftid == '611137' || giftid == '613824' || giftid == '611163' || giftid == '611167'){
-                hiddenPopup();
-                amsCfg_374583.sData = {iShow: 1,'appid':appid};
-                amsSubmit(113923,374583);
-
-                // showPopup('user_info');
-
-            }else{
-                hiddenPopup();
-            }
-
-        });
-    }
-	//初始化抽奖对象的SWFOBJ 
-	//转盘的中心点坐标为（0,0））
-var SWFOBJ= new mo.Lottery({
-		// 'lighturl':'../../ossweb-img.qq.com/images/motion/lottery/light.png'/*tpa=http://ossweb-img.qq.com/images/motion/lottery/light.png*/,
-		'total':10,
-		'width':6.17,
-		'height':6.72,
-		'sbtnx':1.75,
-		'sbtny':2.69,
-		'sbtnw':2.75,
-		'sbtnh':1.27,
-		'boxw':1.22,
-		'boxh':1.77,
-		'position':"http://slg.qq.com/m/0.34_0.47,1.77_0.47,3.21_0.47,4.64_0.47,4.64_2.46,4.64_4.45,3.21_4.45,1.77_4.45,0.34_4.55,0.34_2.46",
-		'contentId' : 'swfcontent',
-		'onClickRollEvent' : callJsToStart,
-		'onCompleteRollEvent':callJsToComplete
-	});
-
-	var _scrool = function (obj) {
-        this.rollBox = $(obj.rollBox);
-        this.rollList = $(obj.rollBox+' ul');
-        this.prev = $(obj.prev);
-        this.next = $(obj.next);
-        this.init();
-    }
-    _scrool.prototype={
-    	startRoll:function(a){//alert(this.rollBox.scrollLeft());
-    		var t=this.rollBox.scrollLeft();
-    		//alert(this.rollBox.width())
-    		this.rollBox.scrollLeft(t+(a*100))
-    		
-    		//this.rollBox.animate({scrollLeft:t+(a*200)},100)
-    	},
-    	init:function(){
-    		var slef=this;
-    		slef.prev.on("click",function(){
-	        	slef.startRoll(-1);
-	        });
-    		slef.next.on("click",function(){
-	        	slef.startRoll(1);
-	        });
-    	}
-    }
-    var gift1=new _scrool({
-    	rollBox:'.act1_gift',
-    	prev:'.gift1prev',
-    	next:'.gift1next'
-
-	}),
-	gift1=new _scrool({
-    	rollBox:'.act2_gift',
-    	prev:'.gift2prev',
-    	next:'.gift2next'
-
-	});
-	var showPopup=function(id){
-		hiddenPopup();
-		$('#'+id).show();
-		$('.mask').show();
-	},
-	hiddenPopup=function(){
-		$('#login_slt').hide();
-		$('.popup').hide();
-		$('.mask').hide();
-	}
-	//视频
-	var showVideo=function(vid){
-		var video = new tvp.VideoInfo();
-		video.setVid(vid);
-		var player =new tvp.Player();
-		player.create({
-			width:"100%",
-			height:"100%",
-			video:video,
-			modId:"videoPlayer",
-			isHtml5UseAirPlay:true,
-			isHtml5UseFakeFullScreen:true,
-			autoplay:true
-		});
-		$('#videoPlayer_box').show();
-		$('#videoClose').show();
-	};
-	$('#videoClose').on("click",function(){
-		$('#videoPlayer_box').hide();
-		$('#videoClose').hide();
-		$('#videoPlayer').html(" ");
-	});
-	$('.video_btn').on('touchstart',function(){showVideo('n0522ooico0');PTTSendClick('kv','video','kv视频');})
-	$('.close_btn').on('touchstart',function(){hiddenPopup();});
-	$('.share_btn,.invite_btn,.share_btn1').on('touchstart',function(){$('.share_tips').show();});
-	$('.share_tips').on('touchstart',function(){$('.share_tips').hide();});
-	function _radio(n,id){
-		var radio=document.getElementById(id).getElementsByTagName("label");
-		if(n==0){
-			radio[0].className='slt';
-			radio[1].className='';
-		}
-		else{
-			radio[1].className='slt';
-			radio[0].className='';
-		}
-	}
-    $('#shoujihao').hide();
-
 	window.tab=new mo.Slide({//游戏特色
 		target: $('#featureRoll li'),
 		direction: 'x',
@@ -701,9 +458,9 @@ $(window).bind( 'orientationchange', function(e){orient();});
         }
     }
     var homePage = location.protocol+'//slg.qq.com/m/index.htm';
-    var strTitle = '预约就送1888元大礼包-王者策略版-乱世王者';
-    var strDesc = '进入群雄乱世，成就王者大业，踏上帝王之路！';
-    var strImg = location.protocol+'//game.gtimg.cn/images/slg/m/web201704/share_logo.jpg';
+    var strTitle = '预约就送价值248元大礼包-篮球大师-真实NBA经理人手游';
+    var strDesc = '真实球队经营！铸就冠军荣耀！--尽在篮球大师';
+    var strImg = location.protocol+'m/img/share_logo.jpg';
     var strAct = 'a20170613subscribe';
     shareFun(homePage,strTitle,strDesc,strImg,strAct);
     //微信授权

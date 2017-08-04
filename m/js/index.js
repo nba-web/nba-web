@@ -8,10 +8,11 @@ function btn1($option="open"){
 		else
 			$login_slt.display='block';
 	}else if ($option=="close_invite"){
+		//alert("open_invite");
 		$invite.display='none';
 	}
 	else if($option=="open_invite"){
-		alert("open_invite");
+		//alert("open");
 		$invite.display='block';
 	}
 }
