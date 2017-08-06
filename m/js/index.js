@@ -16,3 +16,14 @@ function btn1($option){
 		$invite.display='block';
 	}
 }
+
+function mybtn(){
+	var my_start=document.cookie.indexOf("user"); 
+	if(my_start==-1){
+		
+		btn1('open');
+	}
+	else {
+		btn1('open_invite');
+	}
+}

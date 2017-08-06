@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 
+<style type="text/css">   
+ul{ list-style-type:none;}   
+</style>  
+
 <meta charset="gbk">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
@@ -11,6 +15,8 @@
 <meta name="Copyright" content="Tencent">
 <title>篮球大师-官方网站-全新手游-真实NBA经理人手游</title>
 <link rel="stylesheet" href="css/index.css" type="text/css" />
+
+
 <script type="text/javascript">
 (function (win,doc){
 if (!win.addEventListener) return;
@@ -33,6 +39,57 @@ var setSite={ //设置网站属性
 	}
 </script>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+var tel = $.cookie('tempuser');
+var myinva = $.cookie('tempmyinva');
+//alert(cookie);
+//alert($.cookie('myinva'));
+var c_start=document.cookie.indexOf("tempuser"); 
+if(c_start==-1){
+		//alert("1234");
+
+	}
+	else {
+	 //alert(tel);
+	//var tel = $.cookie('user');
+	//var myteminva=$.cookie('myinva');
+		window.onload = function()
+		{
+		//var tel = $.cookie('user');
+		//var myteminva=$.cookie('myinva');
+		document.getElementById("mytel").value = tel;
+		}
+	}
+var p_start=document.cookie.indexOf("tempmyinva"); 
+if(p_start==-1){
+		//alert("1234");
+
+	}
+	else {
+	 //alert(tel);
+	//var tel = $.cookie('user');
+	//var myteminva=$.cookie('myinva');
+		window.onload = function()
+		{
+		//var tel = $.cookie('user');
+		//var myteminva=$.cookie('myinva');
+		document.getElementById("mytel").value = tel;
+		document.getElementById("myinva").value = myinva;
+		}
+	}
+</script>
+ <!--<script type="text/javascript">
+ window.onload = function()
+ {
+	//var tel = $.cookie('user');
+	//var myteminva=$.cookie('myinva');
+    document.getElementById("mytel").value = tel;
+	document.getElementById("myinva").value = myinva;
+ }
+</script>-->
+ 
 <script src="js/index.js"></script>
 
 </head>
@@ -45,10 +102,10 @@ var setSite={ //设置网站属性
 	</header>
 	
 	<section class="s1">
-		<a href="javascript:;" id="btn1" class="spr subscribe_btn subscribe_btn1" onclick="btn1('open')">立即预约</a>
+		<a href="javascript:;" id="btn1" class="spr subscribe_btn subscribe_btn1" onclick="mybtn()">立即预约</a>
 	</section>
 	<section class="s2">
-		<a href="javascript:;"  class="spr btn ljyuzhang" onclick="btn1('open')">立即预约</a>
+		<a href="javascript:;"  class="spr btn ljyuzhang" onclick="mybtn()">立即预约</a>
 	</section>
 	
 	<section class="s5">
@@ -57,7 +114,7 @@ var setSite={ //设置网站属性
 	<section class="s6">
 	
 	<div id="slider">
-	<ul class="slides clearfix">
+	<ul class="slides clearfix"> <!--class="slides clearfix"-->
 		<li><img class="responsive" src="img/1.jpg"></li>
 		<li><img class="responsive" src="img/2.jpg"></li>
 		<li><img class="responsive" src="img/3.jpg"></li>
@@ -65,7 +122,7 @@ var setSite={ //设置网站属性
 		<li><img class="responsive" src="img/5.jpg"></li>
 		<li><img class="responsive" src="img/6.jpg"></li>
 	</ul>
-	
+	</div>
 	<!--<ul class="pagination">
 		<li class="active"></li>
 		<li></li>
@@ -94,16 +151,42 @@ var setSite={ //设置网站属性
 	});
 </script>
 	</section>
+
 	<section class="s7">
 		
 	</section>
-	
+	<iframe name="formsubmit" style="display:none;">  
+		</iframe>  
+	<iframe name="myformsubmit" style="display:inline;">  
+		</iframe>  
+	<script type="text/javascript">
+			function guihuan()
+			{
+			document.forms.myform.action="rand.php";
+			document.forms.myform.target="";
+			 document.form.submit()
+			}
+			function baosun()
+			{
+			document.forms.myform.action="getcode.php" ;
+			document.forms.myform.target="formsubmit" ;
+			 document.form.submit()
+			}
+	</script>
 	<div class="mask"></div>
+	
 	<div id="login_slt" class="login_slt sprbg" style="display: none;">
+
 		<a href="javascript:;" class="close_btn" onclick="btn1('open')">关闭</a>
-		<input type="text" placeholder="请输入正确的手机号码" id="mreg_mobile" name="mreg_mobile" style="margin-top:20%;">
-		<input type="text" placeholder="请输入手机验证码" id="mreg_mobile" name="mreg_mobile" style="margin-top:20%;">
-		<input type="text" placeholder="请输入邀请码" id="mreg_mobile" name="mreg_mobile" style="margin-top:20%;">
+		<form id="myform" method="POST">
+		
+		<input type="text" placeholder="请输入正确的手机号码" value="" id="mytel" name="mytel" style="margin-top:20%;">
+		<input type="text" placeholder="请输入手机验证码" value="" id="mycode" name="mycode" style="margin-top:20%;">
+		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:20%;">
+		<input id="submit" type="submit" value="预约" onclick="guihuan()">
+		<input type="submit" value="获取手机验证码" onclick="baosun()">
+		</form>
+		
 	</div>
 	<div class="sprbg popup invite" id="subscribe_popup">
 		<a href="javascript:;" class="close_btn">关闭</a>
@@ -161,7 +244,163 @@ var setSite={ //设置网站属性
         <a href="javascript:void(0);" class="sprbg share_btn" onclick="PTTSendClick('popup','share','分享按钮');">分享</a>
 		-->
 	</div>
-	
+
+
+	<div id="videoPlayer_box" class="video_player_mask">
+		<div id="videoPlayer" class="video_player"></div>
+	</div>
+	<i id="videoClose" class="video_close">&times;</i>
+	<div class="share_tips"><p>请点击右上角分享给好友，<br>共赴乱世，成就霸业！</p></div>
+	<div class="sprbg gift_popup popup" id="gift_popup">
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3>我的礼包</h3>
+		<div class="mygift">
+			<div class="mygift1">
+				<h4>预约礼包</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" alt="">郭嘉将魂*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" alt="">紫色将魂*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" alt="">50000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*18</li>
+				</ul>
+			</div>
+			<div class="mygift2">
+				<h4><span id="wanzhang">300</span>万玩家预约达成累计礼包</h4>
+				<ul class="q">
+					
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">500君主经验*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">10,000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">10,000木材*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*18</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">1,600铁矿*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">400宝石*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" alt="">蚩尤号角*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" alt="">后羿之箭*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">香烛*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" alt="">普通招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" alt="">高级招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">郭嘉*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img28.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img28.jpg" alt="">武将技能书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*20</li>
+				</ul>
+			</div>
+			<div class="mygift3">
+				<h4>邀请好友达成累计礼包</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">1000君主经验*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">50,000木材*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">50,000粮草*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img4.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img4.jpg" alt="">君主技能重置*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">8,000铁矿*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">2,000宝石*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" alt="">随机迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">1小时加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img9.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img9.jpg" alt="">高级迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img10.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img10.jpg" alt="">2小时士兵<br>训练加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img11.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img11.jpg" alt="">2小时伤兵<br>恢复加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img12.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img12.jpg" alt="">官网预约<br>专属铭牌*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img13.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img13.jpg" alt="">2小时科技<br>研究加速*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img14.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img14.jpg" alt="">2小时建筑<br>加速*10</li>
+				</ul>
+			</div>
+			<div class="mygift4">
+				<h4>预约抽奖礼品</h4>
+				<ul class="q">
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img1.jpg" alt="">500君主经验*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img2.jpg" alt="">10,000粮草*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img3.jpg" alt="">10,000木材*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*18</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img5.jpg" alt="">1,600铁矿*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img6.jpg" alt="">400宝石*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img15.jpg" alt="">蚩尤号角*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img16.jpg" alt="">后羿之箭*28</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img17.jpg" alt="">香烛*8</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img7.jpg" alt="">随机迁城*1</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">1小时加速*5</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img8.jpg" alt="">5分钟加速*20</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img18.jpg" alt="">普通招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img19.jpg" alt="">高级招募券*3</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">极品兵书*10</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img21.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img21.jpg" alt="">Apple Watch<br>Series 2</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img22.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img22.jpg" alt="">京东100元购物卡</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img23.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img23.jpg" alt="">好莱坞会员卡</li>
+					<li><img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img24.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img24.jpg" alt="">IPad Pro 9.7英寸</li>
+				</ul>
+				<div id="listPage"></div>
+			</div>
+
+			
+		</div>
+	</div>
+	<div class="sprbg popup user_info" id="user_info">
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><strong>特别提醒：</strong>为保证实物奖励能准确邮寄，下面所有项目务必详细填写！</h3>
+        <form id="form_personInfo_374583" name="form_personInfo_374583">
+		<ul class="input_list">
+
+            <li style="display:none;" id="tr_package_name_374583">
+
+                <span class="star">*</span> 所或实物：
+
+            </li>
+            <li style="display:none;" id="tr_package_value_374583">
+
+                <select name="sPackageInfo" id="package_374583"></select>
+
+            </li>
+			<li>
+				<strong>姓名:</strong>
+				<input type="type" name="sName">
+			</li>
+			<li class="radio" id="gender">
+				<strong>性别:</strong>
+				<input type="radio" id="man" value="male" name="sGender" onclick="_radio(0,'gender');"><label for="man" onclick="_radio(0,'gender');"><span><i></i></span>男</label>
+				<input type="radio" id="woman" value="female" name="sGender" onclick="_radio(1,'gender');"><label for="woman" onclick="_radio(1,'gender');"><span><i></i></span>女</label>
+			</li>
+			<li>
+				<strong>身份证号码:</strong>
+				<input type="type" name="sIdentity">
+			</li>
+			<li>
+				<strong>手机号码:</strong>
+				<input type="type" name="sMobile">
+			</li>
+			<li>
+				<strong>所在城市:</strong>
+				<select name="sProvince" id="province_374583">
+				</select>
+				<select name="sCity" id="city_374583">
+				</select>
+			</li>
+			<li>
+				<strong>邮政编码:</strong>
+				<input type="type" name="sPostCode">
+			</li>
+			<li>
+				<strong>详细地址:</strong>
+				<input type="type" name="sAddress">
+			</li>
+		</ul>
+		<a href="javascript:void(0);" id="personInfoContentBtn_374583" class="sprbg submit_btn">确定</a>
+        </form>
+	</div>	
+	<div class="sprbg popup winning" id="winning"><!--中奖-->
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><i class="sprbg"></i>恭喜您，抽奖获得:</h3>
+		<ul class="winning_gift">
+			<li>
+				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/0.jpg" alt="">
+				<span>50000粮草*8</span>
+				<span>50000粮草*8</span>
+				<span>50000粮草*8</span>
+			</li>
+		</ul>
+		<p>游戏不删档开启后，来官网领取礼包。</p>
+		<a href="javascript:;" class="sprbg submit_btn">确定</a>
+		<div class="sprbg popup_end"></div>
+	</div>	
 	<div class="sprbg popup tips" id="tips"><!--alert-->
 		<a href="javascript:void(0);" class="close_btn">关闭</a>
 		<h3><i class="sprbg"></i>这里显示对应要提示的语句，请开发同学输出</h3>
@@ -169,6 +408,18 @@ var setSite={ //设置网站属性
 		<a href="javascript:void(0);" class="sprbg submit_btn">确定</a>
 		<div class="sprbg popup_end"></div>
 	</div>
+
+	<!--<script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>-->
+    <script src="../../pub.idqqimg.com/qqmobile/qqapi.js-_bid=152" tppabs="http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/js/mobile_build/util/zepto.js" tppabs="http://ossweb-img.qq.com/images/js/mobile_build/util/zepto.js"  ></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/js/mobile_build/milo.js" tppabs="http://ossweb-img.qq.com/images/js/mobile_build/milo.js" ></script>
+    <script type="text/javascript" src="../../ossweb-img.qq.com/images/ams/atm/reporting.js" tppabs="http://ossweb-img.qq.com/images/ams/atm/reporting.js"></script>
+    <script src="../../ossweb-img.qq.com/images/js/loadjs/loadjs.js" tppabs="http://ossweb-img.qq.com/images/js/loadjs/loadjs.js"></script>
+    <script src="../../ossweb-img.qq.com/images/data/mreport.js" tppabs="http://ossweb-img.qq.com/images/data/mreport.js"></script>
+	<script type="text/javascript" src="../../ossweb-img.qq.com/images/js/motion.js" tppabs="http://ossweb-img.qq.com/images/js/motion.js"></script>
+	<script src="../../imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js" tppabs="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js"></script>
+	<script src="../../ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js" tppabs="http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+	<script src="../act/a20170613subscribe/m/lottery.min.js" tppabs="http://slg.qq.com/act/a20170613subscribe/m/lottery.min.js"></script>
 	<script type="text/javascript">
 	window.tab=new mo.Slide({//游戏特色
 		target: $('#featureRoll li'),
