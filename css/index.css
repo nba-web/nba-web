@@ -21,7 +21,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	header h1 a em {display: block; font-style:normal; font-size:0.18rem; color: #535859;}
 	.home_btn,.mygift_btn {display: block; width: 1.56rem; height: 0.5rem; background-position: -5.55rem -7.89rem; position: absolute; top:0.27rem; right:0.17rem;  overflow: hidden; text-indent: -9999rem;}
 	.mygift_btn {right: 1.8rem;background-position: -5.55rem -7.37rem;}
-	.s1 {width:100%; height:3.2rem; background:url("../img/b1.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
+	.s1 {width:100%; height:3.21rem; background:url("../img/b1.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
 	.s1 h2 {width:2.47rem; height:3.84rem; background-position: 0 -0.95rem; margin:0.37rem 0 0 0.6rem; text-indent: -9999rem;}
 	.video_btn {display:block; height: 1.23rem; width: 1.23rem; position: relative; margin: 0.6rem auto 0;}
 	.video_btn i {display: block;width: 1.23rem; height: 1.23rem; background-position:-8.45rem -0.02rem; position: absolute; top: 0;left: 0; -webkit-animation:video_rotate 4s linear infinite;}
@@ -49,7 +49,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 		25%{transform:translateY(5px)}
 		75%{transform:translateY(-5px)}
 	}
-	.s2 {width:100%; height:3.2rem; background:url("../img/b2.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
+	.s2 {width:100%; height:3.21rem; background:url("../img/b2.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
 	.s5 {width:100%; height:3.2rem; background:url("../img/b3.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
 	.s6 {width:100%; height:3.854rem; background:url("../img/b4.jpg")no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
 	.s7 {width:100%; height:3.2rem; background:url("../img/b5.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
