@@ -1,4 +1,4 @@
-function btn1($option="open"){
+function btn1($option){
 	$login_slt = document.getElementById('login_slt').style; 
 	$invite = document.getElementById('succeed').style; 
 	if($option=="open"){
