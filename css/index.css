@@ -205,11 +205,12 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.qq {margin-left:0.84rem;}
 	.close_btn {display: block; position: absolute; top: 0.31rem; right: 0.01rem; overflow: hidden; text-indent: -9999px; width: 0.41rem; height: 0.41rem;}
 	.close_btn_succeed {display: block; position: absolute; top: 0.68rem; right: 0.64rem; overflow: hidden; text-indent: -99999rem; width: 0.41rem; height: 0.41rem;}
-	.popup {display:none;width: 2.5rem; height: 2.5rem; background:url("../img/y2.png") no-repeat; background-size: cover; position: fixed; top: 13%; left: 35%; z-index: 1000;}
+	.popup {display:none;width: 2.5rem; height: 2.5rem; background:url("../img/y2.png") no-repeat; background-size: cover; position: fixed; top: 13%; left: 30%; z-index: 1000;}
 	.popup a {
 		display: block; 
 		font-size:0.13rem;
 		position: absolute; 
+		overflow: hidden; text-indent: -9999px;
 		top: 0.2rem; right: 0.25rem; 
 		width: 0.2rem; height: 0.2rem;	
 	}
