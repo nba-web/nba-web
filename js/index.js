@@ -16,3 +16,17 @@ function btn1($option){
 		$invite.display='block';
 	}
 }
+
+function btn2($option){
+	if($option=="code"){
+		alert("我是验证码！");
+	}else if($option=="submit_1"){
+		//document.getElementById('mreg_appoint').submit();
+		//return false;
+		alert("submit_1");
+	}else if($option=="submit_2"){
+		//document.getElementById('mreg_appoint').submit();
+		//return false;
+		alert("submit_2");
+	}
+}
