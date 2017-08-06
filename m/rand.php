@@ -40,7 +40,7 @@ function generate_rand($tel) {
 
 
 <?php 
-	
+	setcookie("tempuser", $mytel, time()+36000);
 	try {
 
     ////短信相关
@@ -73,7 +73,7 @@ function generate_rand($tel) {
 			break;
 		}
 	}
-	setcookie("tempuser", $mytel, time()+36000);
+	
 	setcookie("tempmyinva", $myinva, time()+36000);
 	$addSql = "INSERT INTO `reward`(`tel`,  `class1`, `class2`, `class3` ,`class4` , `class5`, `class6`, `class7` ,`class8`, `class9`, `class10`, `class11` ,`class12` , `class13`, `class14`, `class15`) VALUES ('".$mytel."','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0')";
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error());
@@ -104,7 +104,7 @@ function generate_rand($tel) {
 	// exit;
 	
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
-	setcookie("user", $mytel, time()+36000);
+	setcookie("name", $mytel, time()+36000);
 	setcookie("myinva", $str3, time()+36000);
 ?>
 <html lang="zh-CN">
