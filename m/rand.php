@@ -4,6 +4,12 @@ $mytel = trim($_POST['mytel']);
 $mycode = trim($_POST['mycode']);
 $myinva = trim($_POST['myinva']);
 
+if($mytel==NULL)
+{
+	echo "<script type='text/javascript'>alert('手机号为空，可能由于您重复刷新');location.href='./';</script>";
+	return;
+}
+
 ?>
 
 <script type="text/javascript" src="cookie.js"></script>

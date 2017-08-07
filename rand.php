@@ -3,6 +3,12 @@
 $mytel = trim($_POST['mytel']);
 $mycode = trim($_POST['mycode']);
 $myinva = trim($_POST['myinva']);
+if($mytel==NULL)
+{
+	echo "<script type='text/javascript'>alert('手机号为空，可能由于您重复刷新');location.href='./';</script>";
+	return;
+}
+
 
 ?>
 
@@ -366,7 +372,7 @@ var setSite={ //设置网站属性
 	}
 	else
 	{
-		echo "<script type='text/javascript'>alert('验证码错误');location.href='./';</script>";
+		echo "<script type='text/javascript'>alert('验证码错误或勿重复提交');location.href='./';</script>";
 	}
 	//echo $e;
 	
