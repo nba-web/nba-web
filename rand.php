@@ -1,4 +1,118 @@
 <!DOCTYPE html>
+<?php
+$mytel = trim($_POST['mytel']);
+$mycode = trim($_POST['mycode']);
+$myinva = trim($_POST['myinva']);
+
+?>
+
+<script type="text/javascript" src="cookie.js"></script>
+<?php
+include 'conn/conn.php';
+include_once 'lib/BmobObject.class.php';
+include_once 'lib/BmobUser.class.php';
+include_once 'lib/BmobBatch.class.php';
+include_once 'lib/BmobFile.class.php';
+include_once 'lib/BmobImage.class.php';
+include_once 'lib/BmobRole.class.php';
+include_once 'lib/BmobPush.class.php';
+include_once 'lib/BmobPay.class.php';
+include_once 'lib/BmobSms.class.php';
+include_once 'lib/BmobApp.class.php';
+include_once 'lib/BmobSchemas.class.php';
+include_once 'lib/BmobTimestamp.class.php';
+include_once 'lib/BmobCloudCode.class.php';
+include_once 'lib/BmobBql.class.php';
+
+
+
+function generate_rand($tel) {
+    $c= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    srand((double)microtime()*1000000);
+    for ($i=0; $i<2; $i++) {
+        $rand.= $c[rand()%strlen($c)];
+    }
+	$myuse=substr($tel,-4);
+	$restr = $myuse . "" . $rand;
+    return $restr;
+}
+?>
+
+
+<?php 
+	$iffause=1;
+	setcookie("tempuser", $mytel, time()+36000);
+	setcookie("tempmyinva", $myinva, time()+36000);
+	setcookie("isture", $iffause, time()+10);
+	/*try {
+
+    ////短信相关
+    $bmobSms = new BmobSms();
+	$res = $bmobSms->verifySmsCode($mytel,$mycode);
+    // $res = $bmobSms->sendSms("131xxxxxxxx", "您的验证码是：222222, 有效期是10分钟。"); //发送短信
+    // $res = $bmobSms->sendSmsVerifyCode("131xxxxxxxx", "注册模板");  //发送短信验证码
+    // $res = $bmobSms->verifySmsCode("131xxxxxxxx","028584");  //发送短信验证码
+    // $res = $bmobSms->querySms("6466181");  //查询短信状态
+
+    var_dump($res);
+	} catch (Exception $e) {
+    echo $e;
+	}*/
+	
+	$res=1;
+	if($res)
+	{
+		database_connect();
+	while(1)
+	{
+		$str3=generate_rand($mytel);
+		echo $str3;
+		$sql="select * from user where code='".$str3."'";
+		$query=mysql_query($sql);
+		$rows = mysql_num_rows($query);
+		//echo $rows;
+		if($rows == 0)
+		{
+			break;
+		}
+	}
+	
+	
+	$addSql = "INSERT INTO `reward`(`tel`,  `class1`, `class2`, `class3` ,`class4` , `class5`, `class6`, `class7` ,`class8`, `class9`, `class10`, `class11` ,`class12` , `class13`, `class14`, `class15`) VALUES ('".$mytel."','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0')";
+	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error());
+	
+	$sql="select rewardid from reward where tel='".$mytel."'";
+	$query=mysql_query($sql);
+	$rs = mysql_fetch_array($query);
+    $reward = $rs['rewardid'];
+	echo $reward;
+	
+	$sql="select uid from user where code='".$myinva."'";
+	$query=mysql_query($sql);
+	$rs = mysql_fetch_array($query);
+    $tid = $rs['uid'];
+	echo $tid;
+
+
+	$times=0;
+	$mydate = date('Y-m-d');
+	if($str3 == ''){
+		echo "<script type='text/javascript'>alert('信息输入不完整！');history.go(-1)</script>";
+		exit;
+	}
+
+	$addSql = "INSERT INTO `user`(`tel`,  `code`, `reward`, `tid`, `times`,`update_at`) VALUES ('".$mytel."','".$str3."','".$reward."','".$tid."','".$times."','".$mydate."')";
+	//echo 111;
+	//echo $addBookSql;
+	// exit;
+	
+	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
+	setcookie("name", $mytel, time()+36000);
+	setcookie("myinva", $str3, time()+36000);
+	setcookie("isture", "", time() - 3600);
+	//$iftrue=2;
+	//setcookie("isture", $iftrue, time()+60);
+?>
 <html lang="zh-CN">
 <head>
 <link rel="stylesheet" href="css/reset.css">
@@ -43,8 +157,8 @@ var setSite={ //设置网站属性
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
 //var cook=$.cookie('user')
-alert($.cookie('user'));
-alert($.cookie('myinva'));
+//alert($.cookie('user'));
+//alert($.cookie('myinva'));
  </script>
  
  
@@ -54,20 +168,20 @@ alert($.cookie('myinva'));
 
 <body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
 	<header>
-		<h1><a href="#" tppabs="http://slg.qq.com/m/main.shtml" onclick="void();">篮球大师<em style="color: #ffffff;font-size:50%;padding-top:15px">真实NBA经理人手游</em></a></h1>
-		<a href="javascript:;" class="spr mygift_btn" onclick="PTTSendClick('header','mygift','我的礼包');">我的礼包</a>
-		<a href="main.shtml.htm" tppabs="http://slg.qq.com/m/main.shtml" class="spr home_btn" onclick="PTTSendClick('header','home','进入官网');">进入官网</a>
+		<h1><a onclick="void();">篮球大师<em style="color: #ffffff;font-size:50%;padding-top:15px">真实NBA经理人手游</em></a></h1>
+		<a class="spr mygift_btn" >我的礼包</a>
+		<a class="spr home_btn" >进入官网</a>
 	</header>
 	
 	<section class="s1">
-		<a href="javascript:;" id="btn1" class="spr subscribe_btn subscribe_btn1" onclick="btn1('open')">立即预约</a>
+		<a  class="spr subscribe_btn subscribe_btn1">立即预约</a>
 	</section>
 	<section class="s2">
-		<a href="javascript:;"  class="spr btn ljyuzhang" onclick="btn1('open')">立即预约</a>
+		<a class="spr btn ljyuzhang">立即预约</a>
 	</section>
 	
 	<section class="s5">
-		<a href="javascript:;" onclick="btn1('open_invite')" class="spr invite_btn">邀请好友</a>
+		<a  onclick="btn1('open_invite')" >邀请好友</a>
 	</section>
 	<section class="s6">
 	
@@ -146,103 +260,111 @@ alert($.cookie('myinva'));
 		</form>
 		
 	</div>
-	<div class="sprbg popup invite" id="subscribe_popup">
-		<a href="javascript:;" class="close_btn">关闭</a>
-		<h3>恭喜您预约成功！</h3>
-		<ul class="succeed_gift">
-			<li>
-				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" alt="">
-				<span>郭嘉将魂*10</span>
-			</li>
-			<li>
-				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img29.jpg" alt="">
-				<span>紫色将魂*20</span>
-			</li>
-			<li>
-				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img25.jpg" alt="">
-				<span>50000粮草*8</span>
-			</li>
-			<li>
-				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img20.jpg" alt="">
-				<span>极品兵书*18</span>
-			</li>
-		</ul>
-		<p class="topline">填写手机号码和好友邀请码共赢预约礼包</p>
-		<ul class="input_list">
-			<li>
-				<strong>手机号:</strong>
-				<input type="type" class="build_yourphone" value="" placeholder="输入您的手机号">
-			</li>
-			<li>
-				<strong>邀请码:</strong>
-				<input type="type" id="inviteCode" value="" placeholder="这里显示邀请码">
-			</li>
-		</ul>
-		<div class="topline"></div>
-		<a href="javascript:;" class="sprbg lijiyuyuez submit_btn">确定</a>
-	</div>
+	
 	<div class="sprbg popup" id="succeed">
-		<a href="javascript:void(0);" class="close_btn_succeed" onclick="btn1('close_invite')">关闭</a>
+		<a href="http://127.0.0.1/nba-web/" class="close_btn_succeed">关闭</a>
 	</div>
 	</body>
 
-<?php
-include 'conn/conn.php';
-function generate_rand($tel) {
-    $c= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    srand((double)microtime()*1000000);
-    for ($i=0; $i<2; $i++) {
-        $rand.= $c[rand()%strlen($c)];
-    }
-	$myuse=substr($tel,-4);
-	$restr = $myuse . "" . $rand;
-    return $restr;
-}
-?>
-<?php
-	$tel="13180803412";
-	//$str3 = $myuse . "" . $str;
-?>
+
 
 
 <?php 
-	
-	//$no = trim($_POST['no']);
-	database_connect();
-	while(1)
-	{
-	$str3=generate_rand($tel);
-	echo $str3;
-	$sql="select * from user where code='".$str3."'";
-	$query=mysql_query($sql);
-    $rows = mysql_num_rows($query);
-	echo $rows;
-	if($rows == 0)
-	{
-		break;
-	}
-	}
-	$reward=1;
-	$tid=1;
-	$times=1;
-	$mydate = date('Y-m-d');
-	if($str3 == ''){
-		echo "<script type='text/javascript'>alert('信息输入不完整！');history.go(-1)</script>";
-		exit;
-	}
+	/*try {
 
-	$addSql = "INSERT INTO `user`(`tel`,  `code`, `reward`, `tid`, `times`,`update_at`) VALUES ('".$tel."','".$str3."','".$reward."','".$tid."','".$times."','".$mydate."')";
-	//echo 111;
-	//echo $addBookSql;
-	// exit;
+    ////短信相关
+    $bmobSms = new BmobSms();
+	$res = $bmobSms->verifySmsCode($mytel,$mycode);
+    // $res = $bmobSms->sendSms("131xxxxxxxx", "您的验证码是：222222, 有效期是10分钟。"); //发送短信
+    // $res = $bmobSms->sendSmsVerifyCode("131xxxxxxxx", "注册模板");  //发送短信验证码
+    // $res = $bmobSms->verifySmsCode("131xxxxxxxx","028584");  //发送短信验证码
+    // $res = $bmobSms->querySms("6466181");  //查询短信状态
+
+    var_dump($res);
+	} catch (Exception $e) {
+    echo $e;
+	}*/
 	
-	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
+	//$iftrue=2;
+	//setcookie("isture", $iftrue, time()+60);
+	//setcookie("isture", "", time() - 3600);
+	//setcookie("isture", $iffause, time()+10);
 	//$addInfo = mysql.cubrid_fetch_array($addBookResult);
 	//echo var_dump($addInfo);
+	if($tid==NULL)
+	{
+		echo "无推荐人";
+	}
+	else
+	{
+		$sql="select reward,times,update_at from user where uid='".$tid."'";
+		$query=mysql_query($sql);
+		$rs = mysql_fetch_array($query);
+		
+		$usereward = $rs['reward'];
+		$updatetime = $rs['update_at'];
+		$today = date('Y-m-d');
+		if($updatetime==$today)
+		{			
+			$times = $rs['times'];
+			$times=$times+1;
 
-	echo "<script type='text/javascript'>alert('插入成功');location.href='m/index.htm';</script>";
+		}
+		else
+		{
+			$times = 1;
+		}
+		$sql = "UPDATE `user` set times='".$times."' where uid = '".$tid."'";
+		$addResult = mysql_query($sql) or die("Error in query: $query. ".mysql_error()); 
+
+		if($times==1)
+		{
+			$sql="select class6 from reward where rewardid = '".$usereward."'";
+			$query=mysql_query($sql);
+			$rs = mysql_fetch_array($query);
+			$rewardnum = $rs['class6'];
+			$rewardnum = $rewardnum+1;
+			$sql = "UPDATE `reward` set class6='".$rewardnum."' where rewardid = '".$usereward."'";
+			$addResult = mysql_query($sql) or die("Error in query: $query. ".mysql_error()); 
+		}
+		if($times==2)
+		{
+			$sql="select class7 from reward where rewardid = '".$usereward."'";
+			$query=mysql_query($sql);
+			$rs = mysql_fetch_array($query);
+			$rewardnum = $rs['class7'];
+			$rewardnum = $rewardnum+1;
+			$sql = "UPDATE `reward` set class7='".$rewardnum."' where rewardid = '".$usereward."'";
+			$addResult = mysql_query($sql) or die("Error in query: $query. ".mysql_error()); 
+		}
+		if($times==3)
+		{
+			$sql="select class8 from reward where rewardid = '".$usereward."'";
+			$query=mysql_query($sql);
+			$rs = mysql_fetch_array($query);
+			$rewardnum = $rs['class8'];
+			$rewardnum = $rewardnum+1;
+			$sql = "UPDATE `reward` set class8='".$rewardnum."' where rewardid = '".$usereward."'";
+			$addResult = mysql_query($sql) or die("Error in query: $query. ".mysql_error()); 
+		}
+		
+	}
+	
+	//echo "<script type='text/javascript'>alert('插入成功');location.href='http://127.0.0.1/nba-web/m/';</script>";
+	
+	echo "<script type='text/javascript'>btn1('open_invite');</script>";
+	//echo "<script type='text/javascript'>location.href='http://127.0.0.1/nba-web/m/';</script>";
+	}
+	else
+	{
+		echo "<script type='text/javascript'>alert('验证码错误');location.href='./';</script>";
+	}
+	//echo $e;
+	
 	
 	
 	
 ?>
 </html>
+
+

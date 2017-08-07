@@ -30,3 +30,17 @@ function btn2($option){
 		alert("submit_2");
 	}
 }
+
+function mybtn(){
+	var usemy_start=document.cookie.indexOf("name"); 
+	if(usemy_start==-1){
+		alert(usemy_start);
+		btn1('open');
+		
+	}
+	else {
+		alert(usemy_start);
+		//btn1('open');
+		btn1('open_invite');
+	}
+}
