@@ -193,11 +193,10 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 		z-index: 1000;
 	}
 	.gift p{
-		font-size:0.24rem;
+		font-size:0.14rem;
 		font-family:Microsoft YaHei;
 		color:red;
-		margin-top:1.56rem;
-		width:0.67rem;
+		width:0.4rem;
 		text-align:center;
 		display:inline-block;
 	}
