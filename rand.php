@@ -44,7 +44,7 @@ function generate_rand($tel) {
 	setcookie("tempuser", $mytel, time()+36000);
 	setcookie("tempmyinva", $myinva, time()+36000);
 	setcookie("isture", $iffause, time()+10);
-	/*try {
+	try {
 
     ////短信相关
     $bmobSms = new BmobSms();
@@ -57,9 +57,9 @@ function generate_rand($tel) {
     var_dump($res);
 	} catch (Exception $e) {
     echo $e;
-	}*/
+	}
 	
-	$res=1;
+	//$res=1;
 	if($res)
 	{
 		database_connect();
