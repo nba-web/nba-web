@@ -82,7 +82,7 @@ if(iftrue==1){
 		{
 		//var tel = $.cookie('user');
 		//var myteminva=$.cookie('myinva');
-		btn1('open');
+		btn1('login_slt');
 		document.getElementById("mytel").value = tel;
 		document.getElementById("myinva").value = myinva;
 		}
@@ -94,8 +94,8 @@ if(iftrue==1){
 
 <body>
 	<header>
-		<a href="javascript:;" style="margin-left:62%" onclick="btn1('open');">我的礼包</a>
-		<a href="#"  onclick="PTTSendClick('header','home','进入官网');">进入官网</a>
+		<a href="javascript:;" style="margin-left:62%" onclick="btn1('gift');">我的礼包</a>
+		<a href="#"  onclick="">进入官网</a>
 	</header>
 	
 	<section class="s1">
@@ -110,7 +110,7 @@ if(iftrue==1){
 		
 	</section>
 	<section class="s6">
-	<a href="javascript:;" onclick="btn1('open_invite');" class="spr invite_btn">邀请好友</a>
+	<a href="javascript:;" onclick="btn1('invite');" class="spr invite_btn">邀请好友</a>
 	<div id="slider">
 	<ul class="slides clearfix">
 		<li><img class="responsive" src="img/1.jpg"></li>
@@ -144,10 +144,6 @@ if(iftrue==1){
 	<section class="s7">
 		
 	</section>
-	<iframe name="formsubmit" style="display:none;">  
-		</iframe>  
-	<iframe name="myformsubmit" style="display:inline;">  
-		</iframe>  
 	<script type="text/javascript">
 			function guihuan()
 			{
@@ -164,7 +160,7 @@ if(iftrue==1){
 	</script>
 	<div class="mask"></div>
 	<div id="login_slt" class="login_slt" style="display: none;">
-		<a href="javascript:;"  onclick="btn1('open')">关</a>
+		<a href="javascript:;"  onclick="btn1('login_slt')">关</a>
 		<form method="POST" id="myform">
 			<input type="text" placeholder="请输入您的手机号码" value="" id="mytel" name="mytel" style="margin-top:22%; display:block; width:1.14rem; " >
 			<input type="text" placeholder="请输入验证码" value="" id="mycode" name="mycode" style="width:0.6rem; display:inline;">
@@ -182,8 +178,30 @@ if(iftrue==1){
 		<a href="javascript:;" class="close_btn">关闭</a>
 		
 	</div>
+	<div id="gift" class="gift" style="display: none;">
+
+		<a href="javascript:;" onclick="btn1('gift')">关闭</a>
+		<p id ="gift_num1" style="margin-left:0.4rem">1000</p>
+		<p id ="gift_num2" style="margin-left:0.41rem">1000</p>
+		<p id ="gift_num3" style="margin-left:0.42rem">1000</p>
+		<p id ="gift_num4" style="margin-left:0.43rem">1000</p>
+		
+		<p id ="gift_num5" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num6" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num7" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num8" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		
+		<p id ="gift_num9" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num10" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num11" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num12" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		
+		<p id ="gift_num13" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num14" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num15" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+	</div>
 	<div class="popup" id="succeed">
-		<a href="javascript:;" onclick="btn1('close_invite')" >关闭</a>
+		<a href="javascript:;" onclick="btn1('invite')" >关闭</a>
 		<span id="device_type" style="margin-top:0.68rem;">PC</span>
 		<span id="tel_num">15370103305</span>
 		<span id="s_code">KB3125</span>
