@@ -49,10 +49,10 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 		25%{transform:translateY(5px)}
 		75%{transform:translateY(-5px)}
 	}
-	.s2 {width:100%; height:3.2rem; background:url("../img/b2.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;margin:0;padding:0;}
-	.s5 {width:100%; height:3.2rem; background:url("../img/b3.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;margin:0;padding:0;}
-	.s6 {width:100%; height:3.854rem; background:url("../img/b4.jpg")no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;margin:0;padding:0;}
-	.s7 {width:100%; height:3.9rem; background:url("../img/b5.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;margin:0;padding:0;}
+	.s2 {width:100%; height:3.2rem; background:url("../img/b2.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
+	.s5 {width:100%; height:3.2rem; background:url("../img/b3.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
+	.s6 {width:100%; height:3.854rem; background:url("../img/b4.jpg")no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
+	.s7 {width:100%; height:3.9rem; background:url("../img/b5.jpg") no-repeat 50% 0; background-size: contain;overflow: hidden; position: relative;}
 	.tit {height:0.86rem; width:3.8rem;  margin: 0.34rem auto; text-indent: -9999rem;}
 	.t1 {height:0.86rem;margin: 0.54rem auto 0; background-position: -2.54rem -0.75rem;}
 	.t2 {margin:1rem auto 0.15rem;background-position: -2.54rem -2.82rem;}
