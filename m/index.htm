@@ -164,13 +164,13 @@ if(p_start==-1){
 			{
 			document.forms.myform.action="rand.php";
 			document.forms.myform.target="";
-			document.forms.myform.submit()
+			document.forms.myform.submit();
 			}
 			function baosun()
 			{
 			document.forms.myform.action="getcode.php" ;
 			document.forms.myform.target="formsubmit" ;
-			document.forms.myform.submit()
+			document.forms.myform.submit();
 			}
 	</script>
 	<div class="mask"></div>
@@ -180,18 +180,21 @@ if(p_start==-1){
 		<a href="javascript:;" onclick="btn1('open')">关闭</a>
 		<form id="myform" method="POST">
 		
-		<input type="text" placeholder="请输入正确的手机号码" value="" id="mytel" name="mytel" style="margin-top:20%;">
-		<input type="text" placeholder="请输入手机验证码" value="" id="mycode" name="mycode" style="width:1.5rem;margin-top:0.2rem; display:inline;">
-		<a href="javascript:;"  onclick="baosun();" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>
-		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:20%;">
-		<input id="submit" type="submit" value="预约" onclick="guihuan()">
-		<input type="submit" value="获取手机验证码" onclick="baosun()">
+		<input type="text" placeholder="请输入正确的手机号码" value="" id="mytel" name="mytel" style="margin-top:22%;">
+		<input type="text" placeholder="请输入手机验证码" value="" id="mycode" name="mycode" style="width:1.45rem;margin-top:0.2rem; display:inline;">
+		<a href="javascript:;"  onclick="baosun()" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>
+		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:4%;">
+		<a href="javascript:;"  onclick="guihuan()" style="left:1.9rem;top:3.1rem;width:2.6rem;height:0.5rem">立即预约</a>
+		<a href="javascript:;"  onclick="void(0);" style="left:2.4rem;top:3.75rem;width:1.45rem;height:0.5rem">登录</a>
+		
 		</form>
 		
 	</div>
 	<div class="sprbg popup invite" id="subscribe_popup">
 		<a href="javascript:;" class="close_btn">关闭</a>
 		<h3>恭喜您预约成功！</h3>
+		<input id="submit" type="submit" value="预约" onclick="guihuan()">
+		<input type="submit" value="获取手机验证码" onclick="baosun()">
 		<ul class="succeed_gift">
 			<li>
 				<img src="../../game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" tppabs="http://game.gtimg.cn/images/slg/act/a20170613subscribe/img27.jpg" alt="">
