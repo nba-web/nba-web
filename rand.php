@@ -44,7 +44,7 @@ function generate_rand($tel) {
 	setcookie("tempuser", $mytel, time()+36000);
 	setcookie("tempmyinva", $myinva, time()+36000);
 	setcookie("isture", $iffause, time()+10);
-	try {
+	/*try {
 
     ////短信相关
     $bmobSms = new BmobSms();
@@ -57,9 +57,9 @@ function generate_rand($tel) {
     var_dump($res);
 	} catch (Exception $e) {
     echo $e;
-	}
+	}*/
 	
-	//$res=1;
+	$res=1;
 	if($res)
 	{
 		database_connect();
@@ -166,27 +166,27 @@ var setSite={ //设置网站属性
 
 </head>
 
-<body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
+<body>
 	<header>
-		<h1><a onclick="void();">篮球大师<em style="color: #ffffff;font-size:50%;padding-top:15px">真实NBA经理人手游</em></a></h1>
-		<a class="spr mygift_btn" >我的礼包</a>
-		<a class="spr home_btn" >进入官网</a>
+		<a style="margin-left:62%">我的礼包</a>
+		<a>进入官网</a>
 	</header>
 	
 	<section class="s1">
-		<a  class="spr subscribe_btn subscribe_btn1">立即预约</a>
+		
 	</section>
 	<section class="s2">
-		<a class="spr btn ljyuzhang">立即预约</a>
+	<a id="btn1" class="spr subscribe_btn subscribe_btn1">立即预约</a>
+		
 	</section>
-	
 	<section class="s5">
-		<a  onclick="btn1('open_invite')" >邀请好友</a>
+	<a class="spr btn ljyuzhang">立即预约</a>
+		
 	</section>
 	<section class="s6">
-	
+	<a class="spr invite_btn">邀请好友</a>
 	<div id="slider">
-	<ul class="slides clearfix"> <!--class="slides clearfix"-->
+	<ul class="slides clearfix">
 		<li><img class="responsive" src="img/1.jpg"></li>
 		<li><img class="responsive" src="img/2.jpg"></li>
 		<li><img class="responsive" src="img/3.jpg"></li>
@@ -195,18 +195,10 @@ var setSite={ //设置网站属性
 		<li><img class="responsive" src="img/6.jpg"></li>
 	</ul>
 	</div>
-	<!--<ul class="pagination">
-		<li class="active"></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>-->
-	</div>
 <ul class="controls">
 		<li><img src="img/prev.png" alt="previous"></li>
 		<li><img src="img/next.png" alt="next"></li>
 	</ul>
-
 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="dist/easySlider.js"></script>
 <script type="text/javascript">
@@ -222,7 +214,6 @@ var setSite={ //设置网站属性
 		});
 	});
 </script>
-
 	</section>
 	<section class="s7">
 		
@@ -236,33 +227,51 @@ var setSite={ //设置网站属性
 			{
 			document.forms.myform.action="rand.php";
 			document.forms.myform.target="";
-			 document.form.submit()
+			document.forms.myform.submit();
 			}
 			function baosun()
 			{
 			document.forms.myform.action="getcode.php" ;
 			document.forms.myform.target="formsubmit" ;
-			 document.form.submit()
+			document.forms.myform.submit();
 			}
 	</script>
 	<div class="mask"></div>
-	
-	<div id="login_slt" class="login_slt sprbg" style="display: none;">
-
-		<a href="javascript:;" class="close_btn" onclick="btn1('open')">关闭</a>
-		<form id="myform" method="POST">
-		
-		<input type="text" placeholder="请输入正确的手机号码" id="mytel" name="mytel" style="margin-top:20%;">
-		<input type="text" placeholder="请输入手机验证码" id="mycode" name="mycode" style="margin-top:20%;">
-		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:20%;">
-		<input id="submit" type="submit" value="预约" onclick="guihuan()">
-		<input type="submit" value="获取手机验证码" onclick="baosun()">
+	<div id="login_slt" class="login_slt" style="display: none;">
+		<a href="javascript:;"  onclick="btn1('open')">关</a>
+		<form method="POST" id="myform">
+			<input type="text" placeholder="请输入您的手机号码" value="" id="mytel" name="mytel" style="margin-top:22%; display:block; width:1.14rem; " >
+			<input type="text" placeholder="请输入验证码" value="" id="mycode" name="mycode" style="width:0.6rem; display:inline;">
+			<!--<input type="submit" onclick="baosun()" style="left:1.5rem;top:0.75rem;width:0.5rem;">获取验证码</a>-->
+			<!--<a href="javascript:;" name="submit" onclick="baosun()" style="left:1rem;top:1.6rem;width:0.6rem;height:0.18rem;" >获取验证码</a>
+			<a href="javascript:;"  onclick="baosun()" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>-->
+			<a href="javascript:;"  onclick="baosun()" style="left:1.5rem;top:0.75rem;width:0.5rem;">获取验证码</a>
+			<input type="text" placeholder="请输入您的邀请码" id="myinva" name="myinva" style="width:1.14rem;" >
+			<!--<input id="submit" type="submit" name="submit" onclick="guihuan()" style="left:0.8rem;top:1.3rem;width:1.1rem;height:0.23rem;" >立即预约</a>-->
+			<a href="javascript:;" onclick="guihuan()" style="left:0.8rem;top:1.3rem;width:1.1rem;height:0.23rem;" >立即预约</a>
+			<a href="javascript:;" name="submit" onclick="btn2('submit_2');" style="left:1rem;top:1.6rem;width:0.6rem;height:0.18rem;" >登陆</a>
 		</form>
+	</div>
+	<div class="sprbg popup invite" id="subscribe_popup">
+		<a href="javascript:;" class="close_btn">关闭</a>
 		
 	</div>
-	
-	<div class="sprbg popup" id="succeed">
-		<a href="http://127.0.0.1/nba-web/" class="close_btn_succeed">关闭</a>
+	<div class="popup" id="succeed">
+		<a href="./" >关闭</a>
+		<span id="device_type" style="margin-top:0.68rem;">PC</span>
+		<span id="tel_num">15370103305</span>
+		<span id="s_code">KB3745</span>
+        <div class="code" style="margin-top:34%;">
+            <input type="text" name="in_code" value="KB3745" class="cdkid" readonly="readonly" >
+        </div>
+		
+	</div>
+	<div class="sprbg popup tips" id="tips"><!--alert-->
+		<a href="javascript:void(0);" class="close_btn">关闭</a>
+		<h3><i class="sprbg"></i>这里显示对应要提示的语句，请开发同学输出</h3>
+		<p></p>
+		<a href="javascript:void(0);" class="sprbg submit_btn">确定</a>
+		<div class="sprbg popup_end"></div>
 	</div>
 	</body>
 
