@@ -4,12 +4,6 @@ $mytel = trim($_POST['mytel']);
 $mycode = trim($_POST['mycode']);
 $myinva = trim($_POST['myinva']);
 
-if($mytel==NULL)
-{
-	echo "<script type='text/javascript'>alert('手机号为空，可能由于您重复刷新');location.href='./';</script>";
-	return;
-}
-
 ?>
 
 <script type="text/javascript" src="cookie.js"></script>
@@ -46,11 +40,8 @@ function generate_rand($tel) {
 
 
 <?php 
-	$iffause=1;
 	setcookie("tempuser", $mytel, time()+36000);
-	setcookie("tempmyinva", $myinva, time()+36000);
-	setcookie("isture", $iffause, time()+6);
-	/*try {
+	try {
 
     ////短信相关
     $bmobSms = new BmobSms();
@@ -63,9 +54,9 @@ function generate_rand($tel) {
     var_dump($res);
 	} catch (Exception $e) {
     echo $e;
-	}*/
+	}
 	
-	$res=1;
+	//$res=1;
 	if($res)
 	{
 		database_connect();
@@ -83,7 +74,7 @@ function generate_rand($tel) {
 		}
 	}
 	
-	
+	setcookie("tempmyinva", $myinva, time()+36000);
 	$addSql = "INSERT INTO `reward`(`tel`,  `class1`, `class2`, `class3` ,`class4` , `class5`, `class6`, `class7` ,`class8`, `class9`, `class10`, `class11` ,`class12` , `class13`, `class14`, `class15`) VALUES ('".$mytel."','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0')";
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error());
 	
@@ -115,9 +106,6 @@ function generate_rand($tel) {
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
 	setcookie("name", $mytel, time()+36000);
 	setcookie("myinva", $str3, time()+36000);
-	setcookie("isture", "", time() - 3600);
-	//$iftrue=2;
-	//setcookie("isture", $iftrue, time()+60);
 ?>
 <html lang="zh-CN">
 <head>
@@ -291,10 +279,8 @@ var setSite={ //设置网站属性
     echo $e;
 	}*/
 	
-	//$iftrue=2;
-	//setcookie("isture", $iftrue, time()+60);
-	//setcookie("isture", "", time() - 3600);
-	//setcookie("isture", $iffause, time()+10);
+	
+	
 	//$addInfo = mysql.cubrid_fetch_array($addBookResult);
 	//echo var_dump($addInfo);
 	if($tid==NULL)
