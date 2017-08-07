@@ -12,8 +12,19 @@ function btn1($option){
 		$invite.display='none';
 	}
 	else if($option=="open_invite"){
+		
 		//alert("open");
 		$invite.display='block';
+		$.ajax({
+		url:'ab.php',
+		type:'post',
+		dataType:'json',
+		data:{val1:tel},
+		success:function(data){
+		var str = data.val1;
+		alert(str);
+	}
+	});
 	}
 }
 
