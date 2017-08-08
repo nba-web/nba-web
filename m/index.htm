@@ -42,11 +42,11 @@ var setSite={ //设置网站属性
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
-var tel = $.cookie('tempuser');
-var myinva = $.cookie('tempmyinva');
-//alert(cookie);
+var tel = $.cookie('phonetu');
+var myinva = $.cookie('phonetin');
+var phonetel = $.cookie('phonena');
 //alert($.cookie('myinva'));
-var c_start=document.cookie.indexOf("tempuser"); 
+var c_start=document.cookie.indexOf("phoneis"); 
 if(c_start==-1){
 		//alert("1234");
 
@@ -62,7 +62,7 @@ if(c_start==-1){
 		document.getElementById("mytel").value = tel;
 		}
 	}
-var p_start=document.cookie.indexOf("tempmyinva"); 
+var p_start=document.cookie.indexOf("phonetin"); 
 if(p_start==-1){
 		//alert("1234");
 
@@ -97,7 +97,7 @@ if(p_start==-1){
 <body><img src="../../game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" tppabs="https://game.gtimg.cn/images/slg/m/web201704/share_logo.jpg" style="opacity: 0; position: absolute; bottom:0;left:0;" alt="">
 	<header>
 		<h1><a href="#" tppabs="http://slg.qq.com/m/main.shtml" onclick="void();">篮球大师<em style="color: #ffffff;font-size:50%;padding-top:15px">真实NBA经理人手游</em></a></h1>
-		<a href="javascript:;" class="spr mygift_btn" onclick="btn1('gift')">我的礼包</a>
+		<a href="javascript:;" style="" class="spr mygift_btn" onclick="btn1('gift')">我的礼包</a>
 		<a href="#" class="spr home_btn">进入官网</a>
 	</header>
 	
@@ -182,7 +182,7 @@ if(p_start==-1){
 		<a href="javascript:;"  onclick="baosun()" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>
 		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:4%;">
 		<a href="javascript:;"  onclick="guihuan()" style="left:1.9rem;top:3.1rem;width:2.6rem;height:0.5rem">立即预约</a>
-		<a href="javascript:;"  onclick="void(0);" style="left:2.4rem;top:3.75rem;width:1.45rem;height:0.5rem">登录</a>
+		<a href="javascript:;"  onclick="denglubtn()" style="left:2.4rem;top:3.75rem;width:1.45rem;height:0.5rem">登录</a>
 		
 		</form>
 		
@@ -191,24 +191,24 @@ if(p_start==-1){
 	<div id="gift" class="gift" style="display: none;">
 
 		<a href="javascript:;" onclick="btn1('gift')">关闭</a>
-		<p id ="gift_num1" style="margin-left:0.4rem">1000</p>
-		<p id ="gift_num2" style="margin-left:0.41rem">1000</p>
-		<p id ="gift_num3" style="margin-left:0.42rem">1000</p>
-		<p id ="gift_num4" style="margin-left:0.43rem">1000</p>
+		<p id ="gift_num1" style="margin-left:0.4rem"></p>
+		<p id ="gift_num2" style="margin-left:0.41rem"></p>
+		<p id ="gift_num3" style="margin-left:0.42rem"></p>
+		<p id ="gift_num4" style="margin-left:0.43rem"></p>
 		
-		<p id ="gift_num5" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num6" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num7" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num8" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num5" style="margin-left:0.4rem; margin-top:0.8rem"></p>
+		<p id ="gift_num6" style="margin-left:0.41rem; margin-top:0.8rem"></p>
+		<p id ="gift_num7" style="margin-left:0.42rem; margin-top:0.8rem"></p>
+		<p id ="gift_num8" style="margin-left:0.43rem; margin-top:0.8rem"></p>
 		
-		<p id ="gift_num9" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num10" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num11" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num12" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num9" style="margin-left:0.4rem; margin-top:0.8rem"></p>
+		<p id ="gift_num10" style="margin-left:0.41rem; margin-top:0.8rem"></p>
+		<p id ="gift_num11" style="margin-left:0.42rem; margin-top:0.8rem"></p>
+		<p id ="gift_num12" style="margin-left:0.43rem; margin-top:0.8rem"></p>
 		
-		<p id ="gift_num13" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num14" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
-		<p id ="gift_num15" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num13" style="margin-left:0.4rem; margin-top:0.8rem"></p>
+		<p id ="gift_num14" style="margin-left:0.41rem; margin-top:0.8rem"></p>
+		<p id ="gift_num15" style="margin-left:0.42rem; margin-top:0.8rem"></p>
 	</div>
 	
 	<div class="sprbg popup" id="succeed">

@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <?php
+include 'conn/conn.php';
 $mytel = trim($_POST['mytel']);
 $mycode = trim($_POST['mycode']);
 $myinva = trim($_POST['myinva']);
+
+database_connect();
+$sql="select * from user where tel='".$mytel."'";
+$query=mysql_query($sql);
+$rows = mysql_num_rows($query);
+if($rows != 0)
+{
+	echo "<script type='text/javascript'>alert('由于您重复刷新');location.href='./';</script>";
+	return;
+}
+
+if($mytel==NULL)
+{
+	echo "<script type='text/javascript'>alert('手机号为空');location.href='./';</script>";
+	return;
+}
 
 ?>
 
 <script type="text/javascript" src="cookie.js"></script>
 <?php
-include 'conn/conn.php';
 include_once 'lib/BmobObject.class.php';
 include_once 'lib/BmobUser.class.php';
 include_once 'lib/BmobBatch.class.php';
@@ -40,8 +56,11 @@ function generate_rand($tel) {
 
 
 <?php 
-	setcookie("tempuser", $mytel, time()+36000);
-	try {
+	$iffause=1;
+	setcookie("phonetu", $mytel, time()+36000);
+	setcookie("phonetin", $myinva, time()+36000);
+	setcookie("phoneis", $iffause, time()+4);
+	/*try {
 
     ////短信相关
     $bmobSms = new BmobSms();
@@ -54,9 +73,9 @@ function generate_rand($tel) {
     var_dump($res);
 	} catch (Exception $e) {
     echo $e;
-	}
+	}*/
 	
-	//$res=1;
+	$res=1;
 	if($res)
 	{
 		database_connect();
@@ -74,7 +93,7 @@ function generate_rand($tel) {
 		}
 	}
 	
-	setcookie("tempmyinva", $myinva, time()+36000);
+	//setcookie("tempmyinva", $myinva, time()+36000);
 	$addSql = "INSERT INTO `reward`(`tel`,  `class1`, `class2`, `class3` ,`class4` , `class5`, `class6`, `class7` ,`class8`, `class9`, `class10`, `class11` ,`class12` , `class13`, `class14`, `class15`) VALUES ('".$mytel."','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0')";
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error());
 	
@@ -104,8 +123,9 @@ function generate_rand($tel) {
 	// exit;
 	
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
-	setcookie("name", $mytel, time()+36000);
-	setcookie("myinva", $str3, time()+36000);
+	setcookie("phonena", $mytel, time()+36000);
+	setcookie("phoneiv", $str3, time()+36000);
+	setcookie("isture", "", time() - 3600);
 ?>
 <html lang="zh-CN">
 <head>
@@ -254,7 +274,28 @@ var setSite={ //设置网站属性
 		</form>
 		
 	</div>
-	
+	<div id="gift" class="gift" style="display: none;">
+
+		<a href="javascript:;" onclick="btn1('gift')">关闭</a>
+		<p id ="gift_num1" style="margin-left:0.4rem">1000</p>
+		<p id ="gift_num2" style="margin-left:0.41rem">1000</p>
+		<p id ="gift_num3" style="margin-left:0.42rem">1000</p>
+		<p id ="gift_num4" style="margin-left:0.43rem">1000</p>
+		
+		<p id ="gift_num5" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num6" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num7" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num8" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		
+		<p id ="gift_num9" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num10" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num11" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num12" style="margin-left:0.43rem; margin-top:0.8rem">1000</p>
+		
+		<p id ="gift_num13" style="margin-left:0.4rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num14" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
+		<p id ="gift_num15" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
+	</div>
 	<div class="sprbg popup" id="succeed">
 		<a href="http://127.0.0.1/nba-web/m/" class="close_btn_succeed">关闭</a>
 	</div>
@@ -344,7 +385,7 @@ var setSite={ //设置网站属性
 	
 	//echo "<script type='text/javascript'>alert('插入成功');location.href='http://127.0.0.1/nba-web/m/';</script>";
 	
-	echo "<script type='text/javascript'>btn1('open_invite');</script>";
+	echo "<script type='text/javascript'>btn1('invite');</script>";
 	//echo "<script type='text/javascript'>location.href='http://127.0.0.1/nba-web/m/';</script>";
 	}
 	else

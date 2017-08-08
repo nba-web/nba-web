@@ -3,6 +3,8 @@ header("Content-type:text/html;charset=utf-8");
 include 'conn/conn.php';
 database_connect();
     $val1 = $_POST['val1'];
+	//echo "<script type='text/javascript'>alert(val1)</script>;";
+	//echo "<script type='text/javascript'>alert('验证码');</script>";
 	$sql="select class1,class2,class3,class4,class5,class6,class7,class8,class9,class10,class11,class12,class13,class14,class15 from reward where tel='".$val1."'";
 	$query=mysql_query($sql);
 	$rs = mysql_fetch_array($query);

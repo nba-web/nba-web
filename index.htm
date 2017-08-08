@@ -41,6 +41,7 @@
 <script type="text/javascript">
 var tel = $.cookie('tempuser');
 var myinva = $.cookie('tempmyinva');
+var pctel = $.cookie('name');
 var iftrue = $.cookie('isture');
 //alert(cookie);isture
 //alert($.cookie('myinva'));
@@ -176,7 +177,7 @@ if(iftrue==1){
 			<input type="text" placeholder="ÇëÊäÈëÄúµÄÑûÇëÂë" id="myinva" name="myinva" style="width:1.14rem;" >
 			<!--<input id="submit" type="submit" name="submit" onclick="guihuan()" style="left:0.8rem;top:1.3rem;width:1.1rem;height:0.23rem;" >Á¢¼´Ô¤Ô¼</a>-->
 			<a href="javascript:;" onclick="guihuan()" style="left:0.8rem;top:1.3rem;width:1.1rem;height:0.23rem;" >Á¢¼´Ô¤Ô¼</a>
-			<a href="javascript:;" name="submit" onclick="btn2('submit_2');" style="left:1rem;top:1.6rem;width:0.6rem;height:0.18rem;" >µÇÂ½</a>
+			<a href="javascript:;" name="submit" onclick="denglubtn()" style="left:1rem;top:1.6rem;width:0.6rem;height:0.18rem;" >µÇÂ½</a>
 		</form>
 	</div>
 	<div class="sprbg popup invite" id="subscribe_popup">
@@ -186,24 +187,24 @@ if(iftrue==1){
 	<div id="gift" class="gift" style="display: none;">
 
 		<a href="javascript:;" onclick="btn1('gift')">¹Ø±Õ</a>
-		<p id ="gift_num1" style="margin-left:0.15rem; margin-top:0.78rem;">1000</p>
-		<p id ="gift_num2" style="margin-left:0.13rem;margin-top:0.78rem;">1000</p>
-		<p id ="gift_num3" style="margin-left:0.12rem;margin-top:0.78rem;">1000</p>
-		<p id ="gift_num4" style="margin-left:0.11rem;margin-top:0.78rem;">1000</p>
+		<p id ="gift_num1" value="20" style="margin-left:0.15rem; margin-top:0.78rem;"></p>
+		<p id ="gift_num2" style="margin-left:0.13rem;margin-top:0.78rem;"></p>
+		<p id ="gift_num3" style="margin-left:0.12rem;margin-top:0.78rem;"></p>
+		<p id ="gift_num4" style="margin-left:0.11rem;margin-top:0.78rem;"></p>
 		
-		<p id ="gift_num5" style="margin-left:0.15rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num6" style="margin-left:0.13rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num7" style="margin-left:0.12rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num8" style="margin-left:0.11rem; margin-top:0.36rem">1000</p>
+		<p id ="gift_num5" style="margin-left:0.15rem; margin-top:0.36rem"></p>
+		<p id ="gift_num6" style="margin-left:0.13rem; margin-top:0.36rem"></p>
+		<p id ="gift_num7" style="margin-left:0.12rem; margin-top:0.36rem"></p>
+		<p id ="gift_num8" style="margin-left:0.11rem; margin-top:0.36rem"></p>
 		
-		<p id ="gift_num9" style="margin-left:0.15rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num10" style="margin-left:0.13rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num11" style="margin-left:0.12rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num12" style="margin-left:0.11rem; margin-top:0.36rem">1000</p>
+		<p id ="gift_num9" style="margin-left:0.15rem; margin-top:0.36rem"></p>
+		<p id ="gift_num10" style="margin-left:0.13rem; margin-top:0.36rem"></p>
+		<p id ="gift_num11" style="margin-left:0.12rem; margin-top:0.36rem"></p>
+		<p id ="gift_num12" style="margin-left:0.11rem; margin-top:0.36rem"></p>
 		
-		<p id ="gift_num13" style="margin-left:0.15rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num14" style="margin-left:0.13rem; margin-top:0.36rem">1000</p>
-		<p id ="gift_num15" style="margin-left:0.11rem; margin-top:0.36rem">1000</p>
+		<p id ="gift_num13" style="margin-left:0.15rem; margin-top:0.36rem"></p>
+		<p id ="gift_num14" style="margin-left:0.13rem; margin-top:0.36rem"></p>
+		<p id ="gift_num15" style="margin-left:0.11rem; margin-top:0.36rem"></p>
 	</div>
 	<div class="popup" id="succeed">
 		<a href="javascript:;" onclick="btn1('invite')" >¹Ø±Õ</a>
