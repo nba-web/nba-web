@@ -59,7 +59,7 @@ function generate_rand($tel) {
 	$iffause=1;
 	setcookie("phonetu", $mytel, time()+36000);
 	setcookie("phonetin", $myinva, time()+36000);
-	setcookie("phoneis", $iffause, time()+4);
+	setcookie("phoneis", $iffause, time()+5);
 	/*try {
 
     ////短信相关
@@ -125,7 +125,7 @@ function generate_rand($tel) {
 	$addResult = mysql_query($addSql) or die("Error in query: $query. ".mysql_error()); 
 	setcookie("phonena", $mytel, time()+36000);
 	setcookie("phoneiv", $str3, time()+36000);
-	setcookie("isture", "", time() - 3600);
+	setcookie("phoneis", "", time() - 3600);
 ?>
 <html lang="zh-CN">
 <head>
@@ -296,8 +296,16 @@ var setSite={ //设置网站属性
 		<p id ="gift_num14" style="margin-left:0.41rem; margin-top:0.8rem">1000</p>
 		<p id ="gift_num15" style="margin-left:0.42rem; margin-top:0.8rem">1000</p>
 	</div>
+
+
 	<div class="sprbg popup" id="succeed">
-		<a href="http://127.0.0.1/nba-web/m/" class="close_btn_succeed">关闭</a>
+		<a href="./" class="close_btn_succeed">关闭</a>
+		<span id="device_type" style="margin-top:1.64rem;">phone</span>
+		<span id="tel_num"><?php  echo $mytel;?></span>
+		<span id="s_code"><?php  echo $str3;?></span>
+        <div class="code" style="margin-top:34%;">
+            <input type="text" id="myin_code"  name="myin_code" value="<?php  echo $str3;?>" class="cdkid" readonly="readonly" >
+        </div>
 	</div>
 	</body>
 

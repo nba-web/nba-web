@@ -254,6 +254,7 @@ var setSite={ //设置网站属性
 			document.forms.myform.submit();
 			}
 	</script>
+
 	<div class="mask"></div>
 	<div id="login_slt" class="login_slt" style="display: none;">
 		<a href="javascript:;"  onclick="btn1('open')">关</a>
@@ -296,16 +297,20 @@ var setSite={ //设置网站属性
 		<a href="javascript:;" class="close_btn">关闭</a>
 		
 	</div>
+	
+	
+	
 	<div class="popup" id="succeed">
 		<a href="./" >关闭</a>
 		<span id="device_type" style="margin-top:0.68rem;">PC</span>
-		<span id="tel_num">15370103305</span>
-		<span id="s_code">KB3745</span>
+		<span id="tel_num"><?php  echo $mytel;?></span>
+		<span id="s_code"><?php  echo $str3;?></span>
         <div class="code" style="margin-top:34%;">
-            <input type="text" name="in_code" value="KB3745" class="cdkid" readonly="readonly" >
+            <input type="text" id="myin_code" name="in_code" value="<?php  echo $str3;?>" class="cdkid" readonly="readonly" >
         </div>
 		
 	</div>
+	
 	<div class="sprbg popup tips" id="tips"><!--alert-->
 		<a href="javascript:void(0);" class="close_btn">关闭</a>
 		<h3><i class="sprbg"></i>这里显示对应要提示的语句，请开发同学输出</h3>

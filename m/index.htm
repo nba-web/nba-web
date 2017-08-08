@@ -45,6 +45,8 @@ var setSite={ //设置网站属性
 var tel = $.cookie('phonetu');
 var myinva = $.cookie('phonetin');
 var phonetel = $.cookie('phonena');
+var phoneiv = $.cookie('phoneiv');
+var iftrue = $.cookie('phoneis');
 //alert($.cookie('myinva'));
 var c_start=document.cookie.indexOf("phoneis"); 
 if(c_start==-1){
@@ -79,6 +81,35 @@ if(p_start==-1){
 		document.getElementById("myinva").value = myinva;
 		}
 	}
+if(iftrue==1){
+		window.onload = function()
+		{
+		//var tel = $.cookie('user');
+		//var myteminva=$.cookie('myinva');
+		btn1('login_slt');
+		document.getElementById("mytel").value = tel;
+		document.getElementById("myinva").value = myinva;
+		}
+	}
+	
+	window.onload = function()
+		{
+			$.ajax({
+					url:'total.php',
+					type:'post',
+					dataType:'json',
+					data:{val1:phonetel},
+					success:function(data){
+					var str1 = data.val1;
+					//alert(str1);
+					totalnum.innerHTML=str1;
+					}
+				});
+				tel_num.innerHTML=phonetel;
+				s_code.innerHTML=phoneiv;
+				document.getElementById("myin_code").value = phoneiv;
+					
+		}
 </script>
  <!--<script type="text/javascript">
  window.onload = function()
@@ -102,7 +133,7 @@ if(p_start==-1){
 	</header>
 	
 	<section class="s1">
-	   <h3 style="margin-left: 2.4rem;font-size: 0.3rem;color: red;width: 1.2rem;text-align: center;margin-top: 5.4rem;" >2300000</h3>
+	   <h3 id ="totalnum" style="margin-left: 2.4rem;font-size: 0.3rem;color: red;width: 1.2rem;text-align: center;margin-top: 5.4rem;" >2300000</h3>
 		<a href="javascript:;" id="btn1" class="spr subscribe_btn" onclick="mybtn()">立即预约</a>
 	</section>
 	<section class="s2">
@@ -213,11 +244,11 @@ if(p_start==-1){
 	
 	<div class="sprbg popup" id="succeed">
 		<a href="javascript:void(0);" class="close_btn_succeed" onclick="btn1('invite')">关闭</a>
-		<span id="device_type" style="margin-top:1.64rem;">PC</span>
-		<span id="tel_num">15370103305</span>
-		<span id="s_code">KB3745</span>
+		<span id="device_type" style="margin-top:1.64rem;">phone</span>
+		<span id="tel_num"></span>
+		<span id="s_code"></span>
         <div class="code" style="margin-top:34%;">
-            <input type="text" name="in_code" value="KB3745" class="cdkid" readonly="readonly" >
+            <input type="text" id="myin_code"  name="myin_code" value="" class="cdkid" readonly="readonly" >
         </div>
 	</div>
 

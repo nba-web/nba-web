@@ -42,6 +42,7 @@
 var tel = $.cookie('tempuser');
 var myinva = $.cookie('tempmyinva');
 var pctel = $.cookie('name');
+var pcinv = $.cookie('myinva');
 var iftrue = $.cookie('isture');
 //alert(cookie);isture
 //alert($.cookie('myinva'));
@@ -88,6 +89,25 @@ if(iftrue==1){
 		document.getElementById("myinva").value = myinva;
 		}
 	}
+	
+	window.onload = function()
+		{
+			$.ajax({
+					url:'total.php',
+					type:'post',
+					dataType:'json',
+					data:{val1:pctel},
+					success:function(data){
+					var str1 = data.val1;
+					//alert(str1);
+					totalnum.innerHTML=str1;
+					}
+				});
+				tel_num.innerHTML=pctel;
+				s_code.innerHTML=pcinv;
+				document.getElementById("myin_code").value = pcinv;
+					
+		}
 </script>
 
 <script src="js/index.js"></script>
@@ -103,7 +123,7 @@ if(iftrue==1){
 		
 	</section>
 	<section class="s2">
-	<h3 style="margin-left: 2.8rem;font-size: 0.1rem;color: red;width: 0.58rem;text-align: center;" >230000</h3>
+	<h3 id ="totalnum" style="margin-left: 2.8rem;font-size: 0.1rem;color: red;width: 0.58rem;text-align: center;" >00</h3>
 	<a href="javascript:;" id="btn1" class="spr subscribe_btn subscribe_btn1" onclick="mybtn()">Á¢¼´Ô¤Ô¼</a>
 		
 	</section>
@@ -212,7 +232,7 @@ if(iftrue==1){
 		<span id="tel_num">15370103305</span>
 		<span id="s_code">KB3125</span>
         <div class="code" style="margin-top:34%;">
-            <input type="text" name="in_code" value="KB3125" class="cdkid" readonly="readonly" >
+            <input type="text" id="myin_code" name="in_code" value="KB3125" class="cdkid" readonly="readonly" >
         </div>
 		
 	</div>
