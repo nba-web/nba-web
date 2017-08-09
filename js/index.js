@@ -2,6 +2,10 @@ function btn1($option){
 	$login_slt = document.getElementById('login_slt').style; 
 	$invite = document.getElementById('succeed').style; 
 	$gift = document.getElementById('gift').style; 
+	var usemy_start=document.cookie.indexOf("name"); 
+	if(usemy_start==-1){
+		$option="login_slt";//没有登录用户，强制弹登录框
+	}
 	if($option=="login_slt"){
 		//alert("1234");
 		if($login_slt.display == 'block')

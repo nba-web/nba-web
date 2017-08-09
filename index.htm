@@ -35,6 +35,24 @@
 //		stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
 //	}
 </script>
+<script type="text/javascript">
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+				 window.location.href="m/index.htm";
+            }
+        }
+
+        browserRedirect();
+    </script>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
@@ -116,7 +134,7 @@ if(iftrue==1){
 <body>
 	<header>
 		<a href="javascript:;" style="margin-left:62%" onclick="btn1('gift');">我的礼包</a>
-		<a href="#"  onclick="">进入官网</a>
+		<a href="http://www.nbabm.com"  onclick="">进入官网</a>
 	</header>
 	
 	<section class="s1">
