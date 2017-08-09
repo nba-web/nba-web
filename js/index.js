@@ -97,29 +97,31 @@ function btn2($option){
 function mybtn(){
 	var usemy_start=document.cookie.indexOf("name"); 
 	if(usemy_start==-1){
-		alert(usemy_start);
 		btn1('login_slt');
 		
 	}
 	else {
-		alert(usemy_start);
-		//btn1('open');
+		//alert(usemy_start);
 		btn1('invite');
 	}
 }
 
 function denglubtn(){
 	var aa = document.getElementById("mytel").value; 
-	$.ajax({
-					url:'login.php',
-					type:'post',
-					dataType:'json',
-					data:{val1:aa},
-					success:function(data){
-					var str1 = data.val1;
-					var str2 = data.val2;
-					alert('登录成功');
-					location.href='./'
-				}
-				});
-}
+	var pattern = /^1[34578]\d{9}$/;
+	if( $aa!="" && pattern.test($aa) && $aa.length==11)
+	{
+		$.ajax({
+						url:'login.php',
+						type:'post',
+						dataType:'json',
+						data:{val1:aa},
+						success:function(data){
+						var str1 = data.val1;
+						var str2 = data.val2;
+						alert('登录成功');
+						location.href='./'
+					}
+					});
+	}
+	}

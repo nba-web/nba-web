@@ -215,7 +215,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.gift p{
 		font-size:0.24rem;
 		font-family:Microsoft YaHei;
-		color:red;
+		color:#13304f;
 		margin-top:1.56rem;
 		width:0.67rem;
 		text-align:center;
@@ -245,6 +245,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 		height:0.43rem;
 		width:2.7rem;
 		margin-left:38.7%;
+		font-size:0.15rem;
 	}
 	.inbtn {
 		BACKGROUND-COLOR: transparent;

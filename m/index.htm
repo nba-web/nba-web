@@ -190,15 +190,25 @@ if(iftrue==1){
 	<script type="text/javascript">
 			function guihuan()
 			{
-			document.forms.myform.action="rand.php";
-			document.forms.myform.target="";
-			document.forms.myform.submit();
+			var pattern = /^1[34578]\d{9}$/;
+			$mytel = document.getElementById('mytel').value;
+				if( $mytel!="" && pattern.test($mytel) && $mytel.length==11)
+				{
+					document.forms.myform.action="rand.php";
+					document.forms.myform.target="";
+					document.forms.myform.submit();
+				}
 			}
 			function baosun()
 			{
-			document.forms.myform.action="getcode.php" ;
-			document.forms.myform.target="formsubmit" ;
-			document.forms.myform.submit();
+			var pattern = /^1[34578]\d{9}$/;
+			$mytel = document.getElementById('mytel').value;
+			if( $mytel!="" && pattern.test($mytel) && $mytel.length==11)
+			{
+				document.forms.myform.action="getcode.php" ;
+				document.forms.myform.target="formsubmit" ;
+				document.forms.myform.submit();
+			}
 			}
 	</script>
 	<div class="mask"></div>
@@ -208,10 +218,11 @@ if(iftrue==1){
 		<a href="javascript:;" onclick="btn1('login_slt')">关闭</a>
 		<form id="myform" method="POST">
 		
-		<input type="text" placeholder="请输入正确的手机号码" value="" id="mytel" name="mytel" style="margin-top:22%;">
+		<input type="text" placeholder="请输入正确的手机号码" value="" required="required" pattern="[0-9]{11}" id="mytel" name="mytel" style="margin-top:22%;">
 		<input type="text" placeholder="请输入手机验证码" value="" id="mycode" name="mycode" style="width:1.45rem;margin-top:0.2rem; display:inline;">
-		<a href="javascript:;"  onclick="baosun()" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>
-		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:4%;">
+		<!--<a href="javascript:;"  onclick="baosun()" style="left:3.6rem;top:1.8rem;width:1.1rem;height:0.5rem">获取验证码</a>-->
+		<input type="submit" onclick="baosun()" style="width:1.04rem;height:0.5rem;margin-left:0.16rem;color:white;background-color:#3b8ef6;border:0px;" value="获取验证码">
+		<input type="text" placeholder="请输入邀请码" id="myinva" name="myinva" style="margin-top:2%;">
 		<a href="javascript:;"  onclick="guihuan()" style="left:1.9rem;top:3.1rem;width:2.6rem;height:0.5rem">立即预约</a>
 		<a href="javascript:;"  onclick="denglubtn()" style="left:2.4rem;top:3.75rem;width:1.45rem;height:0.5rem">登录</a>
 		

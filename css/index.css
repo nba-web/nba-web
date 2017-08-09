@@ -195,7 +195,7 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 	.gift p{
 		font-size:0.14rem;
 		font-family:Microsoft YaHei;
-		color:red;
+		color:#13304f;
 		width:0.4rem;
 		text-align:center;
 		display:inline-block;
@@ -220,11 +220,11 @@ body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0; padding:0;}
 		font-size:0.17rem;
 	}
 	.login_slt input{
-		border-radius:5px;
+		border-radius:2px;
 		border: 0px;
 		height:0.17rem;
 		margin-left:38.7%;
-		font-size:0.08rem;
+		font-size:0.06rem;
 	}
 	.close_btn {display: block; position: absolute; top: 0.31rem; right: 0.01rem; overflow: hidden; text-indent: -9999px; width: 0.41rem; height: 0.41rem;}
 	.login_slt h3{height:1.23rem; text-indent: -9999px;}

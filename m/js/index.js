@@ -2,6 +2,10 @@ function btn1($option){
 	$login_slt = document.getElementById('login_slt').style; 
 	$invite = document.getElementById('succeed').style; 
 	$gift = document.getElementById('gift').style; 
+	var usemy_start=document.cookie.indexOf("phonena"); 
+	if(usemy_start==-1){
+		$option="login_slt"
+	}
 	if($option=="login_slt"){
 		//alert("1234");
 		if($login_slt.display == 'block')
@@ -94,7 +98,10 @@ function mybtn(){
 
 function denglubtn(){
 	var aa = document.getElementById("mytel").value; 
-	$.ajax({
+	var pattern = /^1[34578]\d{9}$/;
+	if( $aa!="" && pattern.test($aa) && $aa.length==11)
+	{
+		$.ajax({
 					url:'login.php',
 					type:'post',
 					dataType:'json',
@@ -106,4 +113,5 @@ function denglubtn(){
 					location.href='./'
 				}
 				});
+	}
 }
